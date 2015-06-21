@@ -207,7 +207,7 @@ jQuery(document).ready ($) ->
                 data += ' </div>\n'
                 data += '</div>\n'
                 if $('#sidebar div button#' + data2.cat).length <= 0
-                  $('#sidebar div').append('<button class="btn btn-default btn-sm btn-success" data_toggle="collapse" data-target=".' + data2.cat + '" id="' + data2.cat + '" onClick="$(\'.' + data2.cat + '-content\').toggle(); $(\'#' + data2.cat + '\').toggleClass('btn-success');" >' + data2.category + '</button>')
+                  $('#sidebar div').append('<button class="btn btn-default btn-sm btn-success" data_toggle="collapse" data-target=".' + data2.cat + '" id="' + data2.cat + '" onClick="$(\'.' + data2.cat + '-content\').toggle(); $(\'#' + data2.cat + '\').toggleClass(\'btn-success\');" >' + data2.category + '</button>')
                 $('#music').prepend data
                 $('#' + k + ' button.szavazok').click ->
                   data = {}
