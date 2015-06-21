@@ -13,6 +13,7 @@ hidden: true
   <link href='//fonts.googleapis.com/css?family=Dosis&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   {% stylesheet app %}
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  {% javascript app %}
 </head>
 <body>
   <header id="navigation">    
@@ -31,20 +32,112 @@ hidden: true
             </div>
           </div>
           <div class="col-sm-9" style="margin-top: 10px;">
-            <nav class="navbar-right collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-              </ul>
-            </nav>
-          </div>
+              <nav class="navbar-right collapse navbar-collapse">
+                <ul class="nav navbar-nav">                                   
+                  <li><a {% if page.group == 'fooldal' %} class="active"{% endif %} href="/">Főoldal</a></li>
+                  <li><a {% if page.group == 'blog' %} class="active"{% endif %}href="/blog">Hírek</a></li>
+                  <li><a {% if page.group == 'zene' %} class="active"{% endif %}href="/zene">Zene</a></li>           
+                  <!--<li><a {% if page.group == 'program' %} class="active"{% endif %}href="/program">Program</a></li>-->
+                  <!--<li><a {% if page.group == 'szervezok' %} class="active"{% endif %}href="/szervezok">Szervezők</a></li>-->
+			      <!--<li><a {% if page.group == 'poll' %} class="active"{% endif %}href="/poll">Ki lépjen fel idén?</a></li>-->       
+				  <li><a {% if page.group == 'jegyek' %} class="active"{% endif %}href="/jegyek">Jegyek</a></li>			
+                  <li><a {% if page.group == 'info' %} class="active"{% endif %}href="/info">Infó</a></li>             
+                </ul>
+              </nav>
+            </div>
         </div> 
       </div>
     </div>
+    <div id="legnagyobbmagyarpoll" style="display: none;">JavaScript ID</div>
   </header> <!--/#navigation-->
   <div id="fb-root"></div>
+    <!-- container -->
     <div class="container fb-content">
-      <div class="bg">
-      <h1>legnagyobbmagyar</h1>
+      <div class="content" role="main">
+      <!-- album -->
+      <div id="album">
+        <!-- div class="container" -->
+            <div class="album-inner">
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="bg">
+                            <h2 class="heading"><strong>Legnagyobbmagyar</strong></h2>
+                                <div class="leg_text" style="display: none;">
+                                    <p>Lorem ikpsum</p>
+                                </div>
+                            <div id="music" class="row">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sidebar" class="col-sm-4 sidebar-inner">
+                        <div class="widget bg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /div -->
+      </div>
+      <!-- /album -->
     </div>
+    <!-- /container -->
   </div>
+  <footer id="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="updates-links bg">
+              <div class="col-sm-12 col-md-8">
+                <h4>Szervezők</h4>              
+                <a href="http://www.diakhalozat.sk" target="_blank"><img src="{% asset_path dh_logo.png %}"/></a>
+                <img src="{% asset_path sm_logo.png %}"/>
+                <a href="http://www.jaik.sk" target="_blank"><img src="{% asset_path tsz_jaik.png %}"/></a>
+                <a href="http://www.jugyik.sk" target="_blank"><img src="{% asset_path tsz_jugyik.png %}"/></a>
+                <a href="http://www.aed.cz" target="_blank"><img src="{% asset_path tsz_aed.png %}"/></a>
+                <a href="http://www.kafedik.net" target="_blank"><img src="{% asset_path tsz_kafedik.png %}"/></a>
+                <a href="http://www.kikelet.sk" target="_blank"><img src="{% asset_path tsz_kikelet.png %}"/></a>
+                <img src="{% asset_path tsz_ndk.png %}"/>
+                <a href="http://www.jomod.sk" target="_blank"><img src="{% asset_path tsz_jomod.png %}"/></a>
+                <img src="{% asset_path tsz_mikad.png %}"/>
+                <a href="http://www.kadbudapest.hu" target="_blank"><img src="{% asset_path tsz_kad.png %}"/></a>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <h4>Kapcsolat</h4>
+                <ul class="icon-list">
+                  <li class="email">info<i class="fa fa-exclamation-circle"></i>gombaszog.sk</li>
+                  <li class="phone">+421&nbsp;905&nbsp;920&nbsp;551</li>
+                  <li class="phone">+36&nbsp;20&nbsp;964&nbsp;5598</li>
+                  <li class="press"><a href="/sajto">Sajtószoba</a></li>
+                  <!--<li class="about"><a href="http://mediasator.tumblr.com/impresszum">Impresszum</a></li>-->
+                </ul>
+                <div class="social-link">
+                  <a href="http://facebook.com/gombaszog" target="_blank" class="footer-fb" title="Facebook">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="http://twitter.com/gombaszog" target="_blank" class="footer-tw" title="Twitter">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="http://youtube.com/gombaszog" target="_blank" class="footer-yt" title="YouTube">
+                    <i class="fa fa-youtube"></i>
+                  </a>
+                  <a href="http://instagram.com/gombaszog" target="_blank" class="footer-ig" title="Instagram">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                  <a href="https://plus.google.com/103167436782316691617" target="_blank" class="footer-gplus" title="Google+">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                  <a href="/feed" target="_blank" class="footer-rss" title="RSS">
+                    <i class="fa fa-rss-square"></i>
+                  </a>
+                </div>              
+              </div>
+            </div>
+            <div class="footer text-center bg">
+              <p>© Gombaszögi Nyári Tábor 2010-2015<br>
+              Created by <a href="http://mediasator.tumblr.com/" target="_blank">Médiasátor a.k.a. Tokolosh TeaM</a> </p> 
+            </div><!--/#footer-->
+          </div>        
+        </div>
+      </div>  
+    </footer><!--/#footer-widget-->
 </body>
 </html>

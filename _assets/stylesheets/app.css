@@ -676,3 +676,20 @@ input.has-error {
   margin-bottom: 10px;
 }
 
+.profile { margin-bottom: 30px;}
+.profile .single-album {margin-bottom: 10px;}
+ 
+.poll-a, .poll-b {
+  float: left;
+  height: 3px;
+}
+
+.poll-a {
+  background-color: #f00;
+  clear: left;
+}
+
+.poll-b {
+  background-color: #0f0;
+  clear: right;
+}
