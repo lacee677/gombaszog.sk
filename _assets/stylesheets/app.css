@@ -693,4 +693,5 @@ input.has-error {
   background-color: #0f0;
   clear: right;
 }
+#legnagyobbmagyar {background-image: url('<%= asset_path "legnagyobbm.jpg" %>');}
 #legnbut button { margin: 5px;}
