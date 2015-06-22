@@ -6,9 +6,19 @@ hidden: true
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gombaszögi Nyári Tábor - Legnagyobb Felvidéki Magyar</title>
+  <title>Legnagyobb Felvidéki Magyar</title>
   <meta charset="utf-8">
   <meta property="og:image" content="{{ site.url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{% asset_path og.jpg %}{% endif %}">
+  <link href="/favicon.ico" rel="shortcut icon" />
+  <meta property="fb:app_id" content="267323596708516" />
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="{{ site.name }}" />
+  {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip | markdownify | strip_html | truncatewords: 50 }}" />{% endif %}
+  <meta property="og:image" content="{{ site.url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{% asset_path og.jpg %}{% endif %}">
+  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }},{% endif %}{{ site.keywords | join: ',' }}" />
+  {% unless page.tags %}<meta name="description" content="{{ site.description }}" />{% endunless %}
+
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
   <link href='//fonts.googleapis.com/css?family=Dosis&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   {% stylesheet app %}
