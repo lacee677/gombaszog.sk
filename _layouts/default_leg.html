@@ -40,7 +40,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ site.name }}" />
     {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip | markdownify | strip_html | truncatewords: 50 }}" />{% endif %}
-    <meta property="og:image" content="{{ site.url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{% asset_path og.jpg %}{% endif %}">
+    <!-- <meta property="og:image" content="{{ site.url }}{% if page.thumbnail %}{{ page.thumbnail }}{% else %}{% asset_path og.jpg %}{% endif %}"> -->
     <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ',' }},{% endif %}{{ site.keywords | join: ',' }}" />
     {% unless page.tags %}<meta name="description" content="{{ site.description }}" />{% endunless %}
   </head>
