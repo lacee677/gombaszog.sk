@@ -102,7 +102,7 @@ if ($("#stream1").length > 0) {
         $('#videostream').append('<iframe width="480" height="392" src="//www.ustream.tv/embed/18506424?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
     }else{
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="700" height="394 src="//www.youtube.com/embed/c0TtsVXRFfc" frameborder="0" allowfullscreen></iframe>');
+        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/c0TtsVXRFfc" frameborder="0" allowfullscreen></iframe>');
     }
   }
 
