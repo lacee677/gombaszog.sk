@@ -125,7 +125,7 @@ if ($("#stream1").length > 0) {
     $.ajax({
         type: "GET", 
         dataType: "jsonp",
-        url: "https://api.ustream.tv/json/channel/18506424/getValueOf/status",
+        url: "http://www.youtube.com/user/gombaszog/live",
         data: {},
         success: function(data) {
             if(last_stream_status != data) {
