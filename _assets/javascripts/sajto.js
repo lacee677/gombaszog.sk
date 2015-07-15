@@ -79,19 +79,10 @@ if ($("#stream1").length > 0) {
     // decide
     //last_stream last_stream_status
     //web_stream_status
-    if(last_stream_status == '') return; //wait for stream status
-
     if(last_stream != 'live') {
         new_stream_status = 'youtube';
     } else {
-        var now = new Date().getTime();
-        if(last_stream_status == 'live' && last_stream_status_change < now-20) {
-            new_stream_status = 'live';
-        }else if(last_stream_status != 'live' && last_stream_status_change < now-20){
-            new_stream_status = 'youtube';
-        }else{
-            new_stream_status = last_stream_status;
-        }
+        new_stream_status = 'live';
     }
 
     if(web_stream_status == new_stream_status) {return;}
@@ -99,7 +90,7 @@ if ($("#stream1").length > 0) {
     console.log('status change to '+ new_stream_status);
     if(new_stream_status == 'live') {
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="480" height="392" src="//www.ustream.tv/embed/18506424?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
+        $('#videostream').append('<iframe width="560" height="315" src="https://www.youtube.com/embed/c0TtsVXRFfc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>');
     }else{
         $('#videostream').empty();
         $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/c0TtsVXRFfc" frameborder="0" allowfullscreen></iframe>');
@@ -121,19 +112,7 @@ if ($("#stream1").length > 0) {
 
       last_stream = stream_data[1]['F'];
       stream_page(1);
-    });
-    $.ajax({
-        type: "GET", 
-        dataType: "jsonp",
-        url: "https://api.ustream.tv/json/channel/18506424/getValueOf/status",
-        data: {},
-        success: function(data) {
-            if(last_stream_status != data) {
-                last_stream_status_change = new Date().getTime();
-            }
-            last_stream_status = data;
-            set_video();
-        }
+      set_video();
     });
   },500);
 
