@@ -102,7 +102,7 @@ if ($("#stream1").length > 0) {
         $('#videostream').append('<iframe width="560" height="315" src="//www.ustream.tv/user/gombaszog/live" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
     }else{
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/sGioF1np2c8" frameborder="0" allowfullscreen></iframe>');
+        $('#videostream').append('<iframe width="560" height="315" src="//www.ustream.tv/user/gombaszog/live" frameborder="0" allowfullscreen></iframe>');
     }
   }
 
