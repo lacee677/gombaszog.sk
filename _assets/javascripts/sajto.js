@@ -99,7 +99,7 @@ if ($("#stream1").length > 0) {
     console.log('status change to '+ new_stream_status);
     if(new_stream_status == 'live') {
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="480" height="392" src="//www.ustream.tv/embed/18506424?v=3&amp;wmode=direct" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
+        $('#videostream').append('<iframe width="560" height="315" src="//www.ustream.tv/user/gombaszog/live" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>');
     }else{
         $('#videostream').empty();
         $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/sGioF1np2c8" frameborder="0" allowfullscreen></iframe>');
