@@ -694,7 +694,3 @@ input.has-error {
 }
 
 #legnbut button { margin: 5px;}
-
-.videostream, .live { margin-right: auto; margin-left: auto; z-index:0; margin-bottom: 10px;}
-.videostream, .live {position: relative; padding-bottom: 73%; /* 16:9 */padding-top: 25px;height: 0; margin:10px -14% 10px -14%; }
-.videostream iframe, .live iframe, .videostream object, .live object, .videostream object embed,.live object embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
