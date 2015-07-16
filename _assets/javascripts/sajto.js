@@ -90,10 +90,10 @@ if ($("#stream1").length > 0) {
     console.log('status change to '+ new_stream_status);
     if(new_stream_status == 'live') {
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/zjj8F8wOPNY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe><br/> <a href="/" type="button" class="btn btn-primary btn-lg"> Élő </a>');
+        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/zjj8F8wOPNY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe><br/> <a href="/live" type="button" class="btn btn-primary"> Élő közvetítés</a>');
     }else{
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/sGioF1np2c8" frameborder="0" allowfullscreen></iframe><br/> <a href="/" type="button" class="btn btn-primary btn-lg"> Élő </a>');
+        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/sGioF1np2c8" frameborder="0" allowfullscreen></iframe><br/> <a href="/live" type="button" class="btn btn-primary"> Élő közvetítés</a>');
     }
   }
 
