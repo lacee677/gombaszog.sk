@@ -93,7 +93,7 @@ if ($("#stream1").length > 0) {
         $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/zjj8F8wOPNY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe><br/> <a href="/live" type="button" class="btn btn-primary"> Élő közvetítés</a>');
     }else{
         $('#videostream').empty();
-        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/sGioF1np2c8" frameborder="0" allowfullscreen></iframe><br/> <a href="/live" type="button" class="btn btn-primary"> Élő közvetítés</a>');
+        $('#videostream').append('<iframe width="560" height="315" src="//www.youtube.com/embed/via7yYXwn1w" frameborder="0" allowfullscreen></iframe><br/> <a href="/live" type="button" class="btn btn-primary"> Élő közvetítés</a>');
     }
   }
 
