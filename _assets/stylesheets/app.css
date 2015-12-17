@@ -694,3 +694,16 @@ input.has-error {
 }
 
 #legnbut button { margin: 5px;}
+
+div.biglogo {
+	width: 100%;
+	max-width: 1147px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.biglogo:after {
+	content: '';
+	padding-top: 13%;
+	display: block;
+}
