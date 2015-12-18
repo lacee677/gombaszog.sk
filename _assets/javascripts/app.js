@@ -11,7 +11,7 @@
  *= require zene.js
  *= require sajto.js
  *= require poll.js
- *= require christmass_ticket.js
+ *= require christmas_ticket.js
  */
 
 String.prototype.hashCode = function() {
