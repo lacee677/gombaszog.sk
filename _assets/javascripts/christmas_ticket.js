@@ -1,4 +1,4 @@
-if ($("div#christmas_ticket").length > 0) {
+if ($("form#christmas_ticket").length > 0) {
   captcha_reload = function() { // reload captcha image
     $('#christmas_ticket_captcha').css('background-image', 'url(/api/captcha?'+Date.now()+')');
     $('#christmas_ticket_captcha').val("");
