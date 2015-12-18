@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
       });
 
       captcha_reload();
+      e.preventDefault();
     }
   });
 });
