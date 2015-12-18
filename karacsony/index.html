@@ -17,6 +17,7 @@ group: karacsony
 <div id="press">
       <div class="container">
         <div class="bg">
+         <form role="form" class="christmass-ticket-form" action="/jegyek/sikertelen" method="POST" id="christmass_ticket">
          <div class="row">
          <h2 class="heading" style="padding-left:15px;"><strong>Gombaszögi jegyet a fa alá!</strong></h2>
             <div class="col-md-12">
@@ -24,17 +25,22 @@ group: karacsony
  		    </div>
  		    
 			<div class="col-md-6">
-				<label for="ticket_email">A megrendelő e-mail címe: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Erre a címre küldjük a fizetési információkat és a kupont!"></i></label>
-				<input type="email" class="form-control" id="voucher_email" placeholder="te@te.com" name="voucher[email]"/>
+				<label for="christmas_ticket_email">A megrendelő e-mail címe: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Erre a címre küldjük a fizetési információkat és a kupont!"></i></label>
+				<input type="email" class="form-control" id="christmas_ticket_email" placeholder="te@te.com" name="christmas_ticket[email]"/>
 			</div>
 			
 			<div class="col-md-6">
-				<label for="ticket_phone">A megrendelő telefonszáma: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Országkóddal teljes formájában, például +421901234567"></i></label>
-				<input type="text" class="form-control" id="voucher_phone" placeholder="+421xxxxxxxxx" name="voucher[phone]"/>
+				<label for="christmas_ticket_phone">A megrendelő telefonszáma: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Országkóddal teljes formájában, például +421901234567"></i></label>
+				<input type="text" class="form-control" id="christmas_ticket_phone" placeholder="+421xxxxxxxxx" name="christmas_ticket[phone]"/>
 			</div>
+
+            <div class="form-group">
+                <label class="control-label" for="christmas_ticket_captcha">Megerősítő kód <i class="fa fa-info-circle info-tooltip re-captcha" data-toggle="tooltip" data-placement="bottom" title="Az alábbi mezőbe a képen található kódot kell bemásolni. Ha a szöveg nem lenne olvasható, kattints és kapsz újat!"></i></label>
+                <input type="text" class="form-control" id="christmas_ticket_captcha" placeholder="Ezt írd ide --&gt;" name="christmas_ticket[captcha]" style="background-size: 120px; background-position: right center; background-repeat: no-repeat;"/>
+            </div>
 			
 			<div class="col-md-12">
-				<p class="text-center"><button id="sendvoucherbutton" class="btn btn-primary">&nbsp;Tovább&nbsp;</button></p>
+				<p class="text-center"><button id="sendchristmasticketbutton" class="btn btn-primary">&nbsp;Tovább&nbsp;</button></p>
 			</div>		
 			
             <div class="col-md-12">
@@ -42,5 +48,6 @@ group: karacsony
  		    </div>			
  		    
           </div>
+         </form>
         </div>
     </div>
