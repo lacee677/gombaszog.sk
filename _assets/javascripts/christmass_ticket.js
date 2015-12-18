@@ -16,6 +16,6 @@ if ($("div#christmass_ticket").length > 0) {
 
   $('christmass_ticket').submit(function (e) {
     console.log($("form#christmass_ticket").serializeObject());
-  };
+  });
 
 }
