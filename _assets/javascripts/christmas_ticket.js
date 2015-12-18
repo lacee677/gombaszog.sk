@@ -22,6 +22,18 @@ jQuery(document).ready(function($){
     
       $('#christmas_ticket').submit(function (e) {
         console.log($("form#christmas_ticket").serializeObject());
+
+        $.ajax({
+          url: '/api/ticket',
+          type: 'POST',
+          timeout: 2000,
+          async: false,
+          data: $("form#ticket").serializeObject(),
+          dataType: 'json'
+        }).done(function (data) {
+          console.log(data);
+        });
+
         e.preventDefault();
       });
 
