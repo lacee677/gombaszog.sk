@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
         console.log($("form#christmas_ticket").serializeObject());
 
         $.ajax({
-          url: '/api/ticket',
+          url: '/api/christmas_ticket',
           type: 'POST',
           timeout: 2000,
           async: false,
