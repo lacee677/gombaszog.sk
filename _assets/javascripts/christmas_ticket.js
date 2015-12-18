@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
       $('.re-captcha').click(captcha_reload);
     
       $('#christmas_ticket').on("click", "button", "event", function(evt) {
-        e.preventDefault();
+        evt.preventDefault();
       });
 
       $('#christmas_ticket').bind("keyup keypress", function(e) {
