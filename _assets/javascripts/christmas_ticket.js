@@ -28,7 +28,7 @@ jQuery(document).ready(function($){
           type: 'POST',
           timeout: 2000,
           async: false,
-          data: $("form#ticket").serializeObject(),
+          data: $("form#christmas_ticket").serializeObject(),
           dataType: 'json'
         }).done(function (data) {
           console.log(data);
