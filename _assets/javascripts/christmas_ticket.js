@@ -8,6 +8,10 @@ jQuery(document).ready(function($){
     
       $('.re-captcha').click(captcha_reload);
     
+      $('#christmas_ticket').on("click", "button", "event", function(evt) {
+        e.preventDefault();
+      });
+
       $('#christmas_ticket').bind("keyup keypress", function(e) {
         var code = e.keyCode || e.which;
         if (code == 13) {
