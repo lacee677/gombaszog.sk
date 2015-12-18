@@ -22,10 +22,10 @@ jQuery(document).ready(function($){
     
       $('#christmas_ticket').submit(function (e) {
         console.log($("form#christmas_ticket").serializeObject());
+        e.preventDefault();
       });
 
       captcha_reload();
-      e.preventDefault();
     }
   });
 });
