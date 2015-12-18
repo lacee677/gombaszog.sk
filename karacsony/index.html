@@ -25,23 +25,25 @@ group: karacsony
  		    </div>
  		    
 			<div class="col-md-6">
-				<label for="christmas_ticket_email">A megrendelő e-mail címe: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Erre a címre küldjük a fizetési információkat és a kupont!"></i></label>
-				<input type="email" class="form-control" id="christmas_ticket_email" placeholder="te@te.com" name="christmas_ticket[email]"/>
-			</div>
-			
-			<div class="col-md-6">
-				<label for="christmas_ticket_phone">A megrendelő telefonszáma: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Országkóddal teljes formájában, például +421901234567"></i></label>
-				<input type="text" class="form-control" id="christmas_ticket_phone" placeholder="+421xxxxxxxxx" name="christmas_ticket[phone]"/>
+				<div class="form-group">
+					<label for="christmas_ticket_email">A megrendelő e-mail címe: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Erre a címre küldjük a fizetési információkat és a kupont!"></i></label>
+					<input type="email" class="form-control" id="christmas_ticket_email" placeholder="te@te.com" name="christmas_ticket[email]"/>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="christmas_ticket_captcha">Megerősítő kód <i class="fa fa-info-circle info-tooltip re-captcha" data-toggle="tooltip" data-placement="bottom" title="Az alábbi mezőbe a jobb oldalon található kódot (betűk és számok) kell bemásolni. Ha a szöveg nem lenne olvasható, kattints és kapsz újat!"></i></label>
+					<input type="text" class="form-control" id="christmas_ticket_captcha" placeholder="Ezt írd ide --&gt;" name="christmas_ticket[captcha]" style="background-size: 120px; background-position: right center; background-repeat: no-repeat;"/>
+				</div>
 			</div>
 
-            <div class="col-md-6">
-                <label class="control-label" for="christmas_ticket_captcha">Megerősítő kód <i class="fa fa-info-circle info-tooltip re-captcha" data-toggle="tooltip" data-placement="bottom" title="Az alábbi mezőbe a jobb oldalon található kódot (betűk és számok) kell bemásolni. Ha a szöveg nem lenne olvasható, kattints és kapsz újat!"></i></label>
-                <input type="text" class="form-control" id="christmas_ticket_captcha" placeholder="Ezt írd ide --&gt;" name="christmas_ticket[captcha]" style="background-size: 120px; background-position: right center; background-repeat: no-repeat;"/>
-            </div>
-			
 			<div class="col-md-6">
-				<p class="text-center"><button id="sendchristmasticketbutton" class="btn btn-primary">&nbsp;Tovább&nbsp;</button></p>
-			</div>		
+				<div class="form-group">
+					<label for="christmas_ticket_phone">A megrendelő telefonszáma: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Országkóddal teljes formájában, például +421901234567"></i></label>
+					<input type="text" class="form-control" id="christmas_ticket_phone" placeholder="+421xxxxxxxxx" name="christmas_ticket[phone]"/>
+				</div>
+				<div class="form-group">
+					<p class="text-center"><button id="sendchristmasticketbutton" class="btn btn-primary">&nbsp;Tovább&nbsp;</button></p>
+				</div>
+			</div>	
 			
             <div class="col-md-12">
               <p class="text-justified">A rendelés és sikeres fizetés után e-mailben küldjük a címedre a kupont, ami kinyomtatva belépésre jogosítja későbbi tulajdonosát, illetve a hamarosan induló, hagyományos jegyvásárlási felületen további szolgáltatások - partybusz, ételjegyek, stb - is megvásárolhatóak lesznek a belépőjegy mellé.</p> 
