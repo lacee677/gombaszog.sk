@@ -31,14 +31,13 @@ jQuery(document).ready(function($){
           data: $("form#christmas_ticket").serializeObject(),
           dataType: 'json'
         }).done(function (data) {
-			if(1){
+			if(data.email==$("#christmas_ticket_email").val() && data.phone_number==$("#christmas_ticket_phone").val()){
 				alert("Rendelés sikeresen elküldve!");
 				$(".form-control").attr('disabled','disabled');
 				$("#sendchristmasticketbutton").attr('disabled','disabled');
-				$("#sendchristmasticketbutton").text("Rendelés elküldve")
-				console.log(data);
+				$("#sendchristmasticketbutton").text("Rendelés elküldve");
 			}else{
-				
+				alert("Hiba történt, kérjük, ellenőrizze, hogy helyesen töltötte-e ki az adatokat!")é
 			}
         });
 
