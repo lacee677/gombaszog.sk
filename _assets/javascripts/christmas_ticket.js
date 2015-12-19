@@ -32,10 +32,10 @@ jQuery(document).ready(function($){
           dataType: 'json'
         }).done(function (data) {
 			if(data.email==$("#christmas_ticket_email").val() && data.phone_number==$("#christmas_ticket_phone").val()){
-				alert("Rendelés sikeresen elküldve!");
+				alert("Rendelés sikeresen elküldve! Köszönjük a megrendelést! Hamarosan érkezik egy email a megadott címre.");
 				$(".form-control").attr('disabled','disabled');
 				$("#sendchristmasticketbutton").attr('disabled','disabled');
-				$("#sendchristmasticketbutton").text("Rendelés elküldve");
+				$("#sendchristmasticketbutton").text("Sikeres rendelés");
 			}else{
 				alert("Hiba történt, kérjük, ellenőrizze, hogy helyesen töltötte-e ki az adatokat!");
 			}
