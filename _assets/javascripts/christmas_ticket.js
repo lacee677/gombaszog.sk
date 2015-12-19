@@ -31,7 +31,15 @@ jQuery(document).ready(function($){
           data: $("form#christmas_ticket").serializeObject(),
           dataType: 'json'
         }).done(function (data) {
-          console.log(data);
+			if(1){
+				alert("Rendelés sikeresen elküldve!");
+				$(".form-control").attr('disabled','disabled');
+				$("#sendchristmasticketbutton").attr('disabled','disabled');
+				$("#sendchristmasticketbutton").text("Rendelés elküldve")
+				console.log(data);
+			}else{
+				
+			}
         });
 
         e.preventDefault();
