@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
 				$("#sendchristmasticketbutton").attr('disabled','disabled');
 				$("#sendchristmasticketbutton").text("Rendelés elküldve");
 			}else{
-				alert("Hiba történt, kérjük, ellenőrizze, hogy helyesen töltötte-e ki az adatokat!")é
+				alert("Hiba történt, kérjük, ellenőrizze, hogy helyesen töltötte-e ki az adatokat!");
 			}
         });
 
