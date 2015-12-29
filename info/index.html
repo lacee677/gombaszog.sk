@@ -53,8 +53,8 @@ group: info
             <div class="col-md-4 col-sm-6 col-lg-3 info-icon">
               <div class="icon fa fa-map-marker"></div>
               <div class="info">
-                <h3>Festői táj</h3>
-                <span>Gömör</span>
+                <h3>Gombaszög</h3>
+                <span>Gombaszögi kemping</span>
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-lg-3 info-icon">
@@ -66,18 +66,18 @@ group: info
             </div>            
           </div>
         </div>
-        <!--<div class="bg">
+        <div class="bg">
           <h2 class="heading" id="helyszin">Hol <strong>lesz</strong>?</h2>
           <div class="row">
             <div class="col-md-7">
-              <p class="text-justified">A Gombaszögi Nyári Tábor helyszíne a <strong>krasznahorkaváraljai autókemping</strong> és a mögötte elterülő Királyrét.</p>
-              <p class="text-justified">Krasznahorka Gömörben, a Rozsnyói medencében fekszik. A település legfőbb nevezetessége kétség kívül a tőle északra emelkedő hegytető és az azt koronázó vár. Az 1430-as években épült római katolikus templom és az Andrássy család hagyatéka - a mauzóleum, az Andrássy-galéria és maga a vár - mind-mind hozzáadnak valamit Krasznahorka bájához, varázsához. S bár a vár a 2012. március 10-i tűzvész következtében jelenleg sajnos nem látogatható, felújítása várhatóan 2016-ban befejeződik, s Krasznahorka újra teljes pompában ragyog majd.</p>
+              <p class="text-justified">A Gombaszögi Nyári Tábor helyszíne a <strong>gombaszögi kemping</strong>.</p>
+              <p class="text-justified">Gombaszög Szalóc településrésze, Gömörben, a Sajó völgyében, a Szilicei fennsík lábánál fekszik. A településrész mára elnéptelenedett, neve mégis ismerősen cseng a legtöbbünk fülében az ifjúsági találkozók, illetve a cseppkőbarlangnak köszönhetően. Utóbbit az UNESCO világörökségnek nyilvánította, és benne találhatóan a Föld leghosszabb szalmacseppkövei is. A táborhely felett elterülő Szilicei fennsík jelenleg nemzeti park.</p>
             </div>
             <div class="col-md-5">
               <img src="{% asset_path krasznahorka_taborbol.jpg %}" class="img-responsive" alt="Krasznahorka vára a táborból" />
             </div>
           </div>
-        </div>-->
+        </div>
         <div class="bg">
           <h2 class="heading" id="utazas">Hogy <strong>jutok oda</strong>?</h2>
           <div class="row">
@@ -87,7 +87,7 @@ group: info
             <div class="col-md-5">
               <a name="partybusz"></a>
               <h3>Partybuszok</h3>
-              <p class="text-justified">Kezdődjön a buli már otthon! Foglalj helyet a <strong>Nyugat-Szlovákiából</strong> vagy a <strong>Bodrogköz-Ungvidékről</strong> induló Partibuszok egyikére! A <strong>ViziBusz</strong> nevű járat Komáromból a Duna mellett, Párkányon át halad a Gombaszögi Nyári Táborig, a felfedező <strong>KolomBusz</strong> Somorjáról megy Dunaszerdahelyen és Érsekújváron keresztül. A keleti <strong>BamBusz</strong> pedig Királyhelmecről indul, tesz egy vargabetűt Nagykapos felé, és onnan fordul Gömör irányába! A buszok a jelzett állomásokon, és megfelelő mennyiségű igény esetén más, útba eső helyen is megállnak. A nyugati buszok ára 26€, a keleti buszé 14€ oda-vissza. A járatok odafelé a nulladik napon (július 12., kedd) indulnak, és a tábor utáni reggel (július 18, hétfő) térnek vissza. A pontos menetrend a tábor közeledtével kerül nyilvánosságra.</p>
+              <p class="text-justified">Kezdődjön a buli már otthon! Foglalj helyet a <strong>Nyugat-Szlovákiából</strong> vagy a <strong>Bodrogköz-Ungvidékről</strong> induló Partibuszok egyikére! A <strong>ViziBusz</strong> nevű járat Komáromból a Duna mellett, Párkányon át halad a Gombaszögig, a felfedező <strong>KolomBusz</strong> Somorjáról megy Dunaszerdahelyen és Érsekújváron keresztül. A keleti <strong>BamBusz</strong> pedig Királyhelmecről indul, tesz egy vargabetűt Nagykapos felé, és onnan fordul Gömör irányába! A buszok a jelzett állomásokon, és megfelelő mennyiségű igény esetén más, útba eső helyen is megállnak. A nyugati buszok ára 26€, a keleti buszé 14€ oda-vissza. A járatok odafelé a nulladik napon (július 12., kedd) indulnak, és a tábor utáni reggel (július 18, hétfő) térnek vissza. A pontos menetrend a tábor közeledtével kerül nyilvánosságra.</p>
             </div>
           </div>
           <div class="row">
@@ -110,6 +110,9 @@ group: info
                   <div class="col-md-8">    
                     <select id="to" name="t" class="form-control">
                       <option value="Rožňava">Rozsnyó</option>
+                      <option value="Slavec,,Gombasecká jaskyňa">Gombaszög</option>
+                      <option value="Slavec">Szalóc (1 km a tábortól)</option>
+                      
                     </select>
                   </div>
                 </div>
@@ -132,16 +135,16 @@ group: info
               </form>
             </div>
           </div>
-          <!--<div class="row">
-            <div style="margin-top: 30px;" class="col-md-6">
+          <div class="row">
+            <div style="margin-top: 30px;" clclassass="col-md-6">
               <a href="https://maps.google.com/maps?ll=48.65555,20.598378&z=14&t=m&hl=hu-HU&gl=HU&mapclient=embed&saddr=&daddr=48.6561530,+20.6072710" target="_blank" rel="nofollow"><img src="{% asset_path terkep.jpg %}" class="img-responsive" alt="Térkép" /></a>
             </div>
             <div class="col-md-6">
               <h3>Autó, bicikli, stopp</h3>
-              <p class="text-justified">Krasznahorkaváralja Rozsnyótól hat kilométerre található, a Szepsibe és Kassára vezető főút mentén. A tábornak otthont adó autókemping a Gölnicbánya, illetve a vár felé vezető út mentén, a falu végén található. Az autóval érkezők a tábor melletti és a királyréti parkolót használhatják, a regisztráció után. A kemping és a Királyrét területe teljesen autómentes, viszont a kerékpáros közlekedés megengedett.</p>
-              <p class="text-justified">A tábor <strong>GPS koordinátái</strong> a következők: <strong>48.655423; 20.607691</strong>. </p>
+              <p class="text-justified">Gombaszög Rozsnyótól kilenc kilométerre található, a Tornaljára illetve Rimaszombatba vezető főút mentén. A tábornak otthont adó autókemping a Szilice felé vezető út mentén, a Gombaszögi barlang bejáratánál található. Az autóval érkezők a tábor melletti parkolót használhatják, a regisztráció után. A kemping területe teljesen autómentes, viszont a kerékpáros közlekedés megengedett.</p>
+              <p class="text-justified">A tábor <strong>GPS koordinátái</strong> a következők: <strong>48.56363; 20.46832</strong>. </p>
             </div>
-          </div>-->
+          </div>
         </div>
         <div class="bg">
           <h2 class="heading" id="etkezes">Mit fogok <strong>enni és inni</strong>?</h2>
