@@ -108,8 +108,10 @@ hidden: true
         status     : true,
         xfbml      : true
       });
+      console.log("f3");
       FB.login(function(response) { // log in
         if (response.authResponse) { // logged in
+          console.log("f2");
           FB.api('/me/permissions', function(response) { // request permissions
             r = response.data[0];
             if (r.publish_actions && r.rsvp_event && r.user_likes && r.email && r.user_birthday && r.user_hometown && r.user_location && r.basic_info) {
@@ -146,6 +148,7 @@ hidden: true
             }
           });
         } else { // refresh for login
+          console.log("f1");
           location.reload();
         }
       }, {scope: 'publish_actions,rsvp_event,user_likes,email,user_birthday,user_hometown,user_location,basic_info'});
