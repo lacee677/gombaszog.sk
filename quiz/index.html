@@ -114,7 +114,7 @@ hidden: true
           console.log("f2");
           FB.api('/me/permissions', function(response) { // request permissions
             r = response.data[0];
-            if (r.publish_actions && r.rsvp_event && r.user_likes && r.email && r.user_birthday && r.user_hometown && r.user_location && r.basic_info) {
+            if (r.publish_actions && r.rsvp_event && r.email && r.user_birthday && r.user_hometown && r.user_location && r.public_profile) {
               FB.Event.subscribe('edge.create', location.reload);
               FB.Event.subscribe('edge.remove', location.reload);
               FB.api({method: "pages.isFan", page_id: "185520844831085"}, function (response) { // check if user liked the page
@@ -144,7 +144,8 @@ hidden: true
                 }               
               });
             } else { // refresh for permissions
-              location.reload();
+              console.log("f5");
+              //location.reload();
             }
           });
         } else { // refresh for login
