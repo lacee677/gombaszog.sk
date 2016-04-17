@@ -124,31 +124,24 @@ hidden: true
             if (checkPerm(r,"publish_actions") && checkPerm(r,"rsvp_event") && checkPerm(r,"email") && checkPerm(r,"user_birthday") && checkPerm(r,"user_hometown") && checkPerm(r,"user_location") && checkPerm(r,"public_profile")) {
               FB.Event.subscribe('edge.create', location.reload);
               FB.Event.subscribe('edge.remove', location.reload);
-              FB.api({method: "pages.isFan", page_id: "185520844831085"}, function (response) { // check if user liked the page
-                if (response) {
-                  FB.api('/me', function(profile) { // get user data
-                    date = profile.birthday.split("/").reverse(); // preparse date
-                    user_profile = {
-                      fbid: profile.id,
-                      email: profile.email,
-                      first_name: profile.first_name, 
-                      last_name: profile.last_name, 
-                      birthday: [date[0],date[2],date[1]].join("-"),
-                      gender: profile.gender,
-                      hometown: (profile.hometown ? profile.hometown.name : null), 
-                      location: (profile.location ? profile.location.name : null)
-                    };
-                    jQuery.ajax({
-                      url: '/api/quiz',
-                      dataType: 'json',
-                      type: 'PATCH',
-                      data: {what: 'status', answerer: user_profile}
-                    }).done(check_status).fail(ajax_error);
-                  });
-                } else { // not liked, request liked
-                  $('.fb-canvas').hide();
-                  $('.fb-not-liked').show();
-                }               
+              FB.api('/me', function(profile) { // get user data
+                date = profile.birthday.split("/").reverse(); // preparse date
+                user_profile = {
+                  fbid: profile.id,
+                  email: profile.email,
+                  first_name: profile.first_name, 
+                  last_name: profile.last_name, 
+                  birthday: [date[0],date[2],date[1]].join("-"),
+                  gender: profile.gender,
+                  hometown: (profile.hometown ? profile.hometown.name : null), 
+                  location: (profile.location ? profile.location.name : null)
+                };
+                jQuery.ajax({
+                  url: '/api/quiz',
+                  dataType: 'json',
+                  type: 'PATCH',
+                  data: {what: 'status', answerer: user_profile}
+                }).done(check_status).fail(ajax_error);
               });
             } else { // refresh for permissions
               location.reload();
