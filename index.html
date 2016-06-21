@@ -511,6 +511,67 @@ group: fooldal
     </div>
   </section>
 
+  
+
+  <section id="events">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8">
+          <div class="single-event latest-post">
+            <h2 class="heading">Friss <strong>híreink</strong></h2>
+            {% for post in site.posts limit: 4 %}
+            <div class="media">
+              <div class="pull-left">
+                <a href="{{ post.url }}"><img src="{{ post.thumbnail | replace: 'image_','thb_image_' }}" alt="" width="125"></a>
+              </div>
+              <div class="media-body">
+                <a href="{{ post.url }}"><h3 class="media-heading">{{ post.title }}</h3></a>
+                <div class="post-meta">
+                  <span class="pull-left">{{ post.author }}</span>
+                  <span class="pull-right">{{ post.date | date: '%Y. %B %d.' | localize }}</span>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="single-event">
+            <h2 class="heading">SPLIFF447 ft. Gombaszög - <strong>Ezen a nyáron</strong></h2>
+            <div class="media">
+              <iframe width="560" height="315" src="//www.youtube.com/embed/NWqJlRksAvg" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="single-event">
+            <h2 class="heading">A <strong>táborról</strong></h2>
+            <div class="media">
+              <img style="width: 100%; margin-bottom: 15px;" src="{% asset_path kezek.jpg %}" alt="">
+              <div class="media-body">
+                <p class="text-justified">A tábor a szlovákiai magyar ifjúság hagyományos <strong>találkozóhelye</strong>. A <strong>fesztiváli</strong> hangulatról különböző stílusokat képviselő hazai és külföldi zenekarok, DJ-k és VJ-k gondoskodnak. A tábori <strong>szabadegyetem</strong> egy semleges platform közösségünk aktuális történéseinek és jövőjének megvitatására, a felvidéki alkotók és a tudományos élet bemutatására, hagyományaink ápolására. A <strong>csapatjátékok</strong> révén pedig barátaiddal próbára tehetitek ügyességeteket, műveltségeteket és tudásotokat is!</p>
+              </div>
+              <ul class="list-inline pull-right">
+                <li><a class="view-info" href="/info"><span>Tudj meg többet</span></a></li>
+                <!--<li><a class="view-info" href="/jegyek"><span>Jegyelővétel</span></a></li>-->
+              </ul>
+            </div>
+          </div>        
+          
+          <!--<div class="single-event photo-gallery">
+            <h2 class="heading"><strong>Instagaléria</strong></h2>
+            <ul class="galery" id="instafeed">
+            </ul>
+          </div>-->
+          
+          <div class="single-event">
+            <h2 class="heading">Legutóbbi <strong>videók</strong></h2>
+            <iframe width="425" height="349" src="//www.youtube.com/embed/qEnLJ5QXP1Q" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#events-->
+  
+  
   <section><!-- #stream -->
     <div class="container">
       <div class="row">
@@ -518,13 +579,6 @@ group: fooldal
 		<div class="col-md-6">
           <div class="bg" id="videostream">
             <iframe width="560" height="315" src="//www.youtube.com/embed/NWqJlRksAvg" frameborder="0" allowfullscreen></iframe>
-          </div>
-          
-        </div>
-		
-        <div class="col-md-6">
-          <div class="bg" id="videostream">
-            <iframe width="560" height="315" src="//www.youtube.com/embed/ZSX7rw404uY" frameborder="0" allowfullscreen></iframe>
           </div>
           
         </div>
@@ -556,68 +610,8 @@ group: fooldal
       </div>
     </div>
   </section><!-- /#stream -->
-
   
- 
   
-
-  <section id="events">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-8">
-          <div class="single-event latest-post">
-            <h2 class="heading">Friss <strong>híreink</strong></h2>
-            {% for post in site.posts limit: 4 %}
-            <div class="media">
-              <div class="pull-left">
-                <a href="{{ post.url }}"><img src="{{ post.thumbnail | replace: 'image_','thb_image_' }}" alt="" width="125"></a>
-              </div>
-              <div class="media-body">
-                <a href="{{ post.url }}"><h3 class="media-heading">{{ post.title }}</h3></a>
-                <div class="post-meta">
-                  <span class="pull-left">{{ post.author }}</span>
-                  <span class="pull-right">{{ post.date | date: '%Y. %B %d.' | localize }}</span>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div class="single-event">
-            <h2 class="heading">Felvidék Allstars & jóvilágvan feat. Gombaszög - <strong>Levegő</strong></h2>
-            <div class="media">
-              <iframe width="560" height="315" src="//www.youtube.com/embed/qEnLJ5QXP1Q" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4">
-          <div class="single-event">
-            <h2 class="heading">A <strong>táborról</strong></h2>
-            <div class="media">
-              <img style="width: 100%; margin-bottom: 15px;" src="{% asset_path kezek.jpg %}" alt="">
-              <div class="media-body">
-                <p class="text-justified">A tábor a szlovákiai magyar ifjúság hagyományos <strong>találkozóhelye</strong>. A <strong>fesztiváli</strong> hangulatról különböző stílusokat képviselő hazai és külföldi zenekarok, DJ-k és VJ-k gondoskodnak. A tábori <strong>szabadegyetem</strong> egy semleges platform közösségünk aktuális történéseinek és jövőjének megvitatására, a felvidéki alkotók és a tudományos élet bemutatására, hagyományaink ápolására. A <strong>csapatjátékok</strong> révén pedig barátaiddal próbára tehetitek ügyességeteket, műveltségeteket és tudásotokat is!</p>
-              </div>
-              <ul class="list-inline pull-right">
-                <li><a class="view-info" href="/info"><span>Tudj meg többet</span></a></li>
-                <!--<li><a class="view-info" href="/jegyek"><span>Jegyelővétel</span></a></li>-->
-              </ul>
-            </div>
-          </div>        
-          
-          <div class="single-event photo-gallery">
-            <h2 class="heading"><strong>Instagaléria</strong></h2>
-            <ul class="galery" id="instafeed">
-            </ul>
-          </div>
-          
-          <div class="single-event">
-            <h2 class="heading">Legutóbbi <strong>videók</strong></h2>
-            <iframe width="425" height="349" src="//www.youtube.com/embed/EmSRvoEH5R8" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!--/#events-->
   <!--
   <section class="sponsor-section">
     <div class="container">
