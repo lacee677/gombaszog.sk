@@ -1,0 +1,40 @@
+---
+layout: page
+title: Térkép
+group: terkep
+---
+<style type="text/css">
+	span {
+		color: rgba(241, 196, 15, 1.0);
+	}
+	span:hover{
+		color: rgba(184, 149, 19, 1.0);
+	}
+  .col-sm-12 img {
+    max-width: 93px;
+  }
+</style>
+
+
+
+
+<div id="press">
+      <div class="container">
+        <div class="bg">
+          <div class="row">
+			<h2 class="heading" style="padding-left:15px;"><strong>Rólunk</strong></h2>
+            <div class="col-sm-12">
+
+              <img src="{% asset_path terkep_raszter_upd.png %}" id="gomba-map"/><br>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+<script>
+$("gomba-map").on("mousemove", function(e){
+		console.log("pageX: " + event.pageX + ", pageY: " + event.pageY);
+	})
+</script>
