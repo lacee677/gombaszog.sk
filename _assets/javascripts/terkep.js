@@ -5,8 +5,8 @@ if ($("#gomba-map").length > 0) {
 				id: 0,
 				area: {
 						xw1: 940,
-						xw2: 982,
-						yh1: 1051,
+						xw2: 1038,
+						yh1: 981,
 						yh2: 1093
 					},
 				slug: "test",
@@ -18,8 +18,8 @@ if ($("#gomba-map").length > 0) {
 				id: 1,
 				area: {
 						xw1: 1491,
-						xw2: 310,
-						yh1: 1647,
+						xw2: 1647,
+						yh1: 310,
 						yh2: 465
 					},
 				slug: "pajtaszinhaz",
@@ -50,7 +50,7 @@ if ($("#gomba-map").length > 0) {
 	var getPlaceContent = function(px, py){
 		opxw = 1920*(px-imO.left)/imW;
 		opyh = 1348*(py-imO.top)/imH;
-		console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh);
+		//console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh);
 		mapPlaces.forEach(function(place){
 				if(isThere(opxw, opyh, place.area)){
 					console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh + ", is in " + place.title);
