@@ -13,6 +13,24 @@ group: terkep
 	img#gomba-map{
 		width: 100%;
 	}
+	div#location-details{
+		position: absolute;
+		display: none;
+		padding: 10px;
+		max-width: 400px;
+		max-height: 160px;
+		min-width: 100px;
+		min-height: 40px;
+		background-color: purple;
+		color: #EEE;
+	}
+	div#location-description {
+		font-size: smaller;
+	}
+	h3#location-title{
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
 </style>
 
 
@@ -24,9 +42,10 @@ group: terkep
           <div class="row">
 			<h2 class="heading" style="padding-left:15px;"><strong>Rólunk</strong></h2>
             <div class="col-sm-12">
-
-              <img src="{% asset_path terkep_raszter_upd.png %}" id="gomba-map"/><br>
-
+              <img src="{% asset_path terkep_raszter_upd.png %}" id="gomba-map"/>
+              <div id="location-details">
+				  <h4 id="location-title"></h4>
+              </div>
             </div>
           </div>
         </div>
