@@ -249,6 +249,19 @@ if ($("#gomba-map").length > 0) {
 			description: "A gombaszögi barlang bejárata - Az akár három méteres szalmacseppköveiről ismert, UNESCO világörökséggé nyilvánított barlang a táborjeggyel ingyenesen meglátogatható a reggeli órákban. A barlanglátogatásra jelentkezni a portán lehet."
 		},
 		{
+			id: 20,
+			area: {
+					xw1: 645,
+					xw2: 786,
+					yh1: 770,
+					yh2: 888
+				},
+			location: "kopjafapark",
+			title: "Kopjafapark",
+			program: false,
+			description: "A mindenkori Gombaszögi táborok, Nyári Ifjúsági Találkozók, Művelődési táborok kopjafáinak nagy részével díszített hely. Ide kerül az idei kopjafa is, amelyet Nagyferenc Katalinnal együtt te is faraghatsz a kopjafafaragó házban."
+		},
+		{
 			id: 21,
 			area: {
 					xw1: 510,
@@ -269,8 +282,8 @@ if ($("#gomba-map").length > 0) {
 					yh1: 180,
 					yh2: 280
 				},
-			location: "Fotólabor",
-			title: "Fotólabor",
+			location: "Fotósműhely",
+			title: "Fotósműhely",
 			program: true,
 			description: "Fotókészítés, előhívás, gyönyörködés"
 		},
@@ -411,6 +424,10 @@ if ($("#gomba-map").length > 0) {
 			if(isThere(opxw, opyh, place.area)){
 				if(showedLocationId!=place.id){
 					showedLocationId=place.id;
+					$("#gomba-map").css( 'cursor', 'pointer' );
+					$("#gomba-map").click(function(){
+							$("#location-details").click();
+						});
 					$("#location-title").text(place.title);
 					$("#location-details").css("top", place.area.yh2*imH/1348 + "px");
 					$("#location-details").css("left", place.area.xw1*imW/1920 + "px");
@@ -425,11 +442,14 @@ if ($("#gomba-map").length > 0) {
 					}
 				}
 				isActive = true;
+				break;
 			}
 		}
 		if(!isActive){
 			$("#location-details").hide();
 			showedLocationId=0;
+			$("#gomba-map").css('cursor', 'default');
+			$("#gomba-map").unbind("click");
 		}
 	};
 	

@@ -79,10 +79,9 @@ group: terkep
 			<h2 class="heading" style="padding-left:15px;"><strong>Rólunk</strong></h2>
             <div class="col-sm-12">
 				<img src="{% asset_path terkep_raszter_upd.png %}" id="gomba-map"/>
-				<div id="location-details">
+              <div id="location-details" data-toggle="modal" data-target=".description-modal">
 				  <h3 id="location-title"></h4>
-				  <span id="location-description-link" data-toggle="modal" data-target=".description-modal">Részletek</span>
-				</div>
+              </div>
 				<div class="modal fade description-modal" tabindex="-1" role="dialog" aria-labelledby="description-f" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-body">
