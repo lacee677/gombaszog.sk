@@ -22,8 +22,8 @@ if ($("#gomba-map").length > 0) {
 					yh1: 310,
 					yh2: 465
 				},
-			location: "Pajtaszínház",
-			title: "Pajtaszínház",
+			location: "PajtaSzínház",
+			title: "PajtaSzínház",
 			program: true,
 			description: "Egy eredeti gömöri pajta, amelyet a Gombaszög szervezői és a Fiatal Építészek Fóruma telepített a völgybe, és a Gurigongo Symposium tölt meg élettel. Színházi előadások, filmvetítések, slam, és még sok más jó vár mindenkit."
 		},
