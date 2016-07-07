@@ -116,7 +116,7 @@ if ($("#gomba-map").length > 0) {
 			location: "gombabolt",
 			title: "Gombabolt",
 			program: false,
-			description: "Étel-ital, hasznos eszközök boltja"
+			description: "Egy igazi kisbolt és trafik, tehát itt vehetsz ételt-italt, buborékfújót és egyéb más hasznos eszközt, illetve cigarettát is itt tudsz beszerezni!"
 		},
 		{
 			id: 10,
@@ -363,7 +363,7 @@ if ($("#gomba-map").length > 0) {
 			location: "taxi",
 			title: "Taxidroszt",
 			program: false,
-			description: "Taxidroszt"
+			description: "Kedvezményes fuvarok a Rozsnyói medencében és Tornalja környékén! Hívd a T.V. Taxit a +421 905 565 335 vagy a +421 903 054 434 telefonszámok egyikén!"
 		},
 		{
 			id: 29,
