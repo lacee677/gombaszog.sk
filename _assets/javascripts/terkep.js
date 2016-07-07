@@ -12,7 +12,7 @@ if ($("#gomba-map").length > 0) {
 			location: "Labirintus Udvar",
 			title: "Labirintus udvar",
 			program: true,
-			description: "Önismeret, pszichológia"
+			description: "A TANDEM nonprofit szervezet önismereti programsátra idén is gazdag kínálattal várja mindazokat, akik a tábori forgatagban kicsit megpihennének testben, és lélekben egyaránt. A szerda délután kezdődő programokra szombat estig várjuk a magukra és másokra nyitott táborlakókat. A workshopok, előadások, egyéni tanácsadás, életpálya-szimulációs kötélpálya, és kerekasztal beszélgetések mellett teaház várja a felfrissülni vágyókat."
 		},
 		{
 			id: 2,
@@ -77,7 +77,7 @@ if ($("#gomba-map").length > 0) {
 			location: "Korona sátor",
 			title: "Korona sátor",
 			program: true,
-			description: "A tábor komolyzenei chillsátra"
+			description: "A tábor komolyzenei chillsátra, amelyet a pelsőci Korona együttes tölt meg élettel és tartalommal!"
 		},
 		{
 			id: 7,
@@ -87,10 +87,10 @@ if ($("#gomba-map").length > 0) {
 					yh1: 309,
 					yh2: 441
 				},
-			location: "Kocsma",
-			title: "Kocsma",
-			program: false,
-			description: "Egy igazi retró kocsma!"
+			location: "Kocsmaterasz",
+			title: "Kocsma és terasz",
+			program: true,
+			description: "Egy igazi retró kocsma egy óriási terasszal!"
 		},
 		{
 			id: 8,
@@ -103,7 +103,7 @@ if ($("#gomba-map").length > 0) {
 			location: "Kajaplacc",
 			title: "Kajaplacc",
 			program: false,
-			description: "Itt lakhatsz jól"
+			description: "Itt lakhatsz jól - ide gyere a Lecsópasszal és a Golden Hurkapasszal is."
 		},
 		{
 			id: 9,
@@ -181,7 +181,7 @@ if ($("#gomba-map").length > 0) {
 			location: "B-612",
 			title: "B-612 bolygó - JuGYIK sátor",
 			program: true,
-			description: "JuGYIK sátor"
+			description: "A JuGYIK irodalmi sátra"
 		},
 		{
 			id: 15,
@@ -207,7 +207,7 @@ if ($("#gomba-map").length > 0) {
 			location: "Gombaovi",
 			title: "Gombaovi",
 			program: true,
-			description: "Kisgyermek óvoda"
+			description: "Kisgyermek óvoda óvónénikkel és gazdag programmal!"
 		},
 		{
 			id: 17,
@@ -499,4 +499,8 @@ if ($("#gomba-map").length > 0) {
 				setPosition();
 			}, 300);
 		});
+		
+	$(window).resize(function() {
+		setPosition();
+	});
 }
