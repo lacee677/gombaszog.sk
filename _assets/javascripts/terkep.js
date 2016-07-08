@@ -48,7 +48,7 @@ if ($("#gomba-map").length > 0) {
 					yh1: 636,
 					yh2: 750
 				},
-			location: "innsator",
+			location: "Chill",
 			title: "Innsátor",
 			program: true,
 			description: "A chill és az alternatív zene sátra"
