@@ -391,6 +391,19 @@ if ($("#gomba-map").length > 0) {
 			program: false,
 			description: "Jegyvétel és információ"
 		},
+		{
+			id: 31,
+			area: {
+					xw1: 170,
+					xw2: 300,
+					yh1: 1080,
+					yh2: 1200
+				},
+			location: "iranytu",
+			title: "Iránytű",
+			program: false,
+			description: "Nem, valójában itt nincs egy óriási iránytű, de akár lehetne is. Helyette egy óriási szikla van itt, amiről fantasztikus a kilátás a táborra!"
+		}
 	];
 	
 	var imW = 1920;
