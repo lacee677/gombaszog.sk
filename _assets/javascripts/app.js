@@ -10,6 +10,7 @@
  *= require jegyek.js
  *= require zene.js
  *= require sajto.js
+ *= require terkep.js
  *= require poll.js
  *= require christmas_ticket.js
  */
