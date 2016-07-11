@@ -412,10 +412,10 @@ if ($("#gomba-map").length > 0) {
 					yh1: 446,
 					yh2: 528
 				},
-			location: "iranytu",
-			title: "Iránytű",
-			program: false,
-			description: "Nem, valójában itt nincs egy óriási iránytű, de akár lehetne is. Helyette egy óriási szikla van itt, amiről fantasztikus a kilátás a táborra!"
+			location: "SZAKC sátor",
+			title: "SZAKC",
+			program: true,
+			description: "A Szövetség a Közös Célokért sátra."
 		}
 	];
 	
