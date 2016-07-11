@@ -413,7 +413,7 @@ if ($("#gomba-map").length > 0) {
 					yh2: 528
 				},
 			location: "SZAKC sátor",
-			title: "SZAKC",
+			title: "SZAKC sátor",
 			program: true,
 			description: "A Szövetség a Közös Célokért sátra."
 		}
