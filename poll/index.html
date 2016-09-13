@@ -71,7 +71,7 @@ group: otletborze
                     }
                     return false;
                 };
-                if (checkPerm(r, "publish_actions") && checkPerm(r, "rsvp_event") && checkPerm(r, "email") && checkPerm(r, "user_likes") && checkPerm(r, "user_birthday") && checkPerm(r, "user_hometown") && checkPerm(r, "user_location") && checkPerm(r, "public_profile")) {
+                if (checkPerm(r, "publish_actions") && checkPerm(r, "rsvp_event") && checkPerm(r, "email") && checkPerm(r, "user_birthday") && checkPerm(r, "user_hometown") && checkPerm(r, "user_location") && checkPerm(r, "public_profile")) {
                   data = {};
                   jQuery.each(jQuery(".poll-progress.selected"), function(k,v) {
                     data[jQuery(v).data("value")] = 1;
@@ -91,20 +91,19 @@ group: otletborze
                   }).fail(ajax_error);
                 } else { // refresh for permissions
 				  console.log("Permission error, details: publish_actions: " + checkPerm(r, "publish_actions") + 
-						"rsvp_event: " + checkPerm(r, "rsvp_event") + 
-						"user_likes: " + checkPerm(r, "user_likes") + 
-						"email: " + checkPerm(r, "email") + 
-						"user_birthday: " + checkPerm(r, "user_birthday") + 
-						"user_hometown: " + checkPerm(r, "user_hometown") + 
-						"user_location: " + checkPerm(r, "user_location") + 
-						"public_profile: " + checkPerm(r, "public_profile"));
+						" rsvp_event: " + checkPerm(r, "rsvp_event") + 
+						" email: " + checkPerm(r, "email") + 
+						" user_birthday: " + checkPerm(r, "user_birthday") + 
+						" user_hometown: " + checkPerm(r, "user_hometown") + 
+						" user_location: " + checkPerm(r, "user_location") + 
+						" public_profile: " + checkPerm(r, "public_profile"));
                   jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először engedélyezned kell az alkalmazásunkat. Ha ez megtörtént, töltsd újra az oldalat!</strong>");
                 }
               });
             } else { 
               jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először be kell lenned jelentkezned a Facebookon!</strong>");
             }
-          }, {scope: 'publish_actions,rsvp_event,user_likes,email,user_birthday,user_hometown,user_location,public_profile'});
+          }, {scope: 'publish_actions,rsvp_event,email,user_birthday,user_hometown,user_location,public_profile'});
         });
         jQuery(".poll-buttonspace").append(btn);
       } else {
