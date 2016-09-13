@@ -71,7 +71,7 @@ group: otletborze
                     }
                     return false;
                 };
-                if (checkPerm(r, "publish_actions") && checkPerm(r, "rsvp_event") && checkPerm(r, "user_likes") && checkPerm(r, "email") && checkPerm(r, "user_birthday") && checkPerm(r, "user_hometown") && checkPerm(r, "user_location") && checkPerm(r, "public_profile")) {
+                if (checkPerm(r, "publish_actions") && checkPerm(r, "rsvp_event") && checkPerm(r, "email") && checkPerm(r, "user_birthday") && checkPerm(r, "user_hometown") && checkPerm(r, "user_location") && checkPerm(r, "public_profile")) {
                   data = {};
                   jQuery.each(jQuery(".poll-progress.selected"), function(k,v) {
                     data[jQuery(v).data("value")] = 1;
