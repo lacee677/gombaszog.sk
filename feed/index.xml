@@ -18,7 +18,7 @@ hidden: true
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>{{ site.url }}{{ post.url }}</link>
         <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-        <image>{{ post.thumbnail }}</image>
+        <image>{{ site.url }}{{ post.thumbnail }}</image>
       </item>
     {% endfor %}
   </channel>
