@@ -4,7 +4,7 @@ if ($("#livepic").length > 0) {
 	}, 20000)
 }
 
-if ($("#weather-widget").length > 0) {
+if ($("#weatherwrap").length > 0) {
 
 	function renderWeather() {
 		var wIconWrap = document.getElementById("weatherimage");
