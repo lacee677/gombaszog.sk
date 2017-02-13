@@ -24,23 +24,27 @@ if ($("#weatherwrap").length > 0) {
 		}
 		var imgNode = document.createElement("IMG");
 		imgNode.setAttribute("class", "weatherimage-image");
-		imgNode.setAttribute("src", "img/wms/" + wData.weather[0].icon + ".png");
+		imgNode.setAttribute("src", "http://openweathermap.org/img/w/" + wData.weather[0].icon + ".png");
 		wIconWrap.appendChild(imgNode);
 
 		var wTemp = document.getElementById("weathertemp");
 		wTemp.innerHTML = K2C(wData.main.temp) + " ℃";
 
 		var wPressure = document.getElementById("weatherpressure");
-		wPressure.innerHTML = "Légnyomás: " + wData.main.sea_level + " hPa";
+		wPressure.innerHTML = "Légnyomás<br />" + wData.main.sea_level + " hPa";
+
+		var wWind = document.getElementById("weatherwind");
+		wPressure.wWind = "Szélsebesség<br />" + wData.wind.speed + " m/s";
 
 		var wHumid = document.getElementById("weatherhumidity");
-		wHumid.innerHTML = "Páratartalom: " + wData.main.humidity + "%";
+		wHumid.innerHTML = "Páratartalom<br />" + wData.main.humidity + "%";
 
-		var wSun = document.getElementById("weathersun");
+		var wSunR = document.getElementById("weathersunrise");
+		var wSunS = document.getElementById("weathersunrise");
 		var sunRise = new Date(parseInt(wData.sys.sunrise*1000));
-		// console.log("Napkelte: " + wData.sys.sunrise + ", " + (new Date(1476594047)));
 		var sunSet = new Date(wData.sys.sunset*1000);
-		wSun.innerHTML = "Napkelte: " + fillZeros(sunRise.getHours()) + ":" + fillZeros(sunRise.getMinutes()) + ", naplemente: " + fillZeros(sunSet.getHours()) + ":" + fillZeros(sunSet.getMinutes());
+		wSunR.innerHTML = "Napkelte<br />" + fillZeros(sunRise.getHours()) + ":" + fillZeros(sunRise.getMinutes());
+		sunSet.innerHTML = "Naplemente<br />" + fillZeros(sunSet.getHours()) + ":" + fillZeros(sunSet.getMinutes());
 	}
 
 	function updateWeather() {
@@ -52,7 +56,7 @@ if ($("#weatherwrap").length > 0) {
 				if(xmlhttp.status === 200){
 					var wData = JSON.parse(xmlhttp.responseText);
 					renderWeather(wData);
-					console.log(wData.main);
+					console.log(wData);
 				}else{
 					console.log('News download error: ' + xmlhttp.statusText )
 				}
