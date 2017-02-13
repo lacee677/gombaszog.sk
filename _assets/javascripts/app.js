@@ -8,6 +8,7 @@
  *= require vendor/select2_locale_hu
  *= require vendor/instafeed
  *= require jegyek.js
+ *= require livecam.js
  *= require zene.js
  *= require sajto.js
  *= require terkep.js
