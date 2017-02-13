@@ -711,3 +711,8 @@ div.biglogo {
 #livepic {
   width: 100%;
 }
+
+#weathertemp {
+  text-align: center;
+  font-size: xx-large;
+}
