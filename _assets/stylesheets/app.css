@@ -724,7 +724,7 @@ div.biglogo {
 
 .weather-block {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .weather-data {
@@ -733,5 +733,5 @@ div.biglogo {
 }
 
 #weatherinfo {
-  padding-top: 20px;
+  padding-top: 30px;
 }

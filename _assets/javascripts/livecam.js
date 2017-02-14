@@ -15,7 +15,11 @@ if ($("#weatherwrap").length > 0) {
 
 	function K2C(kelvin) {  
 		return Math.round(kelvin-273.15);
-	} 
+	}
+
+	function mps2kmph(mps) {
+		return 3.6*mps;
+	}
 
 	function deg2et(deg) {
 		if (deg <= 22.5 || deg >= 337.5) {
@@ -57,7 +61,7 @@ if ($("#weatherwrap").length > 0) {
 		wHumid.innerHTML = "Páratartalom<br /><span class='weather-data'>" + wData.main.humidity + "%</span>";
 
 		var wWind = document.getElementById("weatherwind");
-		wWind.innerHTML = "Szélsebesség<br /><span class='weather-data'>" + wData.wind.speed + " m/s</span>";
+		wWind.innerHTML = "Szélsebesség<br /><span class='weather-data'>" + mps2kmph(wData.wind.speed) + " km/h</span>";
 
 		var wWindDir = document.getElementById("weatherwinddir");
 		wWindDir.innerHTML = "Szélirány<br /><span class='weather-data'>" + deg2et(wData.wind.deg) + "</span>";
