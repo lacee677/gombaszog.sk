@@ -19,21 +19,21 @@ if ($("#weatherwrap").length > 0) {
 
 	function deg2et(deg) {
 		if (deg <= 22.5 || deg >= 337.5) {
-			return "észak"
+			return "észak";
 		} else if (deg <= 67.5) {
-			return "északkelet"
+			return "északkelet";
 		} else if (deg <= 112.5) {
-			return "kelet"
+			return "kelet";
 		} else if (deg <= 157.5) {
 			return "délkelet"
 		} else if (deg <= 202.5) {
-			return "dél"
+			return "dél";
 		} else if (deg <= 247.5) {
-			return "délnyugat"
+			return "délnyugat";
 		} else if (deg <= 292.5) {
-			return "nyugat"
-		} else if (deg <= 237.5) {
-			return "északnyugat"
+			return "nyugat";
+		} else if (deg <= 337.5) {
+			return "északnyugat";
 		}
 	}
 
@@ -60,10 +60,10 @@ if ($("#weatherwrap").length > 0) {
 		wWind.innerHTML = "Szélsebesség<br /><span class='weather-data'>" + wData.wind.speed + " m/s</span>";
 
 		var wWindDir = document.getElementById("weatherwinddir");
-		wWindDir.innerHTML = "Szélsebesség<br /><span class='weather-data'>" + deg2et(wData.wind.deg) + "</span>";
+		wWindDir.innerHTML = "Szélirány<br /><span class='weather-data'>" + deg2et(wData.wind.deg) + "</span>";
 
 		var wSunR = document.getElementById("weathersunrise");
-		var wSunS = document.getElementById("weathersunrise");
+		var wSunS = document.getElementById("weathersunset");
 		var sunRise = new Date(parseInt(wData.sys.sunrise*1000));
 		var sunSet = new Date(wData.sys.sunset*1000);
 		wSunR.innerHTML = "Napkelte<br /><span class='weather-data'>" + fillZeros(sunRise.getHours()) + ":" + fillZeros(sunRise.getMinutes()) + "</span>";
