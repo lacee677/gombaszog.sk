@@ -15,7 +15,27 @@ if ($("#weatherwrap").length > 0) {
 
 	function K2C(kelvin) {  
 		return Math.round(kelvin-273.15);
-	}  
+	} 
+
+	function deg2et(deg) {
+		if (deg <= 22.5 || deg >= 337.5) {
+			return "észak"
+		} else if (deg <= 67.5) {
+			return "északkelet"
+		} else if (deg <= 112.5) {
+			return "kelet"
+		} else if (deg <= 157.5) {
+			return "délkelet"
+		} else if (deg <= 202.5) {
+			return "dél"
+		} else if (deg <= 247.5) {
+			return "délnyugat"
+		} else if (deg <= 292.5) {
+			return "nyugat"
+		} else if (deg <= 237.5) {
+			return "északnyugat"
+		}
+	}
 
 	function renderWeather(wData) {
 		var wIconWrap = document.getElementById("weatherimage");
@@ -31,20 +51,23 @@ if ($("#weatherwrap").length > 0) {
 		wTemp.innerHTML = K2C(wData.main.temp) + " ℃";
 
 		var wPressure = document.getElementById("weatherpressure");
-		wPressure.innerHTML = "Légnyomás<br />" + wData.main.sea_level + " hPa";
-
-		var wWind = document.getElementById("weatherwind");
-		wPressure.wWind = "Szélsebesség<br />" + wData.wind.speed + " m/s";
+		wPressure.innerHTML = "Légnyomás<br /><span class='weather-data'>" + wData.main.sea_level + " hPa</span>";
 
 		var wHumid = document.getElementById("weatherhumidity");
-		wHumid.innerHTML = "Páratartalom<br />" + wData.main.humidity + "%";
+		wHumid.innerHTML = "Páratartalom<br /><span class='weather-data'>" + wData.main.humidity + "%</span>";
+
+		var wWind = document.getElementById("weatherwind");
+		wWind.innerHTML = "Szélsebesség<br /><span class='weather-data'>" + wData.wind.speed + " m/s</span>";
+
+		var wWindDir = document.getElementById("weatherwinddir");
+		wWindDir.innerHTML = "Szélsebesség<br /><span class='weather-data'>" + deg2et(wData.wind.deg) + "</span>";
 
 		var wSunR = document.getElementById("weathersunrise");
 		var wSunS = document.getElementById("weathersunrise");
 		var sunRise = new Date(parseInt(wData.sys.sunrise*1000));
 		var sunSet = new Date(wData.sys.sunset*1000);
-		wSunR.innerHTML = "Napkelte<br />" + fillZeros(sunRise.getHours()) + ":" + fillZeros(sunRise.getMinutes());
-		sunSet.innerHTML = "Naplemente<br />" + fillZeros(sunSet.getHours()) + ":" + fillZeros(sunSet.getMinutes());
+		wSunR.innerHTML = "Napkelte<br /><span class='weather-data'>" + fillZeros(sunRise.getHours()) + ":" + fillZeros(sunRise.getMinutes()) + "</span>";
+		wSunS.innerHTML = "Naplemente<br /><span class='weather-data'>" + fillZeros(sunSet.getHours()) + ":" + fillZeros(sunSet.getMinutes()) + "</span>";
 	}
 
 	function updateWeather() {

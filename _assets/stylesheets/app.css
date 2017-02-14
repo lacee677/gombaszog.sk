@@ -715,34 +715,18 @@ div.biglogo {
 #weathertemp {
   text-align: left;
   font-size: x-large;
-  display: inline-block;
-  width: 47%;
-  padding-left: 5%;
+  font-weight: bold;
 }
 
 #weatherimage {
-  display: inline-block;
-  width: 47%;
-  padding-right: 5%;
   text-align: right;
 }
 
 .weather-block {
   text-align: center;
-  width: 100%;
-  padding: 10px 0;
 }
 
-#weathersunrise {
-  text-align: center;
-  display: inline-block;
-  width: 47%;
-  padding-left: 5%;
-}
-
-#weatersunset {
-  display: inline-block;
-  width: 47%;
-  padding-right: 5%;
-  text-align: center;
+.weather-data {
+  font-size: large;
+  font-weight: bold;
 }
