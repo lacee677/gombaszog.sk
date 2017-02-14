@@ -724,9 +724,14 @@ div.biglogo {
 
 .weather-block {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .weather-data {
   font-size: large;
   font-weight: bold;
+}
+
+#weatherinfo {
+  padding-top: 20px;
 }
