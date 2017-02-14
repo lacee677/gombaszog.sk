@@ -18,7 +18,7 @@ if ($("#weatherwrap").length > 0) {
 	}
 
 	function mps2kmph(mps) {
-		return 3.6*mps;
+		return Math.round(36*mps)/10;
 	}
 
 	function deg2et(deg) {
