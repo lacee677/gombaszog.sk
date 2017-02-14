@@ -77,7 +77,7 @@ if ($("#weatherwrap").length > 0) {
 	function updateWeather() {
 		var xmlhttp=new XMLHttpRequest();
 		var rnsr = Math.round(Math.random()*19182);
-		xmlhttp.open("GET", 'http://api.openweathermap.org/data/2.5/weather?lat=48.563488&lon=20.467229&appid=251c4ed706476f19a5e8569a4068df4d');
+		xmlhttp.open("GET", 'https://kadbudapest.hu/cachemeteo/');
 		xmlhttp.onreadystatechange = function() {
 			if (xmlhttp.readyState === 4) {
 				if (xmlhttp.status === 200) {
