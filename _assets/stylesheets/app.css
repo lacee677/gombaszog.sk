@@ -707,3 +707,31 @@ div.biglogo {
 	padding-top: 13%;
 	display: block;
 }
+
+#livepic {
+  width: 100%;
+}
+
+#weathertemp {
+  text-align: left;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#weatherimage {
+  text-align: right;
+}
+
+.weather-block {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.weather-data {
+  font-size: large;
+  font-weight: bold;
+}
+
+#weatherinfo {
+  padding-top: 30px;
+}
