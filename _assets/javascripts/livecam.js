@@ -55,7 +55,7 @@ if ($("#weatherwrap").length > 0) {
 		wTemp.innerHTML = K2C(wData.main.temp) + " ℃";
 
 		var wPressure = document.getElementById("weatherpressure");
-		wPressure.innerHTML = "Légnyomás<br /><span class='weather-data'>" + wData.main.sea_level || wData.main.pressure + " hPa</span>";
+		wPressure.innerHTML = "Légnyomás<br /><span class='weather-data'>" + (wData.main.sea_level || wData.main.pressure) + " hPa</span>";
 
 		var wHumid = document.getElementById("weatherhumidity");
 		wHumid.innerHTML = "Páratartalom<br /><span class='weather-data'>" + wData.main.humidity + "%</span>";
