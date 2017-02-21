@@ -22,7 +22,9 @@ if ($("#weatherwrap").length > 0) {
 	}
 
 	function deg2et(deg) {
-		if (deg <= 22.5 || deg >= 337.5) {
+		if (!deg) {
+			return "össze-vissza";
+		} else if (deg <= 22.5 || deg >= 337.5) {
 			return "észak";
 		} else if (deg <= 67.5) {
 			return "északkelet";
