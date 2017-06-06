@@ -12,33 +12,34 @@ group: jegyek
           <ul class="clearfix">
             <li class="regular">
               <div class="regular-price">
-                <h2>Napijegy<span>helyszínen</span></h2>
-                <p class="price">&euro;12</p>
+                <h2>Gömöri nap<span>Gömör lakosainak</span></h2>
+                <p class="price">&euro;1</p>
                 <p class="price-content">
-                  Egy nap<br/> 
-                  Tábor és koncertek<br/>
+                  Szombat egész nap<br/> 
+                  helyszínen<br/>
                 </p>
               </div>
             </li>
             <li class="xplore">
               <div class="regular-price">
-                <h2>Esti jegy<span>helyszínen</span></h2>
-                <p class="price">&euro;7</p>
-                <p class="price-content">Egy nap<br>Koncertek</p>
+                <h2>Helyszíni<br />hetijegy</h2>
+                <p class="price">&euro;49</p>
+                <p class="price-content">6 nap<br>helyszínen</p>
               </div>
             </li>
             <li class="rock">
               <div class="regular-price">
-                <h2>Júliusi<br />hetijegy<span>elővételben júliusban</span></h2>
+                <h2>Elővételes<br />hetijegy<span>július 7-ig</span></h2>
                 <p class="price">&euro;39</p>
-                <p class="price-content">Hat nap<br> Tábor és koncertek</p>
+                <p class="price-content">6 nap<br>elővételben</p>
+                <a class="btn btn-primary btn-pricing">Jegyelővétel!</a>
               </div>
             </li>
             <li class="xplore">
               <div class="regular-price">
-                <h2>Hetijegy<span>helyszínen</span></h2>
-                <p class="price">&euro;45</p>
-                <p class="price-content">Hat nap<br>Tábor és Koncertek</p>
+                <h2>Napijegy</h2>
+                <p class="price">&euro;12</p>
+                <p class="price-content">1 nap<br>helyszínen</p>
               </div>            
             </li>
             <li class="vip">
@@ -46,8 +47,9 @@ group: jegyek
                 <h2>Ingyenes hetijegy</h2>
                 <p class="price">&euro;0</p>
                 <p class="price-content">
-                  A Tőketerebesi<br/>és a Lévai járás<br>lakóinak
+                  A Komáromi járás<br>lakóinak
                 </p>
+                <a class="btn btn-primary btn-pricing">Regisztráció</a>
               </div>
 
             </li>
@@ -61,8 +63,7 @@ group: jegyek
                   </div>
                   <div class="col-sm-8">
                     <h3>Kajajegy</h3>
-                    <p>Lecsópasz: Reggeli+vacsora <span>&euro;13</span></p>
-                    <p>Golden Hurkapasz: 5x<span>&euro;3.5</span> főétel <span>&euro;15</span></p>
+                    <p>Lecsópasz: Reggeli+vacsora <span>&euro;15</span></p>
                   </div>
                 </div>
               </div>
@@ -73,8 +74,8 @@ group: jegyek
                   </div>
                   <div class="col-sm-8">
                     <h3>Sátorjegy</h3>
-                    <p>Sátranként <span>&euro;10</span> (péntektől <span>&euro;6</span>)</p>
-                    <p>Csak egy lakó fizeti</p>
+                    <p>Sátranként <span>&euro;10</span></p>
+                    <p>Sátranként egyszer kell kifizetni</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +84,7 @@ group: jegyek
           <!-- jegyvetel start-->
           
           <div class="ticket-hidden" style="display: block;">
-            <h2 class="text-center roll-here" style="padding-bottom: 1em;">A jegyelővétel megkezdéséhez válassz egy kitöltési opciót:</h2>
+            <h2 class="text-center roll-here" style="padding-bottom: 1em;">A jegyelővétel/regisztráció megkezdéséhez válassz egy kitöltési opciót:</h2>
             <div class="row">
               <div class="col-md-4 text-center col-md-offset-2">
                 <a class="ticket-fb" href="#">
@@ -100,7 +101,7 @@ group: jegyek
                 </a>
               </div>
             </div>
-            <h4 class="text-center">Segítségért olvasd el <a href="/2014/06/09/vigyazz-kesz-indul-a-jegyvasar/#leiras" target="_blank">leírásunkat</a> a jegyelővétel menetéről!</h4><!-->
+            <!--<h4 class="text-center">Segítségért olvasd el <a href="/2014/06/09/vigyazz-kesz-indul-a-jegyvasar/#leiras" target="_blank">leírásunkat</a> a jegyelővétel menetéről!</h4><!-->
             <!--<h4 class="text-center" style="padding-bottom: 1em; color: red">Az internetes jegyelővétel július 11. éjfélig fogadja a rendeléseket!</h4>
             -->
           </div>
@@ -160,7 +161,7 @@ group: jegyek
                     <div class="col-xs-5">
                       <div class="form-group">
                         <label for="ticket_zip">Irányítószám</label>
-                        <input type="text" class="form-control" id="ticket_zip" placeholder="" name="ticket[zip]"/>
+                        <input type="text" class="form-control influence" id="ticket_zip" placeholder="" name="ticket[zip]"/>
                       </div>
                     </div>
                   </div>
@@ -363,8 +364,8 @@ group: jegyek
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="control-label" for="ticket_voucher">Ki ajánlotta a tábort? / Kupon <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Itt adhatod meg, ki ajánlotta a tábort, vagy a kedvezményre feljogosító kuponod kódját."></i></label>
-                    <input type="text" class="form-control" id="ticket_voucher" placeholder="Ajánló email-címe / Kuponkód" name="ticket[voucher]"/>
+                    <label class="control-label" for="ticket_voucher">Kupon kód<i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Itt adhatod meg, ki ajánlotta a tábort, vagy a kedvezményre feljogosító kuponod kódját."></i></label>
+                    <input type="text" class="form-control" id="ticket_voucher" placeholder="Kupon kód" name="ticket[voucher]"/>
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="ticket_captcha">Megerősítő kód <i class="fa fa-info-circle info-tooltip re-captcha" data-toggle="tooltip" data-placement="bottom" title="Az alábbi mezőbe a képen található kódot kell bemásolni. Ha a szöveg nem lenne olvasható, kattints és kapsz újat!"></i></label>
@@ -416,8 +417,8 @@ group: jegyek
                     </div>
                     <div class="col-xs-5">
                       <div class="form-group">
-                        <label class="control-label" for="ticket_beer">Sör? <a class="nocolor" href="/info#etkezes" target="_blank"><i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Egy sörkupon ára 10€ és 11&euro;-nyi sörre váltható be!"></i></a></label>
-                        <input type="number" min=0 class="form-control influence" id="ticket_beer" placeholder="" name="ticket[beer]" value="0" data-price="10.0"/>
+                        <!--<label class="control-label" for="ticket_beer">Sör? <a class="nocolor" href="/info#etkezes" target="_blank"><i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Egy sörkupon ára 10€ és 11&euro;-nyi sörre váltható be!"></i></a></label>
+                        <input type="number" min=0 class="form-control influence" id="ticket_beer" placeholder="" name="ticket[beer]" value="0" data-price="10.0"/>-->
                       </div>                  
                     </div>
                   </div>
@@ -538,7 +539,7 @@ group: jegyek
                    A jegyeket a <strong>PayPal</strong> felületén bankkártyával vagy PayPal számlával lehet kifizetni. Sikeres tranzakció esetén a jegyet <strong>a megadott e-mail címre</strong> küldjük el. Ha kérdésed van, vagy akadályba ütköztél a fizetés során írj nekünk a <strong>jegyek [kukac] gombaszog [pont] sk</strong> e-mail címre!
                   </small></p>
                   <p class="text-justified"><small>
-                   Ha kedvezményes kuponnal rendelkezel, ingyenes településen laksz, vagy két új táborlakót hoztál, akkor az akciós jegyárral számolt összeg csak a <strong>"Tovább"</strong> gombra való kattintás után jelenik meg. 
+                   Ha kuponnal rendelkezel, akkor az akciós jegyárral számolt összeg csak a <strong>"Tovább"</strong> gombra való kattintás után jelenik meg. 
                   </small></p>
                   <p class="text-justified"><small>
                     A <strong>"Tovább"</strong> gombra való kattintással <strong>elfogadod és tudomásul veszed</strong> az <a href="#aszf" data-toggle="modal" data-target="#aszf">általános szerződési feltételeinket és adatkezelési irányelveinket</a>.

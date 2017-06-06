@@ -71,38 +71,39 @@ group: otletborze
                     }
                     return false;
                 };
-                if (checkPerm(r, "publish_actions") && checkPerm(r, "rsvp_event") && checkPerm(r, "user_likes") && checkPerm(r, "email") && checkPerm(r, "user_birthday") && checkPerm(r, "user_hometown") && checkPerm(r, "user_location") && checkPerm(r, "public_profile")) {
-                  FB.api({method: "pages.isFan", page_id: "185520844831085"}, function (response) { // check if user liked the page
-                    if (response) {
-                      data = {};
-                      jQuery.each(jQuery(".poll-progress.selected"), function(k,v) {
-                        data[jQuery(v).data("value")] = 1;
-                      });
-                      jQuery.each(jQuery(".new-vote"), function(k,v) {
-                        if (jQuery(v).val() != "") data[jQuery(v).val()] = 1;
-                      });
-                      jQuery("#poll").html("<p class=\"text-center\"><i class=\"fa fa-spinner fa-spin fa-5x\"></i></p>");
-                      jQuery.ajax({
-                        url: '/api/poll',
-                        dataType: 'json',
-                        type: 'PATCH',
-                        data: {votes: data}
-                      }).done(function(data) {
-                        jQuery("#poll").html("<strong style=\"color: red;\">"+data.message+" Az oldal pár másodpercen belül újratöltődik...</strong>");
-                        setTimeout(function() {document.location.reload();}, 5000);
-                      }).fail(ajax_error);
-                    } else {
-                      jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először kedvelned kell az oldalunkat. Ha ez megtörtént, töltsd újra ezt az oldalat!</strong>");
-                    }               
+                if (checkPerm(r, "publish_actions") && checkPerm(r, "rsvp_event") && checkPerm(r, "email") && checkPerm(r, "user_birthday") && checkPerm(r, "user_hometown") && checkPerm(r, "user_location") && checkPerm(r, "public_profile")) {
+                  data = {};
+                  jQuery.each(jQuery(".poll-progress.selected"), function(k,v) {
+                    data[jQuery(v).data("value")] = 1;
                   });
+                  jQuery.each(jQuery(".new-vote"), function(k,v) {
+                    if (jQuery(v).val() != "") data[jQuery(v).val()] = 1;
+                  });
+                  jQuery("#poll").html("<p class=\"text-center\"><i class=\"fa fa-spinner fa-spin fa-5x\"></i></p>");
+                  jQuery.ajax({
+                    url: '/api/poll',
+                    dataType: 'json',
+                    type: 'PATCH',
+                    data: {votes: data}
+                  }).done(function(data) {
+                    jQuery("#poll").html("<strong style=\"color: red;\">"+data.message+" Az oldal pár másodpercen belül újratöltődik...</strong>");
+                    setTimeout(function() {document.location.reload();}, 5000);
+                  }).fail(ajax_error);
                 } else { // refresh for permissions
+				  console.log("Permission error, details: publish_actions: " + checkPerm(r, "publish_actions") + 
+						" rsvp_event: " + checkPerm(r, "rsvp_event") + 
+						" email: " + checkPerm(r, "email") + 
+						" user_birthday: " + checkPerm(r, "user_birthday") + 
+						" user_hometown: " + checkPerm(r, "user_hometown") + 
+						" user_location: " + checkPerm(r, "user_location") + 
+						" public_profile: " + checkPerm(r, "public_profile"));
                   jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először engedélyezned kell az alkalmazásunkat. Ha ez megtörtént, töltsd újra az oldalat!</strong>");
                 }
               });
             } else { 
               jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először be kell lenned jelentkezned a Facebookon!</strong>");
             }
-          }, {scope: 'publish_actions,rsvp_event,user_likes,email,user_birthday,user_hometown,user_location,public_profile'});
+          }, {scope: 'publish_actions,rsvp_event,email,user_birthday,user_hometown,user_location,public_profile'});
         });
         jQuery(".poll-buttonspace").append(btn);
       } else {
@@ -133,12 +134,12 @@ group: otletborze
     </h3>    
     <div>
       <p class="justified">
-        <span class="lang-hu">Melyik együttest hallanád szívesen a 2015-ös Gombaszögi Nyári Táborban? Szavazz kedvencedre, és mi megpróbáljuk összehozni! <strong>A szavazók közt egy egész hetes táborbelépőt sorsolunk ki!</strong></span>
-        <span class="lang-sk" style="display: none;">Ktorú kapelu by si najradšej vypočul v roku 2015 na Gombaseckom Letnom Tábore? Hlasuj na svoju obľúbenú kapelu a podľa našich možností sa pokúsime splniť tvoje želanie! <strong>Po ukončení hlasovania vyžrebujeme jedného z hlasujúcich, ktorý získa celotýždenný lístok!</strong></span>
+        <span class="lang-hu">Melyik együttest látnád szívesen 2017-ben Gombaszög nagyszínpadán? Szavazz kedvencedre, és mi megpróbáljuk összehozni! <strong>A szavazók közt egy egész hetes táborbelépőt sorsolunk ki!</strong></span>
+        <span class="lang-sk" style="display: none;">Ktorú kapelu by si najradšej vypočul v roku 2017 na Gombaseckom Letnom Tábore? Hlasuj na svoju obľúbenú kapelu a podľa našich možností sa pokúsime splniť tvoje želanie! <strong>Po ukončení hlasovania vyžrebujeme jedného z hlasujúcich, ktorý získa celotýždenný lístok!</strong></span>
         <span class="lang-en" style="display: none;">Which band would you like to enjoy in the Gombaszögi Summer Camp this year? Vote for your favorite, and we try to invite them! <strong>If you vote, you have the chance to win the free ticket to the camp!</strong></span>
       </p>
       <p class="justified"><em>
-        <span class="lang-hu">Összesen három zenekarra szavazhatsz, új zenekart a lista végén adhatsz meg! A szavazás eredménye alapján alakítjuk az idei koncertprogramot, de bármennyire is szeretnénk, nem tudunk minden együttest elhozni a tábor fizikai és anyagi keretei miatt.</span>
+        <span class="lang-hu">Összesen három zenekarra szavazhatsz, új zenekart a lista végén adhatsz meg! A szavazás eredménye alapján alakítjuk a jövő évi koncertprogramot, de bármennyire is szeretnénk, nem tudunk minden együttest elhozni a tábor fizikai és anyagi keretei miatt.</span>
       </em></p>
     </div>
     <div id="poll">

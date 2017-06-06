@@ -663,7 +663,7 @@ input.has-error {
 }
 
 .extra-arak p {
-  font-size: 15px;
+  font-size: 18px;
   margin-bottom: 3px;
 }
 .extra-arak span {
@@ -706,4 +706,37 @@ div.biglogo {
 	content: '';
 	padding-top: 13%;
 	display: block;
+}
+
+.biglogo img {
+  background-color: rgba(255,255,255,0.6);
+  width: 100%;
+}
+
+#livepic {
+  width: 100%;
+}
+
+#weathertemp {
+  text-align: left;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#weatherimage {
+  text-align: right;
+}
+
+.weather-block {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.weather-data {
+  font-size: large;
+  font-weight: bold;
+}
+
+#weatherinfo {
+  padding-top: 30px;
 }

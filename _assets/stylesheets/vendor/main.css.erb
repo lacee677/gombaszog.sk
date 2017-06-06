@@ -5,7 +5,7 @@
 body {
     font-family: 'Dosis', sans-serif;
     background-image: url('<%= asset_path "vardomb.jpg" %>');
-    background-color: #61bb32;
+    background-color: #0f582f;
     background-position: center 0;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -41,7 +41,7 @@ button {
   margin-top: 20px;
 }
 .navbar-nav {
-  background: #cfe5e6;
+  background: transparent;
 }
 .navbar-nav li a:hover, 
 .navbar-nav li a:focus {
@@ -424,7 +424,7 @@ footer .social-link a {
 }
 
 .performance {
-  background:rgba(0, 0, 0, 0.8);
+  background: rgba(91, 49, 97, 0.86);
   color: #FFFFFF;
   padding: 30px;
   position: relative;
@@ -538,6 +538,32 @@ footer .social-link a {
 }
 .item:nth-child(4) .performer-list li:nth-child(4) .perfomer-wrapper .single-performer h3 {
   background: rgba(46, 204, 113, 0.7);
+}
+
+.item:nth-child(5) .performer-list li:nth-child(1) .perfomer-wrapper .single-performer h3 {
+  background: rgba(241, 196, 15, 0.7);
+}
+.item:nth-child(5) .performer-list li:nth-child(2) .perfomer-wrapper .single-performer h3 {
+  background: rgba(230, 126, 34, 0.7);
+}
+.item:nth-child(5) .performer-list li:nth-child(3) .perfomer-wrapper .single-performer h3 {
+  background: rgba(231, 76, 60, 0.7);
+}
+.item:nth-child(5) .performer-list li:nth-child(4) .perfomer-wrapper .single-performer h3 {
+  background: rgba(26, 188, 156, 0.7);
+}
+
+.item:nth-child(6) .performer-list li:nth-child(1) .perfomer-wrapper .single-performer h3 {
+  background: rgba(211, 84, 0, 0.7);
+}
+.item:nth-child(6) .performer-list li:nth-child(2) .perfomer-wrapper .single-performer h3 {
+  background: rgba(52, 152, 219, 0.7);
+}
+.item:nth-child(6) .performer-list li:nth-child(3) .perfomer-wrapper .single-performer h3 {
+  background: rgba(155, 89, 182, 0.7);
+}
+.item:nth-child(6) .performer-list li:nth-child(4) .perfomer-wrapper .single-performer h3 {
+  background: rgba(241, 196, 15, 0.7);
 }
 
 .single-performer h3 span {
@@ -658,7 +684,7 @@ footer .social-link a {
 }
 
 .single-event {
-  background: rgba(25, 54, 80, 0.94);
+  background: rgba(91, 49, 97, 0.86);
   margin-top: 25px;
   padding: 30px;
   color: #fff
@@ -928,8 +954,16 @@ footer .social-link a {
 }
 
 
-.sponsor, .footer, .bg {
-  background: rgba(25, 54, 80, 0.94);
+.sponsor, .bg {
+  background: rgba(91, 49, 97, 0.86);
+  display: block;
+  margin-top: 25px;
+  overflow: hidden;
+  padding: 30px
+}
+
+.footer {
+  background: rgba(91, 49, 97, 0.86);
   display: block;
   margin-top: 25px;
   overflow: hidden;
@@ -1672,7 +1706,7 @@ footer .social-link a {
 }
 
 .rock .regular-price .btn-pricing {
-  border: 1px solid#fff;
+  border: 1px solid #fff;
   bottom: -80px;
 }
 
@@ -1682,6 +1716,7 @@ footer .social-link a {
 
 
 .vip .regular-price .btn-pricing {
+  border: 1px solid #fff;
   bottom: -40px;
 }
 
