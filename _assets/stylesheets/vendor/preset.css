@@ -61,12 +61,14 @@ a,
 .more-link,
 .entry-header .entry-title a,
 .entry-header .author span {
-  color: rgba(241, 196, 15, 1.0) !important;
+  /*color: rgba(241, 196, 15, 1.0) !important;*/
+  color: rgb(238,58,36) !important;
 }
 .more-link:hover,
 .entry-header .entry-title a:hover,
 .entry-header .author span:hover {
-  color: rgba(241, 196, 15, 0.7) !important;
+  /*color: rgba(241, 196, 15, 0.7) !important;*/
+  color: rgba(238,58,36, 0.7) !important
 }
 
 a:focus, 
