@@ -498,7 +498,7 @@ ul.galery > li > a {
 }
 
 a.ticket-fb, a.ticket-manual {
-  color: white;
+  color: #232323;
 }
 
 a.ticket-fb:hover {
