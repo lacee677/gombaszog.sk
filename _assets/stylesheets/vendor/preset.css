@@ -68,7 +68,7 @@ a,
 .entry-header .entry-title a:hover,
 .entry-header .author span:hover {
   /*color: rgba(241, 196, 15, 0.7) !important;*/
-  color: rgba(238,58,36, 0.7) !important
+  color: rgba(238,58,36, 0.7) !important;
 }
 
 a:focus, 
@@ -114,7 +114,8 @@ a:hover,
 .sc-player ol.sc-trackslist li.active a:after,
 #latest-event-content .latest-event:hover .tab .active,
 #navigation li:hover>a {
-  color: #76C2A8;
+  /*color: #76C2A8;*/
+  color: rgba(238,58,36, 0.7);
 }
 
 /* button hover color */
