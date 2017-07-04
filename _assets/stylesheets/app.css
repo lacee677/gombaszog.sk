@@ -341,7 +341,7 @@ div.poll-progress
 }
 #latest-event-content .nav-tabs>li>a  {
   border-radius: 0px;
-  background: rgba(39, 174, 96, 0.4);
+  background: rgba(3, 125, 55, 0.55);
   color: #fff;
   border: 0px;
 }
@@ -351,12 +351,11 @@ div.poll-progress
 }
 #latest-event-content .nav-tabs>li.active>a {
   background: rgba(192, 57, 43, 1.0) !important;
-  color: #000;
   border: 0px;
 }
 
 .program .nav-pills>li>a {
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(99, 1, 123, 0.40) !important;
   color:#fff;
   border-radius: 0px;
 }
