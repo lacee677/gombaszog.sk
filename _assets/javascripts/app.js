@@ -67,71 +67,67 @@ jQuery(document).ready(function($){
     }).run();
 
     // program filter
+    is_all_active = true;
     $(".program .filter li a").click(function(e) {
       e.preventDefault();
       li = $(this).parent();
+      liattr = li.attr('data-toggle');
+      liattr = $("."+liattr);
       if (li.hasClass("alltoggle")){
-        $('.programlist').find("div").each(function(){
-          $(this).removeClass('one_hide');
-          $(this).removeClass('two_hide');
+        is_all_active = true;
+        $('.programlist').find($('.program-pont')).each(function(){
           $(this).show();
+          $(this).addClass('two_active');
         });
         $('.filter').find("li").each(function(){
           $(this).addClass('active');
         });
       }
       else{
-        liatr = $("."+li.attr('data-toggle'));
-        li.toggleClass('active');
-        if(!li.hasClass('active')){
-          if(liatr.hasClass('one_hide')){
-            liatr.removeClass('one_hide');
-            liatr.addClass('two_hide');
-          }
-          else{
-            liatr.hide();
-            liatr.addClass("one_hide");
-          }
+        if(is_all_active){
+          $('.filter').find("li").each(function(){
+            if($(this).hasClass('active')){
+              if(!$(this).hasClass('alltoggle')){
+                $(this).removeClass('active');
+              }
+            }
+          });
+          li.addClass('active');
+          is_all_active = false;
+          $('.programlist').find($('.program-pont')).each(function(){
+            $(this).hide();
+            $(this).removeClass('two_active');
+          });
+          liattr.show();
+          liattr.addClass("one_active");
         }
         else{
-          if(liatr.hasClass('one_hide')){
-            liatr.removeClass('one_hide');
-            liatr.show();
+          if(li.hasClass('active')){
+            li.removeClass('active');
+            if(liattr.hasClass('one_active')){
+              liattr.hide();
+              liattr.removeClass('one_active');
+            }
+            else if(liattr.hasClass('two_active')){
+              liattr.removeClass('two_active');
+              liattr.addClass('one_active');
+            }
           }
-          else if(liatr.hasClass('two_hide')){
-            liatr.addClass('one_hide');
-            liatr.removeClass('two_hide');
+          else{
+            li.addClass('active');
+            liattr.show();
+            if(liattr.hasClass('one_active')){
+              liattr.addClass('two_active');
+              liattr.removeClass('one_active');
+            }
+            else{
+              liattr.addClass('one_active');
+            }
           }
         }
       }
     });
-    /*
-    $(".program .filter li a").click(function(e) {
-      e.preventDefault();
-      li = $(this).parent();
-      li.toggleClass('active');
-      is_active = false;
-      li.parent().find('li').each(function(f) {
-        if ($(this).hasClass('active')) {
-            is_active = true;
-        }
-      });
 
-      if(is_active) {
-        li.parent().find('li').each(function(f) {
-          if ($(this).hasClass('active')) {
-              $("."+$(this).data("toggle")).show();
-          } else {
-              $("."+$(this).data("toggle")).hide();
-          }
-        });
-      } else {
-        li.parent().find('li').each(function(f) {
-          $("."+$(this).data("toggle")).show();
-        });
-      }
-    });
-*/
   });
 });
 

@@ -371,6 +371,18 @@ div.poll-progress
   padding-top:5px;
 }
 
+.filter li.active{
+  border-left:6px solid #71B790;
+}
+
+.filter li{
+  border-left:6px solid #c0392b;
+}
+
+.filter li.alltoggle{
+  border-left:0px;
+}
+
 /* program END */
 
 #ticket a.btn {
