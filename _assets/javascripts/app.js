@@ -70,6 +70,45 @@ jQuery(document).ready(function($){
     $(".program .filter li a").click(function(e) {
       e.preventDefault();
       li = $(this).parent();
+      if (li.hasClass("alltoggle")){
+        $('.programlist').find("div").each(function(){
+          $(this).removeClass('one_hide');
+          $(this).removeClass('two_hide');
+          $(this).show();
+        });
+        $('.filter').find("li").each(function(){
+          $(this).addClass('active');
+        });
+      }
+      else{
+        liatr = $("."+li.attr('data-toggle'));
+        li.toggleClass('active');
+        if(!li.hasClass('active')){
+          if(liatr.hasClass('one_hide')){
+            liatr.removeClass('one_hide');
+            liatr.addClass('two_hide');
+          }
+          else{
+            liatr.hide();
+            liatr.addClass("one_hide");
+          }
+        }
+        else{
+          if(liatr.hasClass('one_hide')){
+            liatr.removeClass('one_hide');
+            liatr.show();
+          }
+          else if(liatr.hasClass('two_hide')){
+            liatr.addClass('one_hide');
+            liatr.removeClass('two_hide');
+          }
+        }
+      }
+    });
+    /*
+    $(".program .filter li a").click(function(e) {
+      e.preventDefault();
+      li = $(this).parent();
       li.toggleClass('active');
       is_active = false;
       li.parent().find('li').each(function(f) {
@@ -92,9 +131,10 @@ jQuery(document).ready(function($){
         });
       }
     });
-
+*/
   });
 });
+
 
 // form serializer
 $.fn.serializeObject = function() {
