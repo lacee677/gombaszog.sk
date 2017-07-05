@@ -44,12 +44,19 @@ class ProgramTag < Liquid::Tag
               html.ul(:class => 'nav nav-pills nav-stacked filter') do
                 #
                 html.li(:class => "active") { html.text 'Helyszinek' }
+                #i = 0
+                #l[:locations].each do |loc|
+                #  loc ? html.li(:class => "active", 'data-toggle' => "#{day_l_map[d]}_#{i}") { html.a(:href => '#') { html.text loc }} : nil
+                #  i+=1
+                #end
+                #l[:locations].include?(nil) ? html.li(:class => "active", 'data-toggle' => "#{day_l_map[d]}_#{l[:locations].find_index(nil)}") { html.a(:href => '#') { html.text "Egyebb" }} : nil
                 i = 0
                 l[:locations].each do |loc|
-                  loc ? html.li(:class => "active", 'data-toggle' => "#{day_l_map[d]}_#{i}") { html.a(:href => '#') { html.text loc }} : nil
+                  loc ? html.li(:class => "", 'data-toggle' => "#{day_l_map[d]}_p_#{i}") { html.a(:href => '#') { html.text loc }} : nil
                   i+=1
                 end
-                l[:locations].include?(nil) ? html.li(:class => "active", 'data-toggle' => "#{day_l_map[d]}_#{l[:locations].find_index(nil)}") { html.a(:href => '#') { html.text "Egyebb" }} : nil
+                l[:locations].include?(nil) ? html.li(:class => "", 'data-toggle' => "#{day_l_map[d]}_p_#{l[:locations].find_index(nil)}") { html.a(:href => '#') { html.text "Egyéb" }} : nil
+                #
                 html.li(:class => "active") { html.text 'Szerverzok' }
                 # 
                 i = 0
