@@ -67,7 +67,22 @@ jQuery(document).ready(function($){
     }).run();
 
     // program filter
+    $(".day-set a").click(function(e){
+      $('.program-pont').each(function(){
+        $(this).show();
+        $(this).addClass('two_active');
+        $(this).removeClass('two_active');
+      });
+      $('.filter').each(function(){
+        $(this).find("li").each(function(){
+          $(this).addClass('active');
+        });
+      });
+      is_all_active = true;
+    });
+
     is_all_active = true;
+    no_active_record = false;
     $(".program .filter li a").click(function(e) {
       e.preventDefault();
       li = $(this).parent();
@@ -126,7 +141,28 @@ jQuery(document).ready(function($){
           }
         }
       }
+      $(li.parent()).find("li").each(function(){
+        if(($(this).hasClass('active')) && (!$(this).hasClass('alltoggle'))){
+          no_active_record = false;
+          return false;
+        }
+        else{
+          no_active_record = true;
+
+        }
+      });
+      if(no_active_record){
+        is_all_active = true;
+        $('.programlist').find($('.program-pont')).each(function(){
+          $(this).show();
+          $(this).addClass('two_active');
+        });
+        $('.filter').find("li").each(function(){
+          $(this).addClass('active');
+        });
+      }
     });
+
 
   });
 });
