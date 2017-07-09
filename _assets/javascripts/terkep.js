@@ -4,23 +4,23 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 1,
 			area: {
-					xw1: 940,
-					xw2: 1038,
-					yh1: 981,
-					yh2: 1093
+					xw1: 966,
+					xw2: 1142,
+					yh1: 225,
+					yh2: 429
 				},
-			location: "Labirintus Udvar",
-			title: "Labirintus udvar",
+			location: "Labirintus Udvar", //ahogy a programban nevezik
+			title: "Labirintus udvar", //ahogy mi megjelenitjuk
 			program: true,
 			description: "A TANDEM nonprofit szervezet önismereti programsátra idén is gazdag kínálattal várja mindazokat, akik a tábori forgatagban kicsit megpihennének testben, és lélekben egyaránt. A szerda délután kezdődő programokra szombat estig várjuk a magukra és másokra nyitott táborlakókat. A workshopok, előadások, egyéni tanácsadás, életpálya-szimulációs kötélpálya, és kerekasztal beszélgetések mellett teaház várja a felfrissülni vágyókat."
 		},
 		{
 			id: 2,
 			area: {
-					xw1: 1491,
-					xw2: 1647,
-					yh1: 310,
-					yh2: 465
+					xw1: 204,
+					xw2: 477,
+					yh1: 849,
+					yh2: 1095
 				},
 			location: "PajtaSzínház",
 			title: "PajtaSzínház",
@@ -30,49 +30,49 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 3,
 			area: {
-					xw1: 1443,
-					xw2: 1644,
-					yh1: 537,
-					yh2: 660
+					xw1: 222,
+					xw2: 519,
+					yh1: 714,
+					yh2: 828
 				},
-			location: "Közbeszéd nagysátor",
-			title: "Közbeszéd nagysátor",
+			location: "PMSZ sátor",
+			title: "Pozonyi Magyar Szakkollégium sátra",
 			program: true,
 			description: "A közéleti programok színtere"
 		},
 		{
 			id: 4,
 			area: {
-					xw1: 1692,
-					xw2: 1839,
-					yh1: 636,
-					yh2: 750
+					xw1: 87,
+					xw2: 360,
+					yh1: 213,
+					yh2: 432
 				},
 			location: "Chill",
-			title: "Innsátor",
+			title: "DurvaCrew Chillsátor",
 			program: true,
 			description: "A chill és az alternatív zene sátra"
 		},
 		{
 			id: 5,
 			area: {
-					xw1: 1692,
-					xw2: 1839,
-					yh1: 636,
-					yh2: 750
+					xw1: 759,
+					xw2: 879,
+					yh1: 921,
+					yh2: 1089
 				},
-			location: "Innsátor",
-			title: "Innsátor",
+			location: "Kisszínpad",
+			title: "Kisszínpad",
 			program: true,
-			description: "A chill és az alternatív zene sátra"
+			description: "Fedett kisszínpad a kocsma mellett"
 		},
 		{
 			id: 6,
 			area: {
-					xw1: 1674,
-					xw2: 1836,
-					yh1: 258,
-					yh2: 369
+					xw1: 180,
+					xw2: 405,
+					yh1: 585,
+					yh2: 699
 				},
 			location: "Korona sátor",
 			title: "Korona sátor",
@@ -82,62 +82,62 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 7,
 			area: {
-					xw1: 945,
-					xw2: 1236,
-					yh1: 309,
-					yh2: 441
+					xw1: 717,
+					xw2: 819,
+					yh1: 1113,
+					yh2: 1347
 				},
-			location: "Kocsmaterasz",
-			title: "Kocsma és terasz",
-			program: true,
+			location: "Kocsma",
+			title: "Kocsma",
+			program: false,
 			description: "Egy igazi retró kocsma egy óriási terasszal!"
 		},
 		{
 			id: 8,
 			area: {
-					xw1: 1272,
-					xw2: 1377,
-					yh1: 312,
-					yh2: 426
+					xw1: 507,
+					xw2: 696,
+					yh1: 1005,
+					yh2: 1209
 				},
 			location: "Kajaplacc",
 			title: "Kajaplacc",
 			program: false,
-			description: "Itt lakhatsz jól - ide gyere a Lecsópasszal és a Golden Hurkapasszal is."
+			description: "Itt lakhatsz jól - ide gyere a Lecsópasszal."
 		},
 		{
 			id: 9,
 			area: {
-					xw1: 1263,
-					xw2: 1332,
-					yh1: 453,
-					yh2: 525
+					xw1: 534,
+					xw2: 687,
+					yh1: 819,
+					yh2: 966
 				},
-			location: "gombabolt",
-			title: "Gombabolt",
+			location: "G-pont",
+			title: "G-pont",
 			program: false,
-			description: "Egy igazi kisbolt és trafik, tehát itt vehetsz ételt-italt, buborékfújót és egyéb más hasznos eszközt, illetve cigarettát is itt tudsz beszerezni!"
+			description: "Inormációs pont, pólóárus és töltőállomás"
 		},
 		{
 			id: 10,
 			area: {
-					xw1: 1197,
-					xw2: 1326,
-					yh1: 546,
-					yh2: 600
+					xw1: 912,
+					xw2: 1035,
+					yh1: 897,
+					yh2: 1002
 				},
-			location: "poloesmobil",
-			title: "Ajándékbolt és mobiltöltő állomás",
+			location: "Kézműves Sátor",
+			title: "Kézműves Sátor",
 			program: false,
-			description: "Itt veheted meg a legtutibb Gombaszög-pólót és itt töltheted a telefonod!"
+			description: "Festés, rajzolás, agyagozás, és minden, ami kézművesség!"
 		},
 		{
 			id: 11,
 			area: {
-					xw1: 1540,
-					xw2: 1700,
-					yh1: 780,
-					yh2: 840
+					xw1: 256,
+					xw2: 525,
+					yh1: 453,
+					yh2: 552
 				},
 			location: "mediasator",
 			title: "Roda István Turistaház - Médiasátor",
@@ -147,75 +147,75 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 12,
 			area: {
-					xw1: 1360,
-					xw2: 1450,
-					yh1: 840,
-					yh2: 920
+					xw1: 741,
+					xw2: 897,
+					yh1: 153,
+					yh2: 342
 				},
 			location: "szifon",
-			title: "Szifon",
+			title: "Szifon és sörstand",
 			program: false,
-			description: "Finom itókák lelőhelye. Lesz bor, fröccs, szóda és szörp minden mennyiségben!"
+			description: "Finom itókák lelőhelye. Lesz sör, bor, fröccs, szóda és szörp minden mennyiségben!"
 		},
 		{
 			id: 13,
 			area: {
-					xw1: 1220,
-					xw2: 1285,
-					yh1: 230,
-					yh2: 290
+					xw1: 642,
+					xw2: 885,
+					yh1: 738,
+					yh2: 807
 				},
-			location: "bankautomata",
-			title: "Bankautomata",
+			location: "Röplabdapálya",
+			title: "Röplabdapálya",
 			program: false,
-			description: "Pénzfelvételi lehetőség"
+			description: "Strandröplapdapálya a medence szomszédságában, igazi dunai homokkal!"
 		},
 		{
 			id: 14,
 			area: {
-					xw1: 825,
-					xw2: 924,
-					yh1: 230,
-					yh2: 330
+					xw1: 834,
+					xw2: 933,
+					yh1: 1215,
+					yh2: 1410
 				},
-			location: "B-612",
-			title: "B-612 bolygó - JuGYIK sátor",
+			location: "B-612 Előadósátor",
+			title: "B-612 Előadósátor",
 			program: true,
-			description: "A JuGYIK irodalmi sátra"
+			description: "Irodalmi sátor"
 		},
 		{
 			id: 15,
 			area: {
-					xw1: 880,
-					xw2: 1020,
-					yh1: 490,
-					yh2: 550
+					xw1: 639,
+					xw2: 885,
+					yh1: 672,
+					yh2: 732
 				},
 			location: "medence",
 			title: "Medence",
 			program: false,
-			description: "Csobbanás és lehűlés a nagy melegben - a tavalyihoz hasonlóan szalmából készítve!"
+			description: "Csobbanás és lehűlés a nagy melegben!"
 		},
 		{
 			id: 16,
 			area: {
-					xw1: 720,
-					xw2: 780,
-					yh1: 240,
-					yh2: 340
+					xw1: 879,
+					xw2: 1011,
+					yh1: 1026,
+					yh2: 1197
 				},
-			location: "Gombaovi",
-			title: "Gombaovi",
+			location: "GombaOvi",
+			title: "GombaOvi",
 			program: true,
 			description: "Kisgyermek óvoda óvónénikkel és gazdag programmal!"
 		},
 		{
 			id: 17,
 			area: {
-					xw1: 560,
-					xw2: 610,
-					yh1: 250,
-					yh2: 300
+					xw1: 1077,
+					xw2: 1146,
+					yh1: 1086,
+					yh2: 1239
 				},
 			location: "elsosegely",
 			title: "Elsősegély",
@@ -225,23 +225,23 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 18,
 			area: {
-					xw1: 1100,
-					xw2: 1170,
-					yh1: 480,
-					yh2: 550
+					xw1: 1416,
+					xw2: 1494,
+					yh1: 1116,
+					yh2: 1224
 				},
-			location: "Csapatjáték infopult",
-			title: "Csapatjáték infopult",
+			location: "Óriás hinta",
+			title: "Óriás hinta",
 			program: false,
-			description: "Csapatjáték információk, jelentkezés"
+			description: "Gömör legnagyobb hintája!"
 		},
 		{
 			id: 19,
 			area: {
-					xw1: 1660,
-					xw2: 1860,
-					yh1: 15,
-					yh2: 160
+					xw1: 138,
+					xw2: 336,
+					yh1: 1176,
+					yh2: 1320
 				},
 			location: "barlang",
 			title: "Gombaszögi barlang",
@@ -251,10 +251,10 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 20,
 			area: {
-					xw1: 645,
-					xw2: 786,
-					yh1: 770,
-					yh2: 888
+					xw1: 1284,
+					xw2: 1485,
+					yh1: 627,
+					yh2: 768
 				},
 			location: "kopjafapark",
 			title: "Kopjafapark",
@@ -264,10 +264,10 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 21,
 			area: {
-					xw1: 510,
-					xw2: 570,
-					yh1: 330,
-					yh2: 390
+					xw1: 993,
+					xw2: 1035,
+					yh1: 1178,
+					yh2: 1248
 				},
 			location: "Kopjafafaragó",
 			title: "Kopjafafaragó",
@@ -277,23 +277,23 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 22,
 			area: {
-					xw1: 320,
-					xw2: 400,
-					yh1: 180,
-					yh2: 280
+					xw1: 1173,
+					xw2: 1236,
+					yh1: 1119,
+					yh2: 1263
 				},
-			location: "Fotósműhely",
-			title: "Fotósműhely",
+			location: "Hívd elő a csacsit!",
+			title: "Hívd elő a csacsit!",
 			program: true,
 			description: "Fotókészítés, előhívás, gyönyörködés"
 		},
 		{
 			id: 23,
 			area: {
-					xw1: 360,
-					xw2: 580,
-					yh1: 480,
-					yh2: 660
+					xw1: 1395,
+					xw2: 1617,
+					yh1: 759,
+					yh2: 954
 				},
 			location: "Nagyszínpad",
 			title: "Nagyszínpad",
@@ -303,10 +303,10 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 24,
 			area: {
-					xw1: 260,
-					xw2: 325,
-					yh1: 670,
-					yh2: 740
+					xw1: 1650,
+					xw2: 1761,
+					yh1: 807,
+					yh2: 1044
 				},
 			location: "frissito",
 			title: "Frissítő",
@@ -316,36 +316,10 @@ if ($("#gomba-map").length > 0) {
 		{
 			id: 25,
 			area: {
-					xw1: 640,
-					xw2: 710,
-					yh1: 360,
-					yh2: 430
-				},
-			location: "Kézműves sátor",
-			title: "Kézműves sátor",
-			program: false,
-			description: "Festés, rajzolás, agyagozás stb."
-		},
-		{
-			id: 26,
-			area: {
-					xw1: 790,
-					xw2: 890,
-					yh1: 390,
-					yh2: 460
-				},
-			location: "Márai Sándor  sátor",
-			title: "Márai Sándor sátor",
-			program: true,
-			description: "Beszélgetések, felolvasások, közéleti programok"
-		},
-		{
-			id: 27,
-			area: {
-					xw1: 540,
-					xw2: 610,
-					yh1: 900,
-					yh2: 970
+					xw1: 1512,
+					xw2: 1638,
+					yh1: 330,
+					yh2: 408
 				},
 			location: "Buszmegálló",
 			title: "Buszmegálló",
@@ -353,12 +327,12 @@ if ($("#gomba-map").length > 0) {
 			description: "Innen indulnak és ide érkeznek a partibuszok, illetve a SAD helyközi buszjáratai, a megálló neve Szalóc, Gombaszögi barlang - Slavec, Gombasecká jaskyňa"
 		},
 		{
-			id: 28,
+			id: 26,
 			area: {
-					xw1: 650,
-					xw2: 720,
-					yh1: 960,
-					yh2: 1030
+					xw1: 1557,
+					xw2: 1695,
+					yh1: 423,
+					yh2: 552
 				},
 			location: "taxi",
 			title: "Taxidroszt",
@@ -366,12 +340,12 @@ if ($("#gomba-map").length > 0) {
 			description: "Kedvezményes fuvarok a Rozsnyói medencében és Tornalja környékén! Hívd a T.V. Taxit a +421 905 565 335 vagy a +421 903 054 434 telefonszámok egyikén!"
 		},
 		{
-			id: 29,
+			id: 27,
 			area: {
-					xw1: 940,
-					xw2: 1000,
-					yh1: 1150,
-					yh2: 1230
+					xw1: 1131,
+					xw2: 1329,
+					yh1: 45,
+					yh2: 216
 				},
 			location: "parkolo",
 			title: "Parkoló",
@@ -379,12 +353,12 @@ if ($("#gomba-map").length > 0) {
 			description: "Parkolóhely mindenkinek. A parkolásért nem kell fizetni, ugyanakkor egy papírt kérünk elhelyezni a szélvédő alá a tulajdonos telefonszámával, hogy szükség esetén el lehessen érni"
 		},
 		{
-			id: 30,
+			id: 28,
 			area: {
-					xw1: 800,
-					xw2: 890,
-					yh1: 970,
-					yh2: 1090
+					xw1: 1176,
+					xw2: 1422,
+					yh1: 267,
+					yh2: 450
 				},
 			location: "porta",
 			title: "Porta és információ",
@@ -392,30 +366,17 @@ if ($("#gomba-map").length > 0) {
 			description: "Jegyvétel és információ"
 		},
 		{
-			id: 31,
+			id: 29,
 			area: {
-					xw1: 170,
-					xw2: 300,
-					yh1: 1080,
-					yh2: 1200
+					xw1: 741,
+					xw2: 954,
+					yh1: 831,
+					yh2: 900
 				},
-			location: "iranytu",
-			title: "Iránytű",
+			location: "Csapatjáték infopult",
+			title: "Csapatjáték infopult",
 			program: false,
-			description: "Nem, valójában itt nincs egy óriási iránytű, de akár lehetne is. Helyette egy óriási szikla van itt, amiről fantasztikus a kilátás a táborra!"
-		},
-		{
-			id: 32,
-			area: {
-					xw1: 1675,
-					xw2: 1786,
-					yh1: 446,
-					yh2: 528
-				},
-			location: "SZAKC sátor",
-			title: "SZAKC sátor",
-			program: true,
-			description: "A Szövetség a Közös Célokért sátra."
+			description: "A csapatjáték információs központja"
 		}
 	];
 	
@@ -441,7 +402,7 @@ if ($("#gomba-map").length > 0) {
 	
 	var getPlaceContent = function(px, py){
 		var opxw = 1920*(px-imO.left)/imW;
-		var opyh = 1348*(py-imO.top)/imH;
+		var opyh = 1487*(py-imO.top)/imH;
 		var isActive = false;
 		//console.log(showedLocationId);
 		//console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh);
@@ -455,7 +416,7 @@ if ($("#gomba-map").length > 0) {
 							$("#location-details").click();
 						});
 					$("#location-title").text(place.title);
-					$("#location-details").css("top", place.area.yh2*imH/1348 + "px");
+					$("#location-details").css("top", place.area.yh2*imH/1487 + "px");
 					$("#location-details").css("left", place.area.xw1*imW/1920 + "px");
 					$("#location-details").show();
 					$("#description-modal-label").text(place.title);
