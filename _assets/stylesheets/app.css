@@ -37,7 +37,7 @@ div.poll-progress
 	background-color: rgb(255, 194, 0);
 }
 
-.poll-progress span 
+.poll-progress span
 {
 	font-size: 18px;
 	font-weight: bold;
@@ -45,22 +45,22 @@ div.poll-progress
 	color: #333;
 }
 
- .mediap .row 
- { 
+ .mediap .row
+ {
 	margin-bottom: 10px;
  }
- 
+
  .tarsszerv .row .col-md-3,
  .tarsszerv .row .col-md-6,
- .tarsszerv .row .col-sm-6, 
+ .tarsszerv .row .col-sm-6,
  .tarsszerv .row .col-xs-12
 {
   margin-bottom: 8px !important;
 }
 
  .mediap .row .col-md-4,
- .mediap .row .col-sm-6, 
- .mediap .row .col-xs-12 
+ .mediap .row .col-sm-6,
+ .mediap .row .col-xs-12
 {
   margin-bottom: 8px !important;
 }
@@ -81,17 +81,17 @@ div.poll-progress
   margin-right: auto;
  }
 
- .szerv, .tarsszerv 
- { 
+ .szerv, .tarsszerv
+ {
   margin-bottom: 15px;
  }
 
- .partner .col-md-4 img, 
- .partner .col-sm-6 img, 
+ .partner .col-md-4 img,
+ .partner .col-sm-6 img,
  .partner .col-xs-12 img,
  .partner .col-md-6 img,
- .partner .col-md-4 img a, 
- .partner .col-sm-6 img a, 
+ .partner .col-md-4 img a,
+ .partner .col-sm-6 img a,
  .partner .col-xs-12 img a,
  .partner .col-md-6 img a
  {
@@ -101,7 +101,7 @@ div.poll-progress
  }
 .strike {
   position: relative;
-  margin-bottom: 0px !important; 
+  margin-bottom: 0px !important;
   margin-left: 80px;
   margin-right: 80px;
   font-size: 30px !important;
@@ -135,7 +135,7 @@ div.poll-progress
   background-clip:padding-box;
 }
 #szavazas h4 { font-weight: bold;}
-.close { 
+.close {
   color: #f1f1f1;
   opacity:.6;
   filter:alpha(opacity=60);
@@ -161,7 +161,7 @@ div.poll-progress
   width: 100%;
   text-shadow:
     2px 2px 0 #292e42,
-   -1px -1px 0 #292e42,  
+   -1px -1px 0 #292e42,
     1px -1px 0 #292e42,
    -1px  1px 0 #292e42,
     1px  1px 0 #292e42;
@@ -173,10 +173,10 @@ div.poll-progress
   margin-bottom: 5px;
 }
 
-#dalnap .album-heading h3 { 
+#dalnap .album-heading h3 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 1.6vw; 
+  font-size: 1.6vw;
 }
 
 #dalnap .album-overlay .album-info {
@@ -214,7 +214,7 @@ div.poll-progress
 
 #sajto-pages.pagination li:first-child a {
     border-top-left-radius:.5em;
-    border-bottom-left-radius:.5em; 
+    border-bottom-left-radius:.5em;
 }
 
 #sajto-pages.pagination li:last-child a {
@@ -239,7 +239,7 @@ div.poll-progress
   list-style: none;
   margin-bottom: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 5px 0 5px 0; 
+  padding: 5px 0 5px 0;
 }
 .stream ul li .placc {
   color: #27ae60;
@@ -251,7 +251,7 @@ div.poll-progress
   width: 100%;
 }
 .stream .streamhead .time {
- padding: 0px 15px 0px 0px; 
+ padding: 0px 15px 0px 0px;
  font-weight: bold;
  font-size: 18px;
  color: #c0392b;
@@ -367,21 +367,37 @@ div.poll-progress
   background-color:#428bca !important;
 }
 
+.filter-header{
+  padding-top:5px;
+}
+
+.filter li.active{
+  border-left:6px solid #71B790;
+}
+
+.filter li{
+  border-left:6px solid #c0392b;
+}
+
+.filter li.alltoggle{
+  border-left:0px;
+}
+
 /* program END */
 
-#ticket a.btn { 
+#ticket a.btn {
   border-radius: 0px;
 }
 .modal-header button:hover { background: transparent;}
 /* youtube vid. respo */
-.videoWrapper { 
- 	margin-right: auto; 
- 	margin-left: auto; 
- 	z-index:0; 
+.videoWrapper {
+ 	margin-right: auto;
+ 	margin-left: auto;
+ 	z-index:0;
  	margin-bottom: 10px;
 }
 .videoWrapper {
-	position: relative; 
+	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
@@ -473,7 +489,7 @@ footer img:hover {
   padding-top: 10px;
 }
 .nav > li {
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   padding-top: 10px;
 }
 
@@ -481,7 +497,7 @@ ul.galery > li {
   height: 100px;
   width: 100px;
   overflow: hidden;
-  background-size: cover; 
+  background-size: cover;
   background-position: 50%;
 }
 
@@ -489,7 +505,7 @@ ul.galery > li > a {
   height: 100px;
   line-height: 100px;
   display: block;
-} 
+}
 
 .ticket-hidden {
   display: none;
@@ -521,7 +537,7 @@ div.info-icon div.icon {
   line-height: 7.4rem;
   text-align: center;
   border-radius: 50%;
-  border: 3px solid rgba(238,58,36, 1.0);  
+  border: 3px solid rgba(238,58,36, 1.0);
 }
 
 div.info-icon div.info {
@@ -617,10 +633,10 @@ input.has-error {
     background: rgba(0, 151, 192, 0.7);
   }
 
-  #dalnap .album-heading h3 { 
+  #dalnap .album-heading h3 {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 5vw; 
+  font-size: 5vw;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -676,7 +692,7 @@ input.has-error {
 
 .profile { margin-bottom: 30px;}
 .profile .single-album {margin-bottom: 10px;}
- 
+
 .poll-a, .poll-b {
   float: left;
   height: 3px;

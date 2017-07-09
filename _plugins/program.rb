@@ -38,33 +38,35 @@ class ProgramTag < Liquid::Tag
     Nokogiri::HTML::Builder.with(@html) do |html|
       html.div(:class => 'tab-content program-matrix program') do
         byday.each do |d,l|
-          html.div(:class => first, :id => day_l_map[d]) do 
+          html.div(:class => first, :id => day_l_map[d]) do
             first = 'tab-pane row'
             html.div(:class => 'col-md-2 visible-md visible-lg') do
               html.ul(:class => 'nav nav-pills nav-stacked filter') do
-                #html.li(:class => "active") { html.text 'Helyszinek' }
-                #i = 0
-                #l[:locations].each do |loc|
-                #  loc ? html.li(:class => "active", 'data-toggle' => "#{day_l_map[d]}_#{i}") { html.a(:href => '#') { html.text loc }} : nil
-                #  i+=1
-                #end
-                #l[:locations].include?(nil) ? html.li(:class => "active", 'data-toggle' => "#{day_l_map[d]}_#{l[:locations].find_index(nil)}") { html.a(:href => '#') { html.text "Egyebb" }} : nil
-                #html.li(:class => "active") { html.text 'Szerverzok' }
+                html.li(:class => "active alltoggle") { html.a(:href => '#') {html.text 'Mutasd mind!' }}
+                html.p(:class => 'filter-header'){ html.text 'Helyszinek:' }
                 i = 0
-                l[:partners].each do |loc|
-                  loc ? html.li(:class => "", 'data-toggle' => "#{day_l_map[d]}_p_#{i}") { html.a(:href => '#') { html.text loc }} : nil
+                l[:locations].each do |loc|
+                  loc ? html.li(:class => "active location-filter", 'data-toggle' => "#{day_l_map[d]}_#{i}") { html.a(:href => '#') { html.text loc }} : nil
                   i+=1
                 end
-                l[:partners].include?(nil) ? html.li(:class => "", 'data-toggle' => "#{day_l_map[d]}_p_#{l[:partners].find_index(nil)}") { html.a(:href => '#') { html.text "Egyéb" }} : nil
+                l[:locations].include?(nil) ? html.li(:class => "active location-filter", 'data-toggle' => "#{day_l_map[d]}_#{l[:locations].find_index(nil)}") { html.a(:href => '#') { html.text "Egyéb" }} : nil
+
+                html.p(:class => 'filter-header'){ html.text 'Szervezők:' }
+                i = 0
+                l[:partners].each do |par|
+                  par ? html.li(:class => "active partner-filter", 'data-toggle' => "#{day_l_map[d]}_p_#{i}") { html.a(:href => '#') { html.text par }} : nil
+                  i+=1
+                end
+                l[:partners].include?(nil) ? html.li(:class => "active partner-filter", 'data-toggle' => "#{day_l_map[d]}_p_#{l[:partners].find_index(nil)}") { html.a(:href => '#') { html.text "Egyéb" }} : nil
               end
             end
-            html.div(:class => 'col-md-10') do
+            html.div(:class => 'col-md-10 programlist') do
               l[:events].each do |e|
                 e['start'] = Time.parse e['start']
                 e['end'] = Time.parse e['end']
                 location_class = day_l_map[d] + '_' + l[:locations].index(e['location']).to_s
                 partner_class = day_l_map[d] + '_p_' + l[:partners].index(e['partner']).to_s
-                html.div(:class => 'program-pont row '+location_class+' '+partner_class) do 
+                html.div(:class => 'program-pont row two_active '+location_class+' '+partner_class) do
                   html.div(:class => 'row') do
                     html.div(:class => 'col-md-10') do
                       html.div(:class => 'col-md-2 meta') do
@@ -96,6 +98,3 @@ class ProgramTag < Liquid::Tag
   end
   Liquid::Template.register_tag('dyn_program', self)
 end
-
-
-
