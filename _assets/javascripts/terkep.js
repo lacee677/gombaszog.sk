@@ -9,7 +9,7 @@ if ($("#gomba-map").length > 0) {
 					yh1: 225,
 					yh2: 429
 				},
-			location: "Labirintus Udvar", //ahogy a programban nevezik
+			location: "Labirintus udvar", //ahogy a programban nevezik
 			title: "Labirintus udvar", //ahogy mi megjelenitjuk
 			program: true,
 			description: "A TANDEM nonprofit szervezet önismereti programsátra idén is gazdag kínálattal várja mindazokat, akik a tábori forgatagban kicsit megpihennének testben, és lélekben egyaránt. A szerda délután kezdődő programokra szombat estig várjuk a magukra és másokra nyitott táborlakókat. A workshopok, előadások, egyéni tanácsadás, életpálya-szimulációs kötélpálya, és kerekasztal beszélgetések mellett teaház várja a felfrissülni vágyókat."
@@ -22,7 +22,7 @@ if ($("#gomba-map").length > 0) {
 					yh1: 849,
 					yh2: 1095
 				},
-			location: "PajtaSzínház",
+			location: "Pajtaszínház",
 			title: "PajtaSzínház",
 			program: true,
 			description: "Egy eredeti gömöri pajta, amelyet a Gombaszög szervezői és a Fiatal Építészek Fóruma telepített a völgybe, és a Gurigongo Symposium tölt meg élettel. Színházi előadások, filmvetítések, slam, és még sok más jó vár mindenkit."
@@ -35,10 +35,10 @@ if ($("#gomba-map").length > 0) {
 					yh1: 714,
 					yh2: 828
 				},
-			location: "PMSZ sátor",
-			title: "Pozonyi Magyar Szakkollégium sátra",
+			location: "PMSz Nagysátor",
+			title: "PMSz Nagysátor",
 			program: true,
-			description: "A közéleti programok színtere"
+			description: "A Pozonyi Magyar Szakkollégium sátra, a közéleti programok színtere"
 		},
 		{
 			id: 4,
@@ -48,7 +48,7 @@ if ($("#gomba-map").length > 0) {
 					yh1: 213,
 					yh2: 432
 				},
-			location: "Chill",
+			location: "Durvacrew Chill Sátor",
 			title: "DurvaCrew Chillsátor",
 			program: true,
 			description: "A chill és az alternatív zene sátra"
@@ -74,8 +74,8 @@ if ($("#gomba-map").length > 0) {
 					yh1: 585,
 					yh2: 699
 				},
-			location: "Korona sátor",
-			title: "Korona sátor",
+			location: "Korona Sátor",
+			title: "Korona Sátor",
 			program: true,
 			description: "A tábor komolyzenei chillsátra, amelyet a pelsőci Korona együttes tölt meg élettel és tartalommal!"
 		},
@@ -152,7 +152,7 @@ if ($("#gomba-map").length > 0) {
 					yh1: 153,
 					yh2: 342
 				},
-			location: "szifon",
+			location: "Szifonterasz",
 			title: "Szifon és sörstand",
 			program: false,
 			description: "Finom itókák lelőhelye. Lesz sör, bor, fröccs, szóda és szörp minden mennyiségben!"
