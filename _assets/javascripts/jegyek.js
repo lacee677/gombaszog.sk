@@ -1,5 +1,5 @@
 if ($(".ticket-form").length > 0) {
-  var freeCities = ["94501", "94504", "94505", "94601", "94602", "94603", "94612", "94613", "94614", "94615", "94616", "94617", "94618", "94619", "94620", "94621", "94631", "94632", "94633", "94634", "94635", "94636", "94637", "94638", "94639", "94651", "94652", "94654", "94655", "94656", "94657", "94661", "94665", "94701"];
+  var freeCities = [];
   captcha_reload = function() { // reload captcha image
     $('#ticket_captcha').css('background-image', 'url(/api/captcha?'+Date.now()+')');
     $('#ticket_captcha').val("");
@@ -74,7 +74,10 @@ if ($(".ticket-form").length > 0) {
       if (tmp) price += parseFloat(tmp);
       tmp = $("#ticket_beer").data('price') * Math.abs($("#ticket_beer").val());
       if (tmp) price += parseFloat(tmp);
-      tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
+      // we keep this line with empty array to have it in the future
+      // tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
+      // free if the birth date is before 1990
+      tmp = (Date.parse($("#ticket_birth").val()) < 631148400000 ? -originalPrice : 0);
       if (tmp) price += parseFloat(tmp);
       $('#price').html(price);
     });
