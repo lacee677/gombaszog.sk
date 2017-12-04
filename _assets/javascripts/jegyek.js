@@ -54,7 +54,7 @@ if ($(".ticket-form").length > 0) {
       appId: '267323596708516',
       xfbml: true,
       status: true,
-      version: 'v2.0'
+      version: 'v2.9'
     });
     // scroller 
     $('.btn-pricing').click(function() {
@@ -99,9 +99,10 @@ if ($(".ticket-form").length > 0) {
             $('#ticket_last_name').val(profile.last_name);
             $('#ticket_city').val((profile.hometown ? profile.hometown.name : null));
             $('#ticket_where').val((profile.location ? profile.location.name : null));
-            if (profile.birthday)
+            if (profile.birthday) {
               date = profile.birthday.split("/").reverse(); // preparse date
-            $('#ticket_birth').val([date[0],date[2],date[1]].join("-"));
+              $('#ticket_birth').val([date[0],date[2],date[1]].join("-"));
+            }
             // show the form
             loadVars();
             alert("Betöltöttük a Facebook adataidat, de kérünk még ellenőrizd, hogy megfelelnek-e a a valóságnak!");
