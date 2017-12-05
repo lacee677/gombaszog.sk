@@ -48,6 +48,25 @@ if ($(".ticket-form").length > 0) {
     } else alert("Hoppá! Az űrlapot hibásan töltötted ki, a javítandó mezőket megjelöltük pirossal!");
   }
 
+  var calculateTicketPrice = function() {
+    price = parseFloat($('#price').data('price'));
+    var originalPrice = price;
+    tmp = $("#ticket_housing option:selected").data('price');
+    if (tmp) price += parseFloat(tmp);
+    tmp = $("#ticket_food option:selected").data('price');
+    if (tmp) price += parseFloat(tmp);
+    tmp = $("#ticket_bus option:selected").data('price');
+    if (tmp) price += parseFloat(tmp);
+    tmp = $("#ticket_beer").data('price') * Math.abs($("#ticket_beer").val());
+    if (tmp) price += parseFloat(tmp);
+    // we keep this line with empty array to have it in the future
+    // tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
+    // free if the birth date is before 1990
+    tmp = (Date.parse($("#ticket_birth").val()) < 631148400000 ? -originalPrice : 0);
+    if (tmp) price += parseFloat(tmp);
+    $('#price').html(price);
+  }
+
   window.fbAsyncInit = function() {
     // initialize facebook
     FB.init({
@@ -63,24 +82,7 @@ if ($(".ticket-form").length > 0) {
       }, "slow");
     });   
     // calculate price
-    $('.influence').on("change", function () {
-      price = parseFloat($('#price').data('price'));
-      var originalPrice = price;
-      tmp = $("#ticket_housing option:selected").data('price');
-      if (tmp) price += parseFloat(tmp);
-      tmp = $("#ticket_food option:selected").data('price');
-      if (tmp) price += parseFloat(tmp);
-      tmp = $("#ticket_bus option:selected").data('price');
-      if (tmp) price += parseFloat(tmp);
-      tmp = $("#ticket_beer").data('price') * Math.abs($("#ticket_beer").val());
-      if (tmp) price += parseFloat(tmp);
-      // we keep this line with empty array to have it in the future
-      // tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
-      // free if the birth date is before 1990
-      tmp = (Date.parse($("#ticket_birth").val()) < 631148400000 ? -originalPrice : 0);
-      if (tmp) price += parseFloat(tmp);
-      $('#price').html(price);
-    });
+    $('.influence').on("change", calculateTicketPrice);
     // autoload captcha
     $('.re-captcha').click(captcha_reload);
     // facebook 
@@ -107,6 +109,7 @@ if ($(".ticket-form").length > 0) {
             }
             // show the form
             loadVars();
+            calculateTicketPrice();
             alert("Betöltöttük a Facebook adataidat, de kérünk még ellenőrizd, hogy megfelelnek-e a a valóságnak!");
             $(".ticket-hidden").slideToggle("slow");
           });
