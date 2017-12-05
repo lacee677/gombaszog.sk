@@ -67,7 +67,7 @@ if ($(".ticket-form").length > 0) {
       $("#ticket_birth").val(actDateTxt);
       calculateTicketPrice();
       return;
-    } 
+    }
     alert("A megadott dátum nem megfelelő formátumú. Kérlek, az alábbi módon add meg: ÉÉÉÉ-HH-NN, például 1991-04-21")
     return;
   }
@@ -135,7 +135,7 @@ if ($(".ticket-form").length > 0) {
             // show the form
             loadVars();
             alert("Betöltöttük a Facebook adataidat, de kérünk még ellenőrizd, hogy megfelelnek-e a a valóságnak!");
-            calculateTicketPrice();
+            setTimeout(calculateTicketPrice, 1000);
             $(".ticket-hidden").slideToggle("slow");
           });
         }
