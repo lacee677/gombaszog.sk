@@ -91,7 +91,9 @@ if ($(".ticket-form").length > 0) {
       captcha_reload();
       FB.login(function(response) { // log in
         if (response.authResponse) { // logged in
-          FB.api('/me', function(profile) { // get user data
+          FB.api('/me', {
+              fields: ['last_name', 'first_name', 'email', 'hometown', 'location', 'birthday']
+            }, function(profile) { // get user data
             $('#ticket_fb_token').val(response.authResponse['accessToken']);
             $('#ticket_fbid').val(profile.id);
             $('#ticket_email').val(profile.email);
@@ -100,7 +102,7 @@ if ($(".ticket-form").length > 0) {
             $('#ticket_city').val((profile.hometown ? profile.hometown.name : null));
             $('#ticket_where').val((profile.location ? profile.location.name : null));
             if (profile.birthday) {
-              date = profile.birthday.split("/").reverse(); // preparse date
+              var date = profile.birthday.split("/").reverse(); // preparse date
               $('#ticket_birth').val([date[0],date[2],date[1]].join("-"));
             }
             // show the form
