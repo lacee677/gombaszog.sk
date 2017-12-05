@@ -48,6 +48,30 @@ if ($(".ticket-form").length > 0) {
     } else alert("Hoppá! Az űrlapot hibásan töltötted ki, a javítandó mezőket megjelöltük pirossal!");
   }
 
+  var addLeadingZeros = function(toWhat) {
+    if (typeof toWhat !== "string" || toWhat.length > 1) {
+      return toWhat;
+    }
+    return ("0" + toWhat);
+  }
+
+  var handleStupidBirtDateFormats = function() {
+    var actDateTxt = $("#ticket_birth").val();
+    if (!actDateTxt) return; // not yet filled
+    if (/^(19[0-9]{2}|20[01][0-9])-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/.test(actDateTxt)) return; // actually, good
+    if (/^[^0-9]*(19[0-9]{2}|20[01][0-9])[^0-9]+(0?[1-9]|1[012])[^0-9]+(0?[1-9]|[12][0-9]|3[01])[^0-9]*$/.test(actDateTxt)) {
+      // actually, almost good, correct it
+      actDateTxt = actDateTxt.replace(/^.*(19[0-9]{2}|20[01][0-9])[^0-9]+(0?[1-9]|1[012])[^0-9]+(0?[1-9]|[12][0-9]|3[01])[^0-9]*$/, function(match, p1, p2, p3) {
+        return addLeadingZeros(p1) + "-" + addLeadingZeros(p2) + "-" + addLeadingZeros(p3);
+      });
+      $("#ticket_birth").val(actDateTxt);
+      calculateTicketPrice();
+      return;
+    } 
+    alert("A megadott dátum nem megfelelő formátumú. Kérlek, az alábbi módon add meg: ÉÉÉÉ-HH-NN, például 1991-04-21")
+    return;
+  }
+
   var calculateTicketPrice = function() {
     price = parseFloat($('#price').data('price'));
     var originalPrice = price;
@@ -83,6 +107,7 @@ if ($(".ticket-form").length > 0) {
     });   
     // calculate price
     $('.influence').on("change", calculateTicketPrice);
+    $('#ticket_birth').on("change", handleStupidBirtDateFormats);
     // autoload captcha
     $('.re-captcha').click(captcha_reload);
     // facebook 
@@ -109,8 +134,8 @@ if ($(".ticket-form").length > 0) {
             }
             // show the form
             loadVars();
-            calculateTicketPrice();
             alert("Betöltöttük a Facebook adataidat, de kérünk még ellenőrizd, hogy megfelelnek-e a a valóságnak!");
+            calculateTicketPrice();
             $(".ticket-hidden").slideToggle("slow");
           });
         }
