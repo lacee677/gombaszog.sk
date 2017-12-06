@@ -584,7 +584,7 @@ a.nocolor {
 }
 
 input.has-error {
-  background-color: #FFCCCC;
+  background-color: #FD8F8F;
 }
 
 @media only screen and (max-width: 1366px) {

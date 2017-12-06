@@ -12,46 +12,42 @@ group: jegyek
           <ul class="clearfix">
             <li class="regular">
               <div class="regular-price">
-                <h2>Gömöri nap<span>Gömör lakosainak</span></h2>
-                <p class="price">&euro;1</p>
-                <p class="price-content">
-                  Szombat egész nap<br/> 
-                  helyszínen<br/>
-                </p>
+                <h2>Helyszíni<br />hetijegy</h2>
+                <p class="price">&euro;55</p>
+                <p class="price-content">6 nap<br>helyszínen</p>
               </div>
             </li>
             <li class="xplore">
               <div class="regular-price">
-                <h2>Helyszíni<br />hetijegy</h2>
-                <p class="price">&euro;49</p>
-                <p class="price-content">6 nap<br>helyszínen</p>
+                <h2>Téli<br />hetijegy</h2>
+                <p class="price">&euro;35</p>
+                <p class="price-content">6 nap<br>elővételben</p>
               </div>
             </li>
             <li class="rock">
               <div class="regular-price">
-                <h2>Elővételes<br />hetijegy<span>július 7-ig</span></h2>
-                <p class="price">&euro;39</p>
+                <h2>Karácsonyi<br />hetijegy<span>2017. végéig</span></h2>
+                <p class="price">&euro;30</p>
                 <p class="price-content">6 nap<br>elővételben</p>
-                <!--a class="btn btn-primary btn-pricing">Jegyelővétel!</a-->
+                <a class="btn btn-primary btn-pricing">Jegyelővétel!</a>
               </div>
             </li>
             <li class="xplore">
               <div class="regular-price">
-                <h2>Napijegy</h2>
-                <p class="price">&euro;12</p>
-                <p class="price-content">1 nap<br>helyszínen</p>
-              </div>            
-            </li>
-            <li class="vip">
-              <div class="regular-price">
                 <h2>Ingyenes hetijegy</h2>
                 <p class="price">&euro;0</p>
                 <p class="price-content">
-                  A Komáromi járás<br/>lakóinak<br/>július 7-ig
+                  Ha 1990 előtt<br/>születtél!!<br/>július 7-ig
                 </p>
-                <!--a class="btn btn-primary btn-pricing">Regisztráció</a-->
+                <a class="btn btn-primary btn-pricing">Regisztráció</a>
               </div>
-
+            </li>
+            <li class="vip">
+              <div class="regular-price">
+                <h2>Napijegy</h2>
+                <p class="price">&euro;13</p>
+                <p class="price-content">1 nap<br>helyszínen</p>
+              </div>
             </li>
           </ul>
           <div class="pricing-content extra-arak">
@@ -62,8 +58,9 @@ group: jegyek
                     <img src="{% asset_path kaja.png %}" class="img-responsive" />
                   </div>
                   <div class="col-sm-8">
-                    <h3>Kajajegy</h3>
-                    <p>Lecsópasz: Reggeli+vacsora <span>&euro;15</span></p>
+                    <h3>Kaja</h3>
+                    <p>Lecsópasz nincs!</p>
+                    <p>helyette <span>pénztárcabarát</span> reggeli és esti menü lesz.</p>
                   </div>
                 </div>
               </div>
@@ -81,7 +78,7 @@ group: jegyek
               </div>
             </div>
           </div>
-          <!-- jegyvetel start
+          <!-- jegyvetel start -->
           
           <div class="ticket-hidden" style="display: block;">
             <h2 class="text-center roll-here" style="padding-bottom: 1em;">A jegyelővétel/regisztráció megkezdéséhez válassz egy kitöltési opciót:</h2>
@@ -142,7 +139,7 @@ group: jegyek
                   </div>
                   <div class="form-group">
                     <label for="ticket_birth">Születési dátum <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Kérjük ÉÉÉÉ-HH-NN formátumban add meg, kötőjellel elválasztva!"></i></label>
-                    <input type="text" class="form-control" id="ticket_birth" placeholder="ÉÉÉÉ-HH-NN" name="ticket[birth]"/>
+                    <input type="text" class="form-control influence" id="ticket_birth" placeholder="ÉÉÉÉ-HH-NN" pattern="^(19[0-9]{2}|20[01][0-9])-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$" name="ticket[birth]"/>
                   </div>
                 </div>
                 <div class="col-md-3">
@@ -153,7 +150,7 @@ group: jegyek
                   <div class="row">
                     <div class="col-xs-7">
                       <div class="form-group">
-                        <label for="ticket_city">Település <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Ingyenes településeknél az irányítószám a mérvadó!"></i></label>
+                        <label for="ticket_city">Település <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Településed neve"></i></label>
                         <input type="text" class="form-control" id="ticket_city" placeholder="" name="ticket[city]"/>
                       </div>
                     </div>
@@ -405,7 +402,7 @@ group: jegyek
                       <option value="sator" data-price="10.0">Sátorban +10€</option>
                     </select>
                   </div>
-                  <div class="row">
+                  <div class="row" style="display: none">
                     <div class="col-xs-7">
                       <div class="form-group">
                         <label class="control-label" for="ticket_food">Mit ennél? <a class="nocolor" href="/info#etkezes" target="_blank"><i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Ha nem szeretnél kajajegyet, hagyd alapértelmezetten! Bővebb információkért kattints!"></i></a></label>
@@ -554,7 +551,7 @@ group: jegyek
               <input type="hidden" name="ticket[fb_token]" id="ticket_fb_token"/>
             </form>
           </div>
-          < jegyvetel end
+          <!-- jegyvetel end
           -->
         </div>
       </div>

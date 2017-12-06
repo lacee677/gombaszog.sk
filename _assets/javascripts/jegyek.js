@@ -1,5 +1,5 @@
 if ($(".ticket-form").length > 0) {
-  var freeCities = ["94501", "94504", "94505", "94601", "94602", "94603", "94612", "94613", "94614", "94615", "94616", "94617", "94618", "94619", "94620", "94621", "94631", "94632", "94633", "94634", "94635", "94636", "94637", "94638", "94639", "94651", "94652", "94654", "94655", "94656", "94657", "94661", "94665", "94701"];
+  var freeCities = [];
   captcha_reload = function() { // reload captcha image
     $('#ticket_captcha').css('background-image', 'url(/api/captcha?'+Date.now()+')');
     $('#ticket_captcha').val("");
@@ -48,13 +48,56 @@ if ($(".ticket-form").length > 0) {
     } else alert("Hoppá! Az űrlapot hibásan töltötted ki, a javítandó mezőket megjelöltük pirossal!");
   }
 
+  var addLeadingZeros = function(toWhat) {
+    if (typeof toWhat !== "string" || toWhat.length > 1) {
+      return toWhat;
+    }
+    return ("0" + toWhat);
+  }
+
+  var handleStupidBirtDateFormats = function() {
+    var actDateTxt = $("#ticket_birth").val();
+    if (!actDateTxt) return; // not yet filled
+    if (/^(19[0-9]{2}|20[01][0-9])-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/.test(actDateTxt)) return; // actually, good
+    if (/^[^0-9]*(19[0-9]{2}|20[01][0-9])[^0-9]+(0?[1-9]|1[012])[^0-9]+(0?[1-9]|[12][0-9]|3[01])[^0-9]*$/.test(actDateTxt)) {
+      // actually, almost good, correct it
+      actDateTxt = actDateTxt.replace(/^.*(19[0-9]{2}|20[01][0-9])[^0-9]+(0?[1-9]|1[012])[^0-9]+(0?[1-9]|[12][0-9]|3[01])[^0-9]*$/, function(match, p1, p2, p3) {
+        return addLeadingZeros(p1) + "-" + addLeadingZeros(p2) + "-" + addLeadingZeros(p3);
+      });
+      $("#ticket_birth").val(actDateTxt);
+      calculateTicketPrice();
+      return;
+    }
+    alert("A megadott dátum nem megfelelő formátumú. Kérlek, az alábbi módon add meg: ÉÉÉÉ-HH-NN, például 1991-04-21")
+    return;
+  }
+
+  var calculateTicketPrice = function() {
+    price = parseFloat($('#price').data('price'));
+    var originalPrice = price;
+    tmp = $("#ticket_housing option:selected").data('price');
+    if (tmp) price += parseFloat(tmp);
+    tmp = $("#ticket_food option:selected").data('price');
+    if (tmp) price += parseFloat(tmp);
+    tmp = $("#ticket_bus option:selected").data('price');
+    if (tmp) price += parseFloat(tmp);
+    tmp = $("#ticket_beer").data('price') * Math.abs($("#ticket_beer").val());
+    if (tmp) price += parseFloat(tmp);
+    // we keep this line with empty array to have it in the future
+    // tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
+    // free if the birth date is before 1990
+    tmp = (Date.parse($("#ticket_birth").val()) < 631148400000 ? -originalPrice : 0);
+    if (tmp) price += parseFloat(tmp);
+    $('#price').html(price);
+  }
+
   window.fbAsyncInit = function() {
     // initialize facebook
     FB.init({
       appId: '267323596708516',
       xfbml: true,
       status: true,
-      version: 'v2.0'
+      version: 'v2.9'
     });
     // scroller 
     $('.btn-pricing').click(function() {
@@ -63,21 +106,8 @@ if ($(".ticket-form").length > 0) {
       }, "slow");
     });   
     // calculate price
-    $('.influence').on("change", function () {
-      price = parseFloat($('#price').data('price'));
-      var originalPrice = price;
-      tmp = $("#ticket_housing option:selected").data('price');
-      if (tmp) price += parseFloat(tmp);
-      tmp = $("#ticket_food option:selected").data('price');
-      if (tmp) price += parseFloat(tmp);
-      tmp = $("#ticket_bus option:selected").data('price');
-      if (tmp) price += parseFloat(tmp);
-      tmp = $("#ticket_beer").data('price') * Math.abs($("#ticket_beer").val());
-      if (tmp) price += parseFloat(tmp);
-      tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
-      if (tmp) price += parseFloat(tmp);
-      $('#price').html(price);
-    });
+    $('.influence').on("change", calculateTicketPrice);
+    $('#ticket_birth').on("change", handleStupidBirtDateFormats);
     // autoload captcha
     $('.re-captcha').click(captcha_reload);
     // facebook 
@@ -88,7 +118,9 @@ if ($(".ticket-form").length > 0) {
       captcha_reload();
       FB.login(function(response) { // log in
         if (response.authResponse) { // logged in
-          FB.api('/me', function(profile) { // get user data
+          FB.api('/me', {
+              fields: ['last_name', 'first_name', 'email', 'hometown', 'location', 'birthday']
+            }, function(profile) { // get user data
             $('#ticket_fb_token').val(response.authResponse['accessToken']);
             $('#ticket_fbid').val(profile.id);
             $('#ticket_email').val(profile.email);
@@ -96,11 +128,14 @@ if ($(".ticket-form").length > 0) {
             $('#ticket_last_name').val(profile.last_name);
             $('#ticket_city').val((profile.hometown ? profile.hometown.name : null));
             $('#ticket_where').val((profile.location ? profile.location.name : null));
-            date = profile.birthday.split("/").reverse(); // preparse date
-            $('#ticket_birth').val([date[0],date[2],date[1]].join("-"));
+            if (profile.birthday) {
+              var date = profile.birthday.split("/").reverse(); // preparse date
+              $('#ticket_birth').val([date[0],date[2],date[1]].join("-"));
+            }
             // show the form
             loadVars();
             alert("Betöltöttük a Facebook adataidat, de kérünk még ellenőrizd, hogy megfelelnek-e a a valóságnak!");
+            setTimeout(calculateTicketPrice, 1000);
             $(".ticket-hidden").slideToggle("slow");
           });
         }
