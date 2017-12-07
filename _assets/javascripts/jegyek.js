@@ -15,7 +15,7 @@ if ($(".ticket-form").length > 0) {
     $.getJSON("/api/ticket/available").done(function (data) {
       $.each(data.bus, function(k,v) {    
         $("#ticket_bus").append(
-          $('<option value="'+v.id+'" data-price="'+v.price+'">'+v.name+' partybusszal (még '+v.free+' hely) +'+parseInt(v.price)+'&euro;</option>')
+          $('<option value="'+v.id+'" data-price="'+v.price+'">'+v.name+' (még '+v.free+' hely) +'+parseInt(v.price)+'&euro;</option>')
         );
       });
       $.each(data.housing, function(k,v) {
