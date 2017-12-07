@@ -24,3 +24,5 @@ _error.log
 _site
 _posts
 _program.json
+
+.asset-cache
