@@ -10,10 +10,10 @@ if ($(".ticket-form").length > 0) {
       vars[key] = value;
     });
     return vars;
-  } 
+  }
   loadVars = function() {
     $.getJSON("/api/ticket/available").done(function (data) {
-      $.each(data.bus, function(k,v) {    
+      $.each(data.bus, function(k,v) {
         $("#ticket_bus").append(
           $('<option value="'+v.id+'" data-price="'+v.price+'">'+v.name+' (még '+v.free+' hely) +'+parseInt(v.price)+'&euro;</option>')
         );
@@ -38,7 +38,7 @@ if ($(".ticket-form").length > 0) {
         $(this).removeClass("has-error");
       });
     });
-    if (e.email == "used") { 
+    if (e.email == "used") {
       alert("A megadott e-mail címet már használták egy jegyelővételhez! Minden megvásárolt jegyhez egyedi e-mail címet kell megadni!");
     } else if (e.email == "retry") {
       $("#ticket_email").removeClass("has-error");
@@ -99,18 +99,18 @@ if ($(".ticket-form").length > 0) {
       status: true,
       version: 'v2.9'
     });
-    // scroller 
+    // scroller
     $('.btn-pricing').click(function() {
       $('body,html').animate({
         scrollTop: $('.roll-here').offset().top
       }, "slow");
-    });   
+    });
     // calculate price
     $('.influence').on("change", calculateTicketPrice);
     $('#ticket_birth').on("change", handleStupidBirtDateFormats);
     // autoload captcha
     $('.re-captcha').click(captcha_reload);
-    // facebook 
+    // facebook
     $('.ticket-fb').click(function(e) {
       e.preventDefault();
       $('form')[0].reset();
@@ -126,7 +126,7 @@ if ($(".ticket-form").length > 0) {
             $('#ticket_email').val(profile.email);
             $('#ticket_first_name').val(profile.first_name);
             $('#ticket_last_name').val(profile.last_name);
-            $('#ticket_city').val((profile.hometown ? profile.hometown.name : null));
+            //$('#ticket_city').val((profile.hometown ? profile.hometown.name : null));
             $('#ticket_where').val((profile.location ? profile.location.name : null));
             if (profile.birthday) {
               var date = profile.birthday.split("/").reverse(); // preparse date
@@ -141,7 +141,7 @@ if ($(".ticket-form").length > 0) {
         }
       }, {scope: 'publish_actions,rsvp_event,user_likes,email,user_birthday,user_hometown,user_location,public_profile'});
     });
-    //manual 
+    //manual
     $('.ticket-manual').click(function (e) {
       e.preventDefault();
       $('form')[0].reset();
@@ -183,12 +183,12 @@ if ($(".ticket-form").length > 0) {
           e.preventDefault();
         }
       });
-    return ret; 
+    return ret;
     });
 
     $('#ticket').bind("keyup keypress", function(e) {
-      var code = e.keyCode || e.which; 
-      if (code == 13) {               
+      var code = e.keyCode || e.which;
+      if (code == 13) {
         e.preventDefault();
         return false;
       }
@@ -210,7 +210,7 @@ getUrlVars = function() { // get url variables
     vars[key] = value;
   });
   return vars;
-} 
+}
 
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -242,4 +242,3 @@ jQuery(document).ready(function($){
     }
   });
 });
-
