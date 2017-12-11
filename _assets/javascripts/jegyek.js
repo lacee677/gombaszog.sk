@@ -119,7 +119,7 @@ if ($(".ticket-form").length > 0) {
       FB.login(function(response) { // log in
         if (response.authResponse) { // logged in
           FB.api('/me', {
-              fields: ['last_name', 'first_name', 'email', 'hometown', 'location', 'birthday']
+              fields: ['last_name', 'first_name', 'email', 'location', 'birthday']
             }, function(profile) { // get user data
             $('#ticket_fb_token').val(response.authResponse['accessToken']);
             $('#ticket_fbid').val(profile.id);
