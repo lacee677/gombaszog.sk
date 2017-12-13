@@ -217,7 +217,7 @@ if ($(".ticket-form").length > 0) {
                   setlNameHU.innerHTML = value.magyarnev;
                 var setlNameSK = document.createElement('strong');
                   setlNameSK.className = 'setlNameSK';
-                  setlNameSK.innerHTML = ','+value.szlovaknev;
+                  setlNameSK.innerHTML = ', '+value.szlovaknev;
                 var setlPSC = document.createElement('small');
                   setlPSC.className = 'setlPSC';
                   setlPSC.innerHTML = value.iranyitoszam;
