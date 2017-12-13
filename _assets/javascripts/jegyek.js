@@ -197,50 +197,66 @@ if ($(".ticket-form").length > 0) {
 
   $('#ticket_city').on('keyup',function(){
     if(this.value.length >= 3 && $('#ticket_country').val() == 'SK'){
-      $.getJSON("https://velemjaro.sk/api/settlementsearchpublic/"+this.value).done(function (data) {
-        $('#settlement_fill').slideDown(500);
-        if(data.success == true){
-          $('#settlement_fill').html('');
-          $.each(data.result, function(key,value) {
-            var setlRow = document.createElement('div');
-            setlRow.className = 'setlRow';
-            setlRow.setAttribute('id','setlRow_'+key);
-            setlRow.setAttribute('onclick','fillSettlement("setlRow_'+key+'")');
-            var setlDivOne = document.createElement('div');
-            var setlDivTwo = document.createElement('div');
-            var setlNameHU = document.createElement('strong');
-              setlNameHU.className = 'setlNameHU';
-              setlNameHU.innerHTML = value.magyarnev;
-            var setlNameSK = document.createElement('strong');
-              setlNameSK.className = 'setlNameSK';
-              setlNameSK.innerHTML = '/'+value.szlovaknev;
-            var setlPSC = document.createElement('small');
-              setlPSC.className = 'setlPSC';
-              setlPSC.innerHTML = value.iranyitoszam;
-            var setlJaras = document.createElement('small');
-              setlJaras.innerHTML = ' - '+value.jarasmnevi;
+      try{
+        $.getJSON("https://velemjaro.sk/api/settlementsearchpublic/"+this.value).done(function (data) {
+          if(data.success == true){
+            $('#settlement_fill').html('');
+            $.each(data.result, function(key,value) {
+              if(key >= 5){
+                return 'five';
+              }
+              else{
+                var setlRow = document.createElement('div');
+                setlRow.className = 'setlRow';
+                setlRow.setAttribute('id','setlRow_'+key);
+                setlRow.setAttribute('onclick','fillSettlement("setlRow_'+key+'")');
+                var setlDivOne = document.createElement('div');
+                var setlDivTwo = document.createElement('div');
+                var setlNameHU = document.createElement('strong');
+                  setlNameHU.className = 'setlNameHU';
+                  setlNameHU.innerHTML = value.magyarnev;
+                var setlNameSK = document.createElement('strong');
+                  setlNameSK.className = 'setlNameSK';
+                  setlNameSK.innerHTML = ','+value.szlovaknev;
+                var setlPSC = document.createElement('small');
+                  setlPSC.className = 'setlPSC';
+                  setlPSC.innerHTML = value.iranyitoszam;
+                var setlJaras = document.createElement('small');
+                  setlJaras.innerHTML = ' - '+value.jarasmnevi;
 
-            setlDivOne.appendChild(setlNameHU);
-            setlDivOne.appendChild(setlNameSK);
-            setlRow.appendChild(setlDivOne);
+                setlDivOne.appendChild(setlNameHU);
+                setlDivOne.appendChild(setlNameSK);
+                setlRow.appendChild(setlDivOne);
 
-            setlDivTwo.appendChild(setlPSC);
-            setlDivTwo.appendChild(setlJaras);
-            setlRow.appendChild(setlDivTwo);
+                setlDivTwo.appendChild(setlPSC);
+                setlDivTwo.appendChild(setlJaras);
+                setlRow.appendChild(setlDivTwo);
 
-            document.getElementById('settlement_fill').appendChild(setlRow);
-          });
-        }
-        else{
-          $('#settlement_fill').html('');
-          $('#settlement_fill').hide();
-        }
-      });
+                document.getElementById('settlement_fill').appendChild(setlRow);
+              }
+            });
+            $('#settlement_fill').slideDown(500);
+          }
+          else{
+            $('#settlement_fill').html('');
+            $('#settlement_fill').slideUp(500);
+          }
+        });
+      }
+      catch(err){
+        console.log('test');
+        $('#settlement_fill').html('');
+        $('#settlement_fill').slideUp(500);
+      }
     }
     else{
       $('#settlement_fill').html('');
-      $('#settlement_fill').hide();
+      $('#settlement_fill').slideUp(500);
     }
+  });
+
+  $(document).click(function(){
+    $('#settlement_fill').hide();
   });
 
   $('#ticket_country').on('change', function(){

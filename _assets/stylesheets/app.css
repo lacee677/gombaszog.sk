@@ -762,13 +762,14 @@ div.biglogo {
   float:left;
   position:absolute;
   width:400px;
-  height:200px;
   left:0;
   margin-left: 15px;
   background-color: white;
   z-index: 3;
   overflow: auto;
   transition: .2s ease;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
 }
 
 .setlRow{
