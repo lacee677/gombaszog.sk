@@ -79,7 +79,7 @@ group: jegyek
             </div>
           </div>
           <!-- jegyvetel start -->
-          
+
           <div class="ticket-hidden" style="display: block;">
             <h2 class="text-center roll-here" style="padding-bottom: 1em;">A jegyelővétel/regisztráció megkezdéséhez válassz egy kitöltési opciót:</h2>
             <div class="row">
@@ -106,15 +106,15 @@ group: jegyek
               <input type="hidden" name="cmd" value="_ext-enter">
               <input type="hidden" name="redirect_cmd" value="_xclick">
               <input type="hidden" name="business" value="gombaszog@gmail.com" />
-              <input type="hidden" name="charset" value="utf-8" /> 
+              <input type="hidden" name="charset" value="utf-8" />
               <input type="hidden" name="currency_code" value="EUR" />
               <input type="hidden" name="address_override" value="1" />
               <input type="hidden" name="no_shipping" value="1" />
               <input type="hidden" name="notify_url" value="https://www.gombaszog.sk/api/ticket/ipn" />
               <input type="hidden" name="return" value="https://www.gombaszog.sk/jegyek/sikeres" />
               <input type="hidden" name="cancel_return" value="https://www.gombaszog.sk/jegyek/sikertelen" />
-              <input type="hidden" name="quantity" value="1" /> 
-              <input type="hidden" name="item_number" value="Belépő/Vstupné" /> 
+              <input type="hidden" name="quantity" value="1" />
+              <input type="hidden" name="item_number" value="Belépő/Vstupné" />
               <input type="hidden" name="amount" value="0" id="ticket_amount" />
               <input type="hidden" name="custom" value="" id="ticket_custom" />
               <input type="hidden" name="item_name" value="BELEPO/VSTUPNE" id="ticket_name" />
@@ -150,8 +150,11 @@ group: jegyek
                   <div class="row">
                     <div class="col-xs-7">
                       <div class="form-group">
-                        <label for="ticket_city">Település <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Településed neve"></i></label>
-                        <input type="text" class="form-control" id="ticket_city" placeholder="" name="ticket[city]"/>
+                        <div>
+                          <label for="ticket_city">Település <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Településed neve"></i></label>
+                          <input type="text" class="form-control" id="ticket_city" placeholder="" name="ticket[city]"/>
+                        </div>
+                        <div id='settlement_fill' style='';></div>
                       </div>
                     </div>
                     <div class="col-xs-5">
@@ -366,7 +369,7 @@ group: jegyek
                   <div class="form-group">
                     <label class="control-label" for="ticket_captcha">Megerősítő kód <i class="fa fa-info-circle info-tooltip re-captcha" data-toggle="tooltip" data-placement="bottom" title="Az alábbi mezőbe a képen található kódot kell bemásolni. Ha a szöveg nem lenne olvasható, kattints és kapsz újat!"></i></label>
                     <input type="text" class="form-control" id="ticket_captcha" placeholder="Ezt írd ide --&gt;" name="ticket[captcha]" style="background-size: 120px; background-position: right center; background-repeat: no-repeat;"/>
-                  </div>                  
+                  </div>
                 </div>
                 <div class="col-md-3">
                   <div class="form-group">
@@ -415,7 +418,7 @@ group: jegyek
                       <div class="form-group">
                         <label class="control-label" for="ticket_beer">Sör? <a class="nocolor" href="/info#etkezes" target="_blank"><i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Egy sörkupon ára 10€ és 11&euro;-nyi sörre váltható be!"></i></a></label>
                         <input type="number" min=0 class="form-control influence" id="ticket_beer" placeholder="" name="ticket[beer]" value="0" data-price="10.0"/>
-                      </div>                  
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -478,7 +481,7 @@ group: jegyek
                             Ismerkedés
                           </label>
                         </div>
-                      </div> 
+                      </div>
                     </div>
                   </div>
                   <div class="form-group">
@@ -523,7 +526,7 @@ group: jegyek
                             Egyéb
                           </label>
                         </div>
-                      </div> 
+                      </div>
                     </div>
                   </div>
                   <label>&nbsp;</label>
@@ -535,7 +538,7 @@ group: jegyek
                    A jegyeket a <strong>PayPal</strong> felületén bankkártyával vagy PayPal számlával lehet kifizetni. Sikeres tranzakció esetén a jegyet <strong>a megadott e-mail címre</strong> küldjük el. Ha kérdésed van, vagy akadályba ütköztél a fizetés során írj nekünk a <strong>jegyek [kukac] gombaszog [pont] sk</strong> e-mail címre!
                   </small></p>
                   <p class="text-justified"><small>
-                   Ha kuponnal rendelkezel, akkor az akciós jegyárral számolt összeg csak a <strong>"Tovább"</strong> gombra való kattintás után jelenik meg. 
+                   Ha kuponnal rendelkezel, akkor az akciós jegyárral számolt összeg csak a <strong>"Tovább"</strong> gombra való kattintás után jelenik meg.
                   </small></p>
                   <p class="text-justified"><small>
                     A <strong>"Tovább"</strong> gombra való kattintással <strong>elfogadod és tudomásul veszed</strong> az <a href="#aszf" data-toggle="modal" data-target="#aszf">általános szerződési feltételeinket és adatkezelési irányelveinket</a>.
