@@ -1976,6 +1976,10 @@ fieldset[disabled] .form-control {
   background-color:#eee;
 }
 
+.form-control:invalid {
+  background-color: #f5d8d8;
+}
+
 textarea.form-control {
   height:auto;
 }
