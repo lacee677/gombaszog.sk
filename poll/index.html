@@ -21,7 +21,8 @@ group: otletborze
       appId: '267323596708516',
       status: true,
       cookie: true,
-      xfbml: true
+      xfbml: true,
+      version: 'v2.5'
     });
     jQuery.ajax({
       url: '/api/poll',
@@ -90,17 +91,17 @@ group: otletborze
                     setTimeout(function() {document.location.reload();}, 5000);
                   }).fail(ajax_error);
                 } else { // refresh for permissions
-				  console.log("Permission error, details: publish_actions: " + checkPerm(r, "publish_actions") + 
-						" rsvp_event: " + checkPerm(r, "rsvp_event") + 
-						" email: " + checkPerm(r, "email") + 
-						" user_birthday: " + checkPerm(r, "user_birthday") + 
-						" user_hometown: " + checkPerm(r, "user_hometown") + 
-						" user_location: " + checkPerm(r, "user_location") + 
+				  console.log("Permission error, details: publish_actions: " + checkPerm(r, "publish_actions") +
+						" rsvp_event: " + checkPerm(r, "rsvp_event") +
+						" email: " + checkPerm(r, "email") +
+						" user_birthday: " + checkPerm(r, "user_birthday") +
+						" user_hometown: " + checkPerm(r, "user_hometown") +
+						" user_location: " + checkPerm(r, "user_location") +
 						" public_profile: " + checkPerm(r, "public_profile"));
                   jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először engedélyezned kell az alkalmazásunkat. Ha ez megtörtént, töltsd újra az oldalat!</strong>");
                 }
               });
-            } else { 
+            } else {
               jQuery("#poll").html("<strong style=\"color: red;\">A szavazáshoz először be kell lenned jelentkezned a Facebookon!</strong>");
             }
           }, {scope: 'publish_actions,rsvp_event,email,user_birthday,user_hometown,user_location,public_profile'});
@@ -131,7 +132,7 @@ group: otletborze
       <span class="lang-hu">Ki zenéljen a táborban?</span>
       <span class="lang-sk" style="display: none;">Kapely</span>
       <span class="lang-en" style="display: none;">Bands</span>
-    </h3>    
+    </h3>
     <div>
       <p class="justified">
         <span class="lang-hu">Melyik együttest látnád szívesen 2018-ban Gombaszög nagyszínpadán? Szavazz kedvencedre, és mi megpróbáljuk összehozni! <strong>A szavazók közt egy egész hetes táborbelépőt sorsolunk ki!</strong></span>
