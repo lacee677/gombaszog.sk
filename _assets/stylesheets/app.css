@@ -755,3 +755,28 @@ div.biglogo {
 #weatherinfo {
   padding-top: 30px;
 }
+
+
+#settlement_fill{
+  display:none;
+  float:left;
+  position:absolute;
+  width:400px;
+  left:0;
+  margin-left: 15px;
+  background-color: white;
+  z-index: 3;
+  overflow: auto;
+  transition: .2s ease;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.setlRow{
+  border-bottom: 1px solid grey;
+  cursor:pointer;
+}
+
+.setlRow:hover{
+  background-color: lightgrey;
+}
