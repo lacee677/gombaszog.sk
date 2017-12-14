@@ -147,23 +147,6 @@ group: jegyek
                     <label for="ticket_address">Utca, házszám</label>
                     <input type="text" class="form-control" id="ticket_address" placeholder="" name="ticket[address]"/>
                   </div>
-                  <div class="row">
-                    <div class="col-xs-7">
-                      <div class="form-group">
-                        <div>
-                          <label for="ticket_city">Település <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Településed neve"></i></label>
-                          <input type="text" class="form-control" id="ticket_city" placeholder="" autocomplete='off' name="ticket[city]"/>
-                        </div>
-                        <div id='settlement_fill' style='';></div>
-                      </div>
-                    </div>
-                    <div class="col-xs-5">
-                      <div class="form-group">
-                        <label for="ticket_zip">Irányítószám</label>
-                        <input type="text" class="form-control influence" id="ticket_zip" placeholder="" name="ticket[zip]"/>
-                      </div>
-                    </div>
-                  </div>
                   <div class="form-group">
                     <label for="ticket_country">Ország</label>
                     <select class="form-control select2" id="ticket_country" placeholder="" name="ticket[country]">
@@ -361,6 +344,23 @@ group: jegyek
                       <option value="ZW">Zimbabwe</option>
                       <option value="CV">Zöld-foki Köztársaság</option>
                     </select>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-7">
+                      <div class="form-group">
+                        <div>
+                          <label for="ticket_city">Település <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Településed neve"></i></label>
+                          <input type="text" class="form-control" id="ticket_city" placeholder="" autocomplete='off' name="ticket[city]"/>
+                        </div>
+                        <div id='settlement_fill' style='';></div>
+                      </div>
+                    </div>
+                    <div class="col-xs-5">
+                      <div class="form-group">
+                        <label for="ticket_zip">Irányítószám</label>
+                        <input type="text" class="form-control influence" id="ticket_zip" placeholder="" name="ticket[zip]"/>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="ticket_voucher">Kupon kód<i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Itt adhatod meg, ki ajánlotta a tábort, vagy a kedvezményre feljogosító kuponod kódját."></i></label>
