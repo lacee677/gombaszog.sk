@@ -52,15 +52,15 @@ group: jegyek
           </ul>
           <div class="pricing-content extra-arak">
             <div class="row">
-              <div class="col-md-4 col-md-offset-2">
+              <div class="col-md-4">
                 <div class="row">
                   <div class="col-sm-4">
-                    <img src="{% asset_path kaja.png %}" class="img-responsive" />
+                    <img src="{% asset_path vonat_icon.png %}" class="img-responsive" />
                   </div>
                   <div class="col-sm-8">
-                    <h3>Kaja</h3>
-                    <p>Lecsópasz nincs!</p>
-                    <p>Helyette <span>pénztárcabarát</span> reggeli és esti menü</p>
+                    <h3>Partivonat</h3>
+                    <p>Csak elővételben <span>&euro;25</span></p>
+                    <p>Válaszd a partivonatot &quot;Mivel érkezel?&quot; kérdésnél</p>
                   </div>
                 </div>
               </div>
@@ -73,6 +73,18 @@ group: jegyek
                     <h3>Sátorjegy</h3>
                     <p>Sátranként <span>&euro;10</span></p>
                     <p>Sátranként egyszer kell kifizetni</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="{% asset_path kaja.png %}" class="img-responsive" />
+                  </div>
+                  <div class="col-sm-8">
+                    <h3>Kaja</h3>
+                    <p>Lecsópasz nincs!</p>
+                    <p>Helyette <span>pénztárcabarát</span> reggeli és esti menü</p>
                   </div>
                 </div>
               </div>
@@ -388,7 +400,7 @@ group: jegyek
                     <input type="text" class="form-control" id="ticket_where" placeholder="" name="ticket[stat_where]"/>
                   </div>
                   <div class="form-group">
-                    <label class="control-label" for="ticket_bus">Mivel érkezel? <a class="nocolor" href="/info#utazas" target="_blank"><i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Itt tudsz helyet foglalni a partybuszainkra, a szabad helyek számát zárójelben látod. Bővebb információkért kattints!"></i></a></label>
+                    <label class="control-label" for="ticket_bus">Mivel érkezel? <a class="nocolor" href="/info#utazas" target="_blank"><i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Itt tudsz helyet foglalni a partivonatra, a szabad helyek számát zárójelben látod. Bővebb információkért kattints!"></i></a></label>
                     <select id="ticket_bus" name="ticket[bus]" class="form-control influence">
                       <option value="gyalog">Gyalog</option>
                       <option value="bicikli">Biciklivel</option>
