@@ -163,19 +163,14 @@ if ($(".ticket-form").length > 0) {
         dataType: 'json'
       }).done(function (data) {
         if (data.ok) {
-          $("#ticket_first_name").attr("name", "first_name");
-          $("#ticket_last_name").attr("name", "last_name");
-          $("#ticket_email").attr("name", "email");
-          $("#ticket_address").attr("name", "address1");
-          $("#ticket_city").attr("name", "city");
-          $("#ticket_zip").attr("name", "zip");
-          $("#ticket_country").attr("name", "country");
-          $("#ticket_phone_a").val(data.phone_a)
-          $("#ticket_phone").attr("name", "night_phone_b").val(data.phone_b);
-          $("#ticket_custom").val(data.custom);
           $("#ticket_amount").val(data.amount);
-          $("#ticket_name").val(data.name);
-          $("form#ticket").attr("action", data.action);
+          if(data.amount == 0){
+            $('form#ticket').attr('action', data.action);
+          }
+          else{
+            e.preventDefault();
+            payNow(data.token, data.custom, data.amount, true);
+          }
           ret = data.ok;
         } else {
           mark(data);
@@ -184,6 +179,12 @@ if ($(".ticket-form").length > 0) {
         }
       });
     return ret;
+    });
+
+    $('#braintree-modal-close').click(function(){
+      $('#braintree-modal').modal('hide');
+      $('#braintree-container').html('');
+      $('#buybutton').html("&nbsp;Tovább&nbsp;");
     });
 
     $('#ticket').bind("keyup keypress", function(e) {
@@ -297,15 +298,13 @@ function getParameterByName(name) {
 
 jQuery(document).ready(function($){
   $(window).load(function() {
-    if ($('#pay-form').length > 0) {
-      $.getJSON("https://felho.gombaszog.sk/api/ticket/paynow/"+getParameterByName("q")).done(function (data) {
+    if ($('#braintree-box').hasClass('paybox')) {
+      $.getJSON("/api/ticket/paynow/"+getParameterByName("q")).done(function (data) {
         var msg = "";
         if(data.status == "waiting") {
-          msg = "Kedves "+data.last_name+" "+data.first_name+", <br />a megrendelt jegy ára: "+data.amount+"&euro;. A fizetéshez kattints a PayPal-os képre:";
-          $.each( data, function( key, val ) {
-              $("#"+key).val(val);
-          });
-          $("#pay-form").removeClass("hidden-form");
+          msg = "Kedves "+data.last_name+" "+data.first_name+", <br />a megrendelt jegy ára: "+data.amount+"&euro;.";
+          payNow(data.token, data.custom, data.amount, false);
+          $('#braintree-box').show();
         } else if(data.status == "dropped") {
           msg = "Kedves "+data.last_name+" "+data.first_name+", <br />a fizetés nem kezdeményezhető, mert lejárt a rendelés utáni három órás időkeret. <a href=\"/jegyek/\">Kattints ide</a> új vásárlás indításához.";
         } else if(data.status == "completed") {
@@ -318,3 +317,46 @@ jQuery(document).ready(function($){
     }
   });
 });
+
+function payNow(token, custom, amount, isModal){
+  braintree.dropin.create({
+    authorization: token,
+    paypal:{
+      flow: 'checkout',
+      amount: amount,
+      currency: 'EUR'
+    },
+    container: '#braintree-container'
+  }, function (createErr, instance) {
+    var button = document.querySelector('#braintree-pay');
+    button.setAttribute('data-custom', custom);
+    button.innerHTML = 'Fizetés - '+ amount + '&euro;';
+    if(isModal){
+      $('#braintree-modal').modal('show');
+    }
+    button.addEventListener('click', function () {
+      instance.requestPaymentMethod(function (err, payload) {
+        var button_val = document.querySelector('#braintree-pay');
+        button_val = button.getAttribute('data-custom');
+        $.ajax({
+          url: '/api/ticket/paynow',
+          type: 'POST',
+          timeout: 2000,
+          async: false,
+          data: {id : button_val,
+                 nonce: payload.nonce
+                },
+          dataType: 'json'
+        }).done(function (data) {
+          console.log(data.status);
+          if(data.ok){
+            setTimeout(function(){ window.location.href = '/jegyek/sikeres'; }, 1000);
+          }
+          else{
+            setTimeout(function(){ window.location.href = '/jegyek/sikertelen'; }, 1000);
+          }
+        });
+      });
+    });
+  });
+}
