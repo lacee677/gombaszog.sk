@@ -461,6 +461,14 @@ a.footer-scu:hover {
   color: #f50;
 }
 
+a.footer-sp:hover {
+  color: #3DFB26;
+}
+
+a.footer-bc:hover {
+  color: #333;
+}
+
 #post-content img {
   width: 100%;
 }
