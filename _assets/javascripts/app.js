@@ -12,9 +12,9 @@
  *= require zene.js
  *= require sajto.js
  *= require terkep.js
- *= require poll.js
- *= require christmas_ticket.js
  */
+ // require poll.js
+ // require christmas_ticket.js
 
 String.prototype.hashCode = function() {
   var hash = 0, i, chr, len;
