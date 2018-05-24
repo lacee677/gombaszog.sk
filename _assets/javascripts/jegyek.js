@@ -152,7 +152,7 @@ if ($(".ticket-form").length > 0) {
     });
     // submit
     $('form#ticket').submit(function (e) {
-      if (!$("#ticket_confirm_aszf").checked) {
+      if (!$("#ticket_confirm_aszf").prop("checked")) {
         e.preventDefault();
         return alert("A továbblépéshez kérünk, fogadd el az általános szerződési feltételeinket és adatvédelmi irányelveinket.");
       }
