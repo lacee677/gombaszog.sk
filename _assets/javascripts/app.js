@@ -35,6 +35,13 @@ jQuery(document).ready(function($){
       return this.hostname != window.location.hostname;
     }).attr('target', '_blank');
 
+    // open modal if it is received in hash
+    var target = document.location.hash.replace("#", "");
+    if (target && target.length && /^modal-.+/gi.test(target)) {
+      var realLink = target.replace(/^modal-/gi, "");
+      $('#' + realLink).modal('show');
+    }
+
     // The slider being synced must be initialized first
     $('#carousel').flexslider({
       animation: "slide",
