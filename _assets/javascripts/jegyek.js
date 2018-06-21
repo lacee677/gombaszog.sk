@@ -343,7 +343,7 @@ function payNow(token, custom, amount, isModal){
         var button_val = document.querySelector('#braintree-pay');
         button_val = button.getAttribute('data-custom');
         $.ajax({
-          url: '/api/ticket/paynow',
+          url: '/api/ticket/pay',
           type: 'POST',
           timeout: 2000,
           async: false,
