@@ -86,7 +86,7 @@ if ($(".ticket-form").length > 0) {
     // we keep this line with empty array to have it in the future
     // tmp = ($.inArray($("#ticket_zip").val(), freeCities) > -1 ? -originalPrice : 0);
     // free if the birth date is before 1990
-    tmp = (Date.parse($("#ticket_birth").val()) < 631148400000 ? -originalPrice : 0);
+    // tmp = (Date.parse($("#ticket_birth").val()) < 631148400000 ? -originalPrice : 0);
     if (tmp) price += parseFloat(tmp);
     $('#price').html(price);
   }
@@ -139,7 +139,7 @@ if ($(".ticket-form").length > 0) {
             $(".ticket-hidden").slideToggle("slow");
           });
         }
-      }, {scope: 'publish_actions,rsvp_event,user_likes,email,user_birthday,user_hometown,user_location,public_profile'});
+      }, {scope: 'publish_actions,user_likes,email,user_birthday,user_hometown,user_location,public_profile'});
     });
     //manual
     $('.ticket-manual').click(function (e) {
@@ -152,6 +152,10 @@ if ($(".ticket-form").length > 0) {
     });
     // submit
     $('form#ticket').submit(function (e) {
+      if (!$("#ticket_confirm_aszf").prop("checked")) {
+        e.preventDefault();
+        return alert("A továbblépéshez kérünk, fogadd el az általános szerződési feltételeinket és adatvédelmi irányelveinket.");
+      }
       $('#buybutton').html("&nbsp;<i class=\"fa fa-spinner fa-spin\"></i>&nbsp;");
       ret = false;
       $.ajax({
@@ -178,7 +182,7 @@ if ($(".ticket-form").length > 0) {
           e.preventDefault();
         }
       });
-    return ret;
+      return ret;
     });
 
     $('#braintree-modal-close').click(function(){

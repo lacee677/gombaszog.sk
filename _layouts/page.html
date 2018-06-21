@@ -30,7 +30,7 @@ layout: default
                   <li><a {% if page.group == 'blog' %} class="active"{% endif %}href="/blog">Hírek</a></li>
                   <!--li><a {% if page.group == 'poll' %} class="active"{% endif %}href="/poll">Ki lépjen fel?</a></li-->
                   <li><a {% if page.group == 'rolunk' %} class="active"{% endif %}href="/rolunk">Rólunk</a></li>
-                  <!--li><a {% if page.group == 'zene' %} class="active"{% endif %}href="/zene">Zene</a></li-->
+                  <li><a {% if page.group == 'zene' %} class="active"{% endif %}href="/zene">Zene</a></li>
                   <!--<li><a {% if page.group == 'program' %} class="active"{% endif %}href="/program">Program</a></li>-->
                   <li><a {% if page.group == 'terkep' %} class="active"{% endif %}href="/terkep">Térkép</a></li>
                   <!--<li><a {% if page.group == 'tompaszobor' %} class="active"{% endif %}href="/tompaszobor">Tompa-szobor</a></li>-->
@@ -60,37 +60,36 @@ layout: default
               <div class="col-sm-12 col-md-8">
                 <h4>Szervezők</h4>         
                 <img src="{% asset_path sm_logo.png %}"/>     
-                <a href="http://www.diakhalozat.sk" target="_blank"><img src="{% asset_path dh_logo.png %}"/></a>
-                <a href="http://www.aed.cz" target="_blank"><img src="{% asset_path tsz_aed.png %}"/></a>
-                <a href="http://www.kafedik.net" target="_blank"><img src="{% asset_path tsz_kafedik.png %}"/></a>
-                <a href="http://www.jaik.sk" target="_blank"><img src="{% asset_path tsz_jaik.png %}"/></a>
-                <a href="http://www.jugyik.sk" target="_blank"><img src="{% asset_path tsz_jugyik.png %}"/></a>               
-                <a href="http://www.kikelet.sk" target="_blank"><img src="{% asset_path tsz_kikelet.png %}"/></a>
-                <a href="http://www.jomod.sk" target="_blank"><img src="{% asset_path tsz_jomod.png %}"/></a>
-                <img src="{% asset_path tsz_mikad.png %}"/>
-                <a href="http://kaszasattiladiakkor.hu/" target="_blank"><img src="{% asset_path kad_1.png %}"/></a>
-                <img src="{% asset_path tsz_jadik.png %}"/>
+                <a href="http://www.diakhalozat.sk" target="_blank"><img src="{% asset_path tsz/dh_logo.png %}"/></a>
+                <a href="http://www.aed.cz" target="_blank"><img src="{% asset_path tsz/tsz_aed.png %}"/></a>
+                <a href="http://www.kafedik.net" target="_blank"><img src="{% asset_path tsz/tsz_kafedik.png %}"/></a>
+                <a href="http://www.jaik.sk" target="_blank"><img src="{% asset_path tsz/tsz_jaik.png %}"/></a>
+                <a href="http://www.jugyik.sk" target="_blank"><img src="{% asset_path tsz/tsz_jugyik.png %}"/></a>               
+                <a href="http://www.kikelet.sk" target="_blank"><img src="{% asset_path tsz/tsz_kikelet.png %}"/></a>
+                <a href="http://www.jomod.sk" target="_blank"><img src="{% asset_path tsz/tsz_jomod.png %}"/></a>
+                <img src="{% asset_path tsz/tsz_mikad.png %}"/>
+                <a href="http://kaszasattiladiakkor.hu/" target="_blank"><img src="{% asset_path tsz/tsz_kad.png %}"/></a>
+                <img src="{% asset_path tsz/tsz_jadik.png %}"/>
               </div>
               <div class="col-sm-12 col-md-4">
                 <h4>Kapcsolat</h4>
                 <ul class="icon-list">
                   <li class="email">info<i class="fa fa-exclamation-circle"></i>gombaszog.sk</li>
-                  <li class="phone">+421&nbsp;905&nbsp;920&nbsp;551</li>
-                  <li class="phone">+36&nbsp;20&nbsp;964&nbsp;5598</li>
+                  <li class="phone">+421&nbsp;944&nbsp;104&nbsp;494</li>
                   <li class="press"><a href="/sajto">Sajtószoba</a></li>
                   <!--<li class="about"><a href="http://mediasator.tumblr.com/impresszum">Impresszum</a></li>-->
                 </ul>
                 <div class="social-link">
-                  <a href="http://facebook.com/gombaszog" target="_blank" class="footer-fb" title="Facebook">
+                  <a href="https://facebook.com/gombaszog" target="_blank" class="footer-fb" title="Facebook">
                     <i class="fa fa-facebook"></i>
                   </a>
-                  <a href="http://twitter.com/gombaszog" target="_blank" class="footer-tw" title="Twitter">
+                  <a href="https://twitter.com/gombaszog" target="_blank" class="footer-tw" title="Twitter">
                     <i class="fa fa-twitter"></i>
                   </a>
-                  <a href="http://youtube.com/gombaszog" target="_blank" class="footer-yt" title="YouTube">
+                  <a href="https://youtube.com/gombaszog" target="_blank" class="footer-yt" title="YouTube">
                     <i class="fa fa-youtube"></i>
                   </a>
-                  <a href="http://instagram.com/gombaszog" target="_blank" class="footer-ig" title="Instagram">
+                  <a href="https://instagram.com/gombaszog" target="_blank" class="footer-ig" title="Instagram">
                     <i class="fa fa-instagram"></i>
                   </a>
                   <a href="https://plus.google.com/103167436782316691617" target="_blank" class="footer-gplus" title="Google+">
@@ -106,26 +105,27 @@ layout: default
             <div class="updates-links bg sponsor-images">
         <div class="col-md-12">
           <h4>Társszervezők</h4>
-
           <img src="{% asset_path tamogatok/guri.png %}"/>
           <img src="{% asset_path tamogatok/promino.png %}"/>
           <img src="{% asset_path tamogatok/tandem.png %}"/>
-          <img src="{% asset_path tamogatok/durvacrew.png %}"/>
           <img src="{% asset_path tamogatok/b612.png %}"/>
-          <img src="{% asset_path tamogatok/szottes.png %}"/>
+          <img src="{% asset_path tamogatok/tokolosh.png %}"/>
           <img src="{% asset_path tamogatok/szakkoli.png %}"/>
           <img src="{% asset_path tamogatok/csacsi.png %}"/>
           <img src="{% asset_path tamogatok/fef.png %}"/>
           <img src="{% asset_path tamogatok/korona.png %}"/>
-          <img src="{% asset_path tamogatok/ujszo.png %}"/>   
-          <img src="{% asset_path tamogatok/kozbeszed.png %}"/> 
+          <img src="{% asset_path tamogatok/ujszo.png %}"/>    
           <img src="{% asset_path tamogatok/kue.png %}"/>
-          <img src="{% asset_path tamogatok/komaromiszalon.png %}"/>
+          <img src="{% asset_path tamogatok/tarsreflexintezet.png %}"/>
           <img src="{% asset_path tamogatok/vandorlass.png %}"/>
           <img src="{% asset_path tamogatok/kisebbsegijogvedo.png %}"/>
           <img src="{% asset_path tamogatok/trafik.png %}"/>
           <img src="{% asset_path tamogatok/masik.png %}"/>
-          <img src="{% asset_path tamogatok/hir24.png %}"/>
+          <img src="{% asset_path tamogatok/HHH.png %}"/>
+          <img src="{% asset_path tamogatok/patria.png %}"/>
+          <img src="{% asset_path tamogatok/bumm.png %}"/>
+          <img src="{% asset_path tamogatok/szoba.png %}"/>
+          
         </div>
       </div>
       <div class="updates-links bg sponsor-images">
@@ -134,7 +134,7 @@ layout: default
           <img src="{% asset_path tamogatok/miniszterelnokseg.png %}"/>
           <img src="{% asset_path tamogatok/bga.png %}"/>
           <img src="{% asset_path tamogatok/slovnaft.png %}"/>
-          <img src="{% asset_path tamogatok/uradvlady.png %}"/>
+          <img src="{% asset_path tamogatok/kka.png %}"/>
           <img src="{% asset_path tamogatok/hun.png %}"/>
           <img src="{% asset_path tamogatok/balassi.png %}"/>
           <img src="{% asset_path tamogatok/otp.png %}"/>
@@ -143,14 +143,13 @@ layout: default
           <img src="{% asset_path tamogatok/nka.png %}"/>
           <img src="{% asset_path tamogatok/regiomax.png %}"/>          
           <img src="{% asset_path tamogatok/tcom.png %}"/>
-          <img src="{% asset_path tamogatok/mocs.png %}"/>          
-          <img src="{% asset_path tamogatok/bott.png %}"/>
+          <img src="{% asset_path tamogatok/orange.png %}"/>
+          <img src="{% asset_path tamogatok/mocs.png %}"/>   
           <img src="{% asset_path tamogatok/rakoczi.png %}"/>
           <img src="{% asset_path tamogatok/kassamegye.png %}"/>
           <img src="{% asset_path tamogatok/terraincognita.png %}"/>
           <img src="{% asset_path tamogatok/carmeuse.png %}"/>
           <img src="{% asset_path tamogatok/kominvent.png %}"/>
-          <img src="{% asset_path tamogatok/reboot.png %}"/>
           <p class="highlighted">Jurenka Oszkár, Jurenka Csaba, Mácsadi Tamás, Horkay László, Belák Csaba, Hamelli János, Hamelli Marián</p>
         </div>
       </div>
@@ -167,18 +166,17 @@ layout: default
           <img src="{% asset_path tamogatok/rozsnyovidek.png %}"/>
           <img src="{% asset_path tamogatok/citystar.png %}"/>
           <img src="{% asset_path tamogatok/felvidekma.png %}"/>
-          <img src="{% asset_path tamogatok/gerzson.png %}"/>
           <img src="{% asset_path tamogatok/figyelo.png %}"/>
           <img src="{% asset_path tamogatok/hireksk.png %}"/>
           <img src="{% asset_path tamogatok/tokolosh.png %}"/>
           <img src="{% asset_path tamogatok/ahojszia.png %}"/>
-          <img src="{% asset_path tamogatok/kozbeszed.png %}"/>
           <img src="{% asset_path tamogatok/trafik.png %}"/>
           <img src="{% asset_path mediaspajz.png %}"/>
           <img src="{% asset_path tamogatok/hirnok.png %}"/>
           <img src="{% asset_path tamogatok/delta.png %}"/>
           <img src="{% asset_path tamogatok/patria.png %}"/>
           <img src="{% asset_path tamogatok/sportolunk.png %}"/>      
+          <img src="{% asset_path tamogatok/ma7.png %}"/>      
         </div>
       </div>
 

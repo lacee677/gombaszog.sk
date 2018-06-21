@@ -12,9 +12,9 @@
  *= require zene.js
  *= require sajto.js
  *= require terkep.js
- *= require poll.js
- *= require christmas_ticket.js
  */
+ // require poll.js
+ // require christmas_ticket.js
 
 String.prototype.hashCode = function() {
   var hash = 0, i, chr, len;
@@ -34,6 +34,13 @@ jQuery(document).ready(function($){
     $(document.links).filter(function() {
       return this.hostname != window.location.hostname;
     }).attr('target', '_blank');
+
+    // open modal if it is received in hash
+    var target = document.location.hash.replace("#", "");
+    if (target && target.length && /^modal-.+/gi.test(target)) {
+      var realLink = target.replace(/^modal-/gi, "");
+      $('#' + realLink).modal('show');
+    }
 
     // The slider being synced must be initialized first
     $('#carousel').flexslider({
