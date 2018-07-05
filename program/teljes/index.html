@@ -24,7 +24,8 @@ group: program
 
 <script type="text/javascript">
     var renderFullProgram = function(fullProgram) {
-		$("#full-program").html("");
+        var fullProgramDiv = document.getElementById("full-program");
+		fullProgramDiv.innerHTML = "";
 		var napNevek = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
 		var napNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 		var actNap = null;
@@ -34,25 +35,40 @@ group: program
             var formattedDate = new Date(actProgram.start);
             if(formattedDate.getDay()!=actNap){
 					var actDay = formattedDate.getDay();
-					actNapWrap = $("<div class=\"program-day-wrap program-day-" + napNames[actDay] + "\"><h3>" + napNevek[actDay] + "</h3></div>").appendTo($("#full-program"));
-					actNap=actDay;
-				}
-				actNapWrap.append("<div class=\"program-wrap\">"+
-                                "<div class=\"program-start\">" + formattedDate.getHours() + ":" + formattedDate.getMinutes() + (formattedDate.getMinutes()<10?"0":"") + "</div>"+
+                    actNapWrap = document.createElement("DIV");
+                    actNapWrap.setAttribute("class", "program-day-wrap program-day-" + napNames[actDay]);
+                    actNapWrap.innerHTML = ("<h3>" + napNevek[actDay] + "</h3>");
+                    fullProgramDiv.appendChild(actNapWrap);
+					actNap = actDay;
+                }
+                var actProgramDiv = document.createElement("DIV");
+                actProgramDiv.setAttribute("class", "program-wrap");
+                actProgramDiv.innerHTML = "<div class=\"program-start\">" + formattedDate.getHours() + ":" + formattedDate.getMinutes() + (formattedDate.getMinutes()<10?"0":"") + "</div>"+
                                 "<div class=\"program-location\">" + actProgram.location + "</div>"+
 								"<div class=\"program-title\">" + actProgram.name + "</div>"+
-								"<div class=\"program-description\">" + actProgram.description + "</div>"+
-							"</div>");
+								"<div class=\"program-description\">" + actProgram.description + "</div>";
+				actNapWrap.appendChild(actProgramDiv);
 		}
     }
 
 	var getFullProgram = function(){
-		$.get("/api/program", function( data ) {
-			renderFullProgram(data.program);
-		}, "json" );
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.open("GET", '/api/program');
+        xmlhttp.timeout = 7000;
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState === 4) {
+                if(xmlhttp.status === 200){
+                    var answer = JSON.parse(xmlhttp.responseText);
+                    renderFullProgram(answer.program);
+                } else {
+                    console.log('Program fetch error: ' + xmlhttp.statusText );
+                }
+            }
+        }
+        xmlhttp.send();
 	}
 
-    $(document).ready(function(){
+    document.addEventListener('DOMContentLoaded', function(){
         setTimeout(function(){
             getFullProgram();
         }, 20);
