@@ -1,0 +1,63 @@
+---
+layout: page
+title: Program
+group: program
+---
+
+<style>
+    div.full-program tr:nth-child(even) {background: #D4D4D4}
+    div.full-program tr:nth-child(odd) {background: #E8E8E8}
+    div.full-program td, div.full-program th {padding: 5px}
+    td.program-start {width: 5%}
+    td.program-location {width: 15%}
+    td.program-title {width: 35%; font-weight: bold;}
+    td.program-description {width: 45%}
+</style>
+
+<div id="press">
+    <div class="container">
+        <div class="bg">
+            <div class="row">
+                <h2 class="heading" style="padding-left:15px;"><strong>Teljes program</strong></h2>
+                <div id="full-program"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var renderFullProgram = function(fullProgram) {
+		$("#full-program").html("");
+		var napNevek = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
+		var napNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+		var actNap = null;
+		var actNapWrap = null;
+		for(var i=0; i<fullProgram.length; i++){
+            var actProgram = fullProgram[i];
+            var formattedDate = new Date(actProgram.start);
+            if(formattedDate.getDay() != actNap){
+                var actDay = formattedDate.getDay();
+                actNapWrap = $("<div class=\"program-day-wrap\"></div>").appendTo($("#full-program"));
+                var actNapTitle = $("<h3>" + napNevek[actDay] + "</h3>").appendTo(actNapWrap);
+                var actNapTable = $("<table class=\"program-day-wrap\"></table>").appendTo($(actNapWrap));
+                actNap = actDay;
+            }
+            actNapWrap.append("<tr><td class=\"program-start\">" + formattedDate.getHours() + ":" + formattedDate.getMinutes() + (formattedDate.getMinutes()<10?"0":"") + "</td>"+
+                            "<td class=\"program-location\">" + actProgram.location + "</td>"+
+                            "<td class=\"program-title\">" + actProgram.name + "</td>"+
+                            "<td class=\"program-description\">" + actProgram.description + "</td></tr>");
+		}
+    }
+
+	var getFullProgram = function(){
+		$.get("/api/program", function( data ) {
+			renderFullProgram(data.program);
+		}, "json" );
+	}
+
+    $(document).ready(function(){
+        setTimeout(function(){
+            getFullProgram();
+        }, 20);
+    });
+</script>

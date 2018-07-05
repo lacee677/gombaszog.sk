@@ -1,0 +1,60 @@
+---
+layout: page
+title: Program
+group: program
+---
+
+<style>
+    div#full-program div.program-wrap:nth-child(even) {background: #A4A4A422}
+    div#full-program div.program-wrap:nth-child(odd) {background: #E8E8E822}
+    div.program-wrap {padding: 5px}
+    div#full-program {color: white}
+</style>
+
+<div id="press">
+    <div class="container">
+        <div class="bg">
+            <div class="row">
+                <h2 class="heading" style="padding-left:15px;"><strong>Teljes program</strong></h2>
+                <div id="full-program"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var renderFullProgram = function(fullProgram) {
+		$("#full-program").html("");
+		var napNevek = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
+		var napNames = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+		var actNap = null;
+		var actNapWrap = null;
+		for(var i=0; i<fullProgram.length; i++){
+            var actProgram = fullProgram[i];
+            var formattedDate = new Date(actProgram.start);
+            if(formattedDate.getDay()!=actNap){
+					var actDay = formattedDate.getDay();
+					actNapWrap = $("<div class=\"program-day-wrap program-day-" + napNames[actDay] + "\"><h3>" + napNevek[actDay] + "</h3></div>").appendTo($("#full-program"));
+					actNap=actDay;
+				}
+				actNapWrap.append("<div class=\"program-wrap\">"+
+                                "<div class=\"program-start\">" + formattedDate.getHours() + ":" + formattedDate.getMinutes() + (formattedDate.getMinutes()<10?"0":"") + "</div>"+
+                                "<div class=\"program-location\">" + actProgram.location + "</div>"+
+								"<div class=\"program-title\">" + actProgram.name + "</div>"+
+								"<div class=\"program-description\">" + actProgram.description + "</div>"+
+							"</div>");
+		}
+    }
+
+	var getFullProgram = function(){
+		$.get("/api/program", function( data ) {
+			renderFullProgram(data.program);
+		}, "json" );
+	}
+
+    $(document).ready(function(){
+        setTimeout(function(){
+            getFullProgram();
+        }, 20);
+    });
+</script>
