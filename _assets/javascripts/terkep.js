@@ -383,7 +383,7 @@ if ($("#gomba-map").length > 0) {
 	]; */
 	
 	var imW = 1920;
-	var imH = 1348;
+	var imH = 1920;
 	var imO = {};
 	
 	var setPosition = function(){
@@ -404,7 +404,7 @@ if ($("#gomba-map").length > 0) {
 	
 	var getPlaceContent = function(px, py){
 		var opxw = 1920*(px-imO.left)/imW;
-		var opyh = 1487*(py-imO.top)/imH;
+		var opyh = 1920*(py-imO.top)/imH;
 		var isActive = false;
 		//console.log(showedLocationId);
 		//console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh);
@@ -419,8 +419,8 @@ if ($("#gomba-map").length > 0) {
 						});
 					$("#location-title").text(place.name);
 					//$("#location-details").css("top", place.area.yh2*imH/1487 + "px");
-					$("#location-details").css("top", place.area.yh2*imH/(imH + 139) + "px");
-					$("#location-details").css("left", place.area.xw1*imW/imW + "px");
+					$("#location-details").css("top", place.area.yh2*imH/1920 + "px");
+					$("#location-details").css("left", place.area.xw1*imW/1920 + "px");
 					$("#location-details").show();
 					$("#description-modal-label").text(place.name);
 					$("#location-description").text(place.description);
@@ -451,9 +451,10 @@ if ($("#gomba-map").length > 0) {
 		}, "json" );
 	};
 
-	var getLocations = function(){
+	var getLocations = function(cb){
 		$.get("/api/location", function( data ) {
 			mapPlaces = data.location;
+			cb();
 		}, "json" );
 	}
 	
