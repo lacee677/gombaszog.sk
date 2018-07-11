@@ -403,8 +403,8 @@ if ($("#gomba-map").length > 0) {
 	var showedLocationId = 0;
 	
 	var getPlaceContent = function(px, py){
-		var opxw = 1920*(px-imO.left)/imW;
-		var opyh = 1920*(py-imO.top)/imH;
+		var opxw = 1000*(px-imO.left)/imW;
+		var opyh = 1000*(py-imO.top)/imH;
 		var isActive = false;
 		//console.log(showedLocationId);
 		//console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh);
@@ -419,8 +419,8 @@ if ($("#gomba-map").length > 0) {
 						});
 					$("#location-title").text(place.name);
 					//$("#location-details").css("top", place.area.yh2*imH/1487 + "px");
-					$("#location-details").css("top", place.area.yh2*imH/1920 + "px");
-					$("#location-details").css("left", place.area.xw1*imW/1920 + "px");
+					$("#location-details").css("top", place.area.yh2*imH/1000 + "px");
+					$("#location-details").css("left", place.area.xw1*imW/1000 + "px");
 					$("#location-details").show();
 					$("#description-modal-label").text(place.name);
 					$("#location-description").text(place.description);
