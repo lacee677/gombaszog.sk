@@ -1,5 +1,7 @@
 if ($("#gomba-map").length > 0) {
-	
+
+	var mapPlaces;
+	/*
 	var mapPlaces = [
 		{
 			id: 1,
@@ -378,7 +380,7 @@ if ($("#gomba-map").length > 0) {
 			program: false,
 			description: "A csapatjáték információs központja"
 		}
-	];
+	]; */
 	
 	var imW = 1920;
 	var imH = 1348;
@@ -406,23 +408,24 @@ if ($("#gomba-map").length > 0) {
 		var isActive = false;
 		//console.log(showedLocationId);
 		//console.log("OrigPosX: " + opxw + ", OrigPosY: " + opyh);
-		for(var i=0; i<mapPlaces.length; i++){
-			var place=mapPlaces[i];
+		for(var i = 0; i < mapPlaces.length; i++){
+			var place = mapPlaces[i];
 			if(isThere(opxw, opyh, place.area)){
-				if(showedLocationId!=place.id){
-					showedLocationId=place.id;
+				if(showedLocationId != place.id){
+					showedLocationId = place.id;
 					$("#gomba-map").css( 'cursor', 'pointer' );
-					$("#gomba-map").click(function(){
+					$("#gomba-map").click(function() {
 							$("#location-details").click();
 						});
-					$("#location-title").text(place.title);
-					$("#location-details").css("top", place.area.yh2*imH/1487 + "px");
-					$("#location-details").css("left", place.area.xw1*imW/1920 + "px");
+					$("#location-title").text(place.name);
+					//$("#location-details").css("top", place.area.yh2*imH/1487 + "px");
+					$("#location-details").css("top", place.area.yh2*imH/(imH + 139) + "px");
+					$("#location-details").css("left", place.area.xw1*imW/imW + "px");
 					$("#location-details").show();
-					$("#description-modal-label").text(place.title);
+					$("#description-modal-label").text(place.name);
 					$("#location-description").text(place.description);
-					if(place.program){
-						renderProgram(place.location);
+					if (place.hasProgram) {
+						renderProgram(place.name);
 					}
 					else{
 						deleteProgram();
@@ -446,11 +449,17 @@ if ($("#gomba-map").length > 0) {
 		$.get("/api/program", function( data ) {
 			programFS = data.program;
 		}, "json" );
+	};
+
+	var getLocations = function(){
+		$.get("/api/location", function( data ) {
+			mapPlaces = data.location;
+		}, "json" );
 	}
 	
 	var deleteProgram = function(){
 		$("#location-program").html("");
-	}
+	};
 	
 	var renderProgram = function(actLocation){
 		$("#location-program").html("");
@@ -460,7 +469,7 @@ if ($("#gomba-map").length > 0) {
 		var actNapWrap = null;
 		for(var i=0; i<programFS.length; i++){
 			if(actLocation == programFS[i].location){
-				actProgram=programFS[i];
+				actProgram = programFS[i];
 				var formattedDate = new Date(actProgram.start);
 				if(formattedDate.getDay()!=actNap){
 					var actDay = formattedDate.getDay();
@@ -474,7 +483,7 @@ if ($("#gomba-map").length > 0) {
 							"</div>");
 			}
 		}
-	}
+	};
 	
 	$("#gomba-map").on("mousemove", function(e){
 			getPlaceContent(e.pageX, e.pageY);
@@ -482,8 +491,10 @@ if ($("#gomba-map").length > 0) {
 		
 	$(document).ready(function(){
 		setTimeout(function(){
-				getProgram();
-				setPosition();
+				getLocations(function() {
+					getProgram();
+					setPosition();
+				});
 			}, 300);
 		});
 		
