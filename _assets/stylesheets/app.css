@@ -829,16 +829,16 @@ div.biglogo {
   display: table-cell;
   -webkit-opacity: 0;
   opacity: 0;
-  transition: opacity 0.6s;
+  transition: opacity 0.3s ease-in-out;
   overflow: hidden;
 }
 
-.splash-section-bgcarrier:hover {
+.splash-section:hover .splash-section-bgcarrier {
   opacity: 1;
 }
 
 .splash-nav-image {
-  transition: transform .3s;
+  transition: transform .4s;
 }
 
 .splash-section:hover .splash-nav-image {
