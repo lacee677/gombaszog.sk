@@ -788,3 +788,16 @@ div.biglogo {
 .setlRow:hover{
   background-color: lightgrey;
 }
+
+.splash-content {
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.splash-cell {
+  height: 50%;
+}
