@@ -764,13 +764,12 @@ div.biglogo {
   padding-top: 30px;
 }
 
-
 #settlement_fill{
-  display:none;
-  float:left;
-  position:absolute;
-  width:400px;
-  left:0;
+  display: none;
+  float: left;
+  position: absolute;
+  width: 400px;
+  left: 0;
   margin-left: 15px;
   background-color: white;
   z-index: 3;
@@ -803,6 +802,13 @@ div.biglogo {
   padding: 30px 25px;
 }
 
+@media screen and (orientation: portrait) {
+  .splash-cell {
+    height: 25%;
+    padding: 15px 10px;
+  }
+}
+
 .splash-section {
   background-color: rgba(255, 255, 255, 0.6);
   height: 100%;
@@ -833,7 +839,7 @@ div.biglogo {
   overflow: hidden;
 }
 
-.splash-section:hover .splash-section-bgcarrier {
+.splash-section:hover .splash-section-bgcarrier, .splash-section:active .splash-section-bgcarrier {
   opacity: 1;
 }
 
@@ -841,6 +847,6 @@ div.biglogo {
   transition: transform .4s;
 }
 
-.splash-section:hover .splash-nav-image {
+.splash-section:hover .splash-nav-image, .splash-section:active .splash-nav-image {
   transform: scale(1.2);
 }
