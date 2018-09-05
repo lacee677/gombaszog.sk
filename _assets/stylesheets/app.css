@@ -802,7 +802,7 @@ div.biglogo {
   padding: 30px 25px;
 }
 
-@media screen and (max-width: 991) {
+@media screen and (max-width: 991px) {
   .splash-cell {
     height: 25%;
     padding: 15px 10px;
