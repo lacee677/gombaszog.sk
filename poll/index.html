@@ -87,7 +87,19 @@ group: otletborze
                     data: {votes: data}
                   }).done(function(data) {
                     jQuery("#poll").html("<strong style=\"color: red;\">"+data.message+" Az oldal pár másodpercen belül újratöltődik...</strong>");
-                    setTimeout(function() {document.location.reload();}, 5000);
+                    document.getElementById("navigation").scrollIntoView();
+                    if(data.votes){
+                      FB.ui({
+                          method: 'share',
+                          href: 'https://gombaszog.sk/poll',
+                          quote: "Ki lépjen fel 2019-ban Gombaszögön? Én rájuk szavaztam: " + data.votes + ". Szavazz te is, és nyerj ingyenes belépőjegyet!",
+                      }, function(response){
+                        setTimeout(function() {document.location.reload();}, 5000);
+                      });
+                    }
+                    else{
+                      setTimeout(function() {document.location.reload();}, 5000);
+                    }
                   }).fail(ajax_error);
                 } else { // refresh for permissions
 				  console.log("Permission error, details: publish_actions: " + "false" + 
