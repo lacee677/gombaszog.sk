@@ -25,5 +25,6 @@ _error.log
 _site
 _posts
 _program.json
+_deprecated
 
 .asset-cache
