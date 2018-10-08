@@ -1,0 +1,45 @@
+@import 'style.scss';
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+#top-box{
+    background-color: $default-background;
+    margin-bottom:5%;
+}
+
+#top-box img{
+    max-width:100%;
+}
+
+.default{
+    padding:30px;
+    background-color: $default-background;
+}
+
+#content{
+    width: calc(100% - 30px);
+    display:grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 30px;
+    grid-rows:20% 20% 20%;
+}
+
+#content div{
+    display:grid;
+}
+
+#content-about img{
+    margin-top:30px;
+}
+
+#content-about{
+    grid-row: 1/3;
+    grid-column:2;
+}
+
+#content-about a{
+    text-align: right;
+}
+
+#content-news{
+    grid-row:2/4;
+}

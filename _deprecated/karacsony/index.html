@@ -1,0 +1,44 @@
+---
+layout: page
+title: Ajándék jegy karácsonyra
+group: karacsony
+---
+<div id="press">
+      <div class="container">
+        <div class="bg">
+         <form role="form" class="christmas-ticket-form" action="/jegyek/sikertelen" method="POST" id="christmas_ticket">
+         <div class="row">
+         <h2 class="heading" style="padding-left:15px;"><strong>Gombaszögi jegyet a fa alá!</strong></h2>
+            <div class="col-md-12">
+              <p class="text-justified">Ajándékozz egy egész hetes belépőjegyet a Gombaszögi Nyári Táborba! A vásárláshoz nem kell mást tenned, mint megadnod az e-mailcímed (nem feltétlenül a leendő táborozóét), ahová azonnal elküldjük az elektronikus fizetésre szóló hivatkozást. Hogy bármilyen gubanc esetén el tudjunk érni, kérlek, add meg a telefonszámodat is. A karácsonyi akcióban az egészhetes belépőjegy ára 29&euro;!</p>
+ 		    </div>
+ 		    
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="christmas_ticket_email">A megrendelő e-mail címe: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Erre a címre küldjük a fizetési információkat és a kupont!"></i></label>
+					<input type="email" class="form-control" id="christmas_ticket_email" placeholder="pl. encimem@szolgaltato.com" name="christmas_ticket[email]"/>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="christmas_ticket_captcha">Megerősítő kód <i class="fa fa-info-circle info-tooltip re-captcha" data-toggle="tooltip" data-placement="bottom" title="Az alábbi mezőbe a jobb oldalon található kódot (betűk és számok) kell bemásolni. Ha a szöveg nem lenne olvasható, kattints és kapsz újat!"></i></label>
+					<input type="text" class="form-control" id="christmas_ticket_captcha" placeholder="Ezt írd ide --&gt;" name="christmas_ticket[captcha]" style="background-size: 120px; background-position: right center; background-repeat: no-repeat;"/>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="christmas_ticket_phone">A megrendelő telefonszáma: <i class="fa fa-info-circle info-tooltip" data-toggle="tooltip" data-placement="bottom" title="Országkóddal teljes formájában, például +421901234567"></i></label>
+					<input type="text" class="form-control" id="christmas_ticket_phone" placeholder="+421xxxxxxxxx" name="christmas_ticket[phone_number]"/>
+				</div>
+				<div class="form-group">
+					<button id="sendchristmasticketbutton" class="btn btn-primary" style="margin-top: 1em;">&nbsp;Megrendelés&nbsp;</button>
+				</div>
+			</div>
+			
+            <div class="col-md-12">
+              <p class="text-justified">A rendelés és sikeres fizetés után az email címedre küldjük a kupont, ami kinyomtatva belépésre jogosítja későbbi tulajdonosát, illetve a hamarosan induló, hagyományos jegyvásárlási felületen további szolgáltatások - partybusz, ételjegyek, stb - is megvásárolhatóak lesznek a belépőjegy mellé.</p> 
+ 		    </div>
+ 		    
+          </div>
+         </form>
+        </div>
+    </div>

@@ -1,0 +1,49 @@
+name: Gombaszög - gombaszog.sk
+language: hu
+markdown: kramdown
+highlighter: null
+permalink: /:year/:month/:day/:title/
+url: https://www.gombaszog.sk/
+timezone: Europe/Bratislava
+exclude: [ 'README.md', 'LICENSE', 'Gemfile', 'Makefile', '_deprecated', '_compress_images_cache.yml']
+include: ['.htaccess']
+excerpt_separator: <!--more-->
+minify_html: true
+plugins: 
+  - jekyll-assets
+  - jekyll-minify-html
+  - jekyll-compress-images
+compress_images:
+  images_path: "_assets/img/**/*.{gif,png,jpg,jpeg,svg}"
+assets:
+  cache: false
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/fonts
+    - _assets/downloads
+  compress:
+    css: true
+    js: true
+  js_compressor:  uglifier
+  css_compressor: sass
+jekyll_timeago:
+  today: 'ma'
+  yesterday: 'tegnap'
+  tomorrow: 'holnap'
+  and: 'és'
+  suffix: 'ezelőtt'
+  prefix: ''
+  suffix_future: 'in'
+  prefix_future: ''
+  years: 'évvel'
+  year: 'évvel'
+  months: 'hónappal'
+  month: 'hónappal'
+  weeks: 'héttel'
+  week: 'héttel'
+  days: 'nappal'
+  day: 'nappal'
+keywords: 
+
