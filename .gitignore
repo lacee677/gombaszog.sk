@@ -26,6 +26,6 @@ _site
 _posts
 _program.json
 _compress_images_cache.yml
-
+_deprecated
 
 .asset-cache
