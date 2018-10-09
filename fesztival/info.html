@@ -1,0 +1,144 @@
+---
+group: festival
+title: festival.info.title
+layout: festival-page
+---
+
+<div class='container'>
+    <section class='default'>
+        <h2 class='heading'>{% t festival.info.heading1 %}</h2>
+        <div id='info-head'>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh1 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh1 %}</h3>
+                    <span>{% t festival.info.heads1 %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh2 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh2 %}</h3>
+                    <span>{% t festival.info.heads2 %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh3 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh3 %}</h3>
+                    <span>{% t festival.info.heads3 %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh4 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh4 %}</h3>
+                    <span>{% t festival.info.heads4 %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh5 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh5 %}</h3>
+                    <span>{% t festival.info.heads5 %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh6 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh6 %}</h3>
+                    <span>{% t festival.dateShort %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t general.gombaszog %}'/>
+                <div>
+                    <h3>{% t general.gombaszog %}</h3>
+                    <span>{% t festival.info.heads7 %}</span>
+                </div>
+            </div>
+            <div class='infobox'>
+                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh8 %}'/>
+                <div>
+                    <h3>{% t festival.info.headh8 %}</h3>
+                    <span>{% t festival.info.heads8 %}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class='default'>
+        <h2 class='heading'>{% t festival.info.heading2 %}</h2>
+        <div class='infosection'>
+            <div>
+                <p>{% t festival.info.p1 %}</p>
+                <p>{% t festival.info.p2 %}</p>
+            </div>
+            <div>
+                <div id='map'></div>
+            </div>
+        </div>
+    </section>
+    <section class='default'>
+            <h2 class='heading'>{% t festival.info.heading3 %}</h2>
+            <div class='infosection'>
+                <div class='fullwidth'>
+                    <h3>{% t festival.info.headsm1 %}</h3>
+                    <p>{% t festival.info.p3 %}</p>
+                </div>
+                <div>
+                    <h3>{% t festival.info.headsm2 %}</h3>
+                    <p>{% t festival.info.p4 %}</p>
+                </div>
+                <form action="https://cp.hnonline.sk/vlakbus/spojenie/" target="_blank" role="form" method="GET">
+                    <input type="hidden" name="time" value="6:00" />
+                    <label for="from">{% t festival.info.from %}</label>
+                    <input id="from" name="f" type="text">
+                
+                    <label for="to">{% t festival.info.to %} </label>
+                    <select id="to" name="t">
+                        <option value="Slavec,Gombasecká jaskyňa">{% t general.gombaszog %}</option>
+                        <option value="Rožňava">{% t festival.info.rozsnyo %}</option>
+                        <option value="Slavec">{% t festival.info.szaloc %}</option>
+                    </select>
+                    <label for="when">{% t festival.info.when %}</label>
+                    <div class='select-button-box'>
+                        <select id="when" name="date">
+                            <option value="15.07.2019">{% t festival.info.zero %}</option>
+                            <option value="16.07.2019">{% t festival.info.first %}</option>
+                            <option value="17.07.2019">{% t festival.info.second %}</option>
+                            <option value="18.07.2019">{% t festival.info.third %}</option>
+                            <option value="19.07.2019">{% t festival.info.fourth %}</option>
+                            <option value="20.07.2019">{% t festival.info.fifth %}</option>
+                        </select>
+                        <button name="submit" value="true" aria-label="{% t general.send %}">O</button>
+                    </div>
+                </form>
+                <div class='fullwidth'>
+                    <h3>{% t festival.info.headsm3 %}</h3>
+                    <p>{% t festival.info.p5 %}</p>
+                    <p>{% t festival.info.p6 %}</p>
+                </div>
+            </div>
+        </section>
+        <section class='default'>
+                <h2 class='heading'>{% t festival.info.heading4 %}</h2>
+                <div class='infosection'>
+                    <div>
+                        <p>{% t festival.info.p7 %}</p>
+                        <p>{% t festival.info.p8 %}</p>
+                    </div>
+                    <img src='https://placekitten.com/g/600/300' alt='{% t festival.info.alt2 %}' />
+                </div>
+            </section>
+</div>
+<script>
+    var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: , lng: },
+        zoom: 8
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>

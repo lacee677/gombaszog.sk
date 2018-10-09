@@ -5,6 +5,8 @@ site:
 
 general:
   more: Tudj meg többet
+  gombaszog: Gombaszög
+  send: Küldés
 
 index:
   title: Főoldal
@@ -17,12 +19,14 @@ festival:
   name: Gombaszögi Nyári tábor - gombaszog.sk
   title: Gombaszögi Nyári tábor
   date: 2019.július 15-21.
+  dateShort: július 15-21.
   description: test
   index:
     title: Főoldal
     heading1: A <span>táborról</span>
     alt1: Rólunk - illusztráció
-    p1: A tábor a szlovákiai magyar ifjúság hagyományos <strong>találkozóhelye.</strong>
+    p1: >-
+        A tábor a szlovákiai magyar ifjúság hagyományos <strong>találkozóhelye.</strong>
         A <strong>fesztiváli</strong> hangulatról különböző stílusokat képviselő hazai és külföldi zenekarok, DJ-k és VJ-k gondoskodnak.
         A tábori <strong>szabadegyetem</strong> egy semleges platform közösségünk aktuális történéseinek és jövőjének megvitatására, a felvidéki alkotók és a tudományos élet bemutatására, hagyományaink ápolására.
         A <strong>csapatjátékok</strong> révén pedig barátaiddal próbára tehetitek ügyességeteket, műveltségeteket és tudásotokat is!
@@ -30,3 +34,61 @@ festival:
     heading3: Legutóbbi <span>videó</span>
     heading4: <span>Zenei </span>program
     heading5: Rólunk <span>írták</span>
+  info:
+    title: Információk
+    heading1: Mi is ez a <span>tábor</span>?
+    headh1: Találkozóhely
+    heads1: A felvidéki fiatalságnak
+    headh2: Fesztivál
+    heads2: Zenekarokkal és DJ-kkel
+    headh3: Szabadegyetem
+    heads3: 250+ programmal
+    headh4: Csapatjátékok
+    heads4: Értékes nyereményekért
+    headh5: Partivonat
+    heads5: Különvonat Gombaszögre!
+    headh6: Hat nap
+    heads7: Gombaszögi kemping
+    headh8: Életérzés
+    heads8: Verebek a jegenyefán
+    heading2: Hol <span>lesz</span>?
+    p1: A Gombaszögi Nyári Tábor helyszíne a <strong>gombaszögi kemping</strong>.
+    p2: Gombaszög Szalóc településrésze, Gömörben, a Sajó-völgyében, a Szilicei-fennsík lábánál fekszik. A településrész mára elnéptelenedett, neve mégis ismerősen cseng a legtöbbünk fülében az ifjúsági találkozóknak, illetve a cseppkőbarlangnak köszönhetően. Utóbbit az UNESCO világörökségnek nyilvánította, érdekesség, hogy a barlangban találhatóak a Föld leghosszabb szalmacseppkövei. A táborhely felett elterülő Szilicei-fennsíkot nemzeti parknak nyilvánították.
+    heading3: Hogy <span>jutok oda</span>?
+    headsm1: Partivonat
+    p3: >- 
+        Kezdődjön a buli már otthon! 
+        Foglalj helyet a <strong>gombaszögi különvonatra</strong>, amely egyenesen a tábor melletti állomásra visz! 
+        A nosztalgiaszerelvény Dunaszerdahelyről indul, megállói előreláthatólag a következőképpen alakulnak: 
+        Nagymegyer, Komárom, Ógyalla, Érsekújvár, Köbölkút, Párkány, Zselíz, Léva, Zólyom, Losonc és Fülek. A pontos menetrend a tábor közeledtével kerül nyilvánosságra. 
+        A különvonat odafelé a nulladik napon (július 16., hétfő) reggel indul, és a tábor utáni reggel (július 22, vasárnap) tér vissza, ára oda-vissza 25 euró. 
+        A különvonatra <strong>csak előre megvásárolt jeggyel</strong> lehet felszállni. A vonatjegyet a hetibérlettel együtt (ingyenes hetibérlet esetén is) <a href="http://gombaszog.sk/jegyek/" target="_blank" aria-labeled='Online jegyvásárlási felület link'>az online jegyvásárlási felületünkön</a> tudod beszerezni. 
+        Amennyiben már megvetted a hetibérleted, vagy regisztráltál az ingyenes jegyre, akkor sincs gond, csak írj az utazas@gombaszog.sk címre.
+    headsm2: Tömegközlekedés
+    p4: >-
+        <strong>Menetrend szerinti buszokkal</strong> Rozsnyóról (Rožňava), Pelsőcről (Plešivec),  Kassáról  (Košice)  vagy  Szepsiből (Moldava   nad  Bodvou)  lehet   megközelíteni  a  kempinget. 
+        A legközelebbi <strong>vasútállomás</strong> Rozsnyón illetve Pelsőcön található, ahová Pozsonyból és Kassáról járnak gyorsvonatok. Bővebb információkért és pontos menetrendekért látogass el <a href="https://cp.hnonline.sk/vlakbus/spojenie/" target="_blank" aria-labeled='cp.hnonline.sk link'>cp.hnonline.sk</a> portálra, vagy használd a keresőnket!
+    from: Honnan (szlovákul)
+    to: Hová
+    rozsnyo: Rozsnyó
+    szaloc: Szalóc (1 km a tábortól)
+    when: Mikor
+    zero: Nulladik nap - július 15.
+    first: Első nap - július 16.
+    second: Második nap - július 17.
+    third: Harmadik nap - július 18.
+    fourth: Negyedik nap - július 19.
+    fifth: Ötödik nap - július 20.
+    headsm3: Autó, bicikli, stopp
+    p5: >-
+        Gombaszög Rozsnyótól kilenc kilométerre található, a Tornaljára, illetve Rimaszombatba vezető főút mentén. 
+        A tábornak otthont adó autókemping a Szilice felé vezető út mentén, a Gombaszögi barlang bejáratánál található. 
+        Az autóval érkezők a tábor melletti parkolót használhatják a regisztrációt követően.
+        A kemping területe teljesen autómentes, viszont a kerékpáros közlekedés megengedett.
+    p6: >-
+        A tábor <strong>GPS koordinátái</strong> a következők: 
+        <strong>48.563772; 20.466542</strong>.
+    heading4: Mit fogok <strong>enni és inni</strong>?
+    p7: A tábor büféiben <strong>frissítőket, szeszes italokat, hideg és meleg ételeket</strong> kínálunk. Fontos változás az előző évekhez képest, hogy <strong>megszűnik a lecsópasz</strong> intézménye, helyette viszont változatosabb, viszont továbbra is pénztárcabarát reggeli és estebéd menüvel bővül a kínálatunk. Az étlapon szereplő ételek közé tartozik a gírosz, a csirkemell, a szőgyéni kemencés lepény, valamint lángos többféle feltéttel és egyéb klasszikus fesztiváli ételek. Gondoltunk a vegetáriánusokra is, akik választhatnak a rántott sajt és a hús nélküli pizzák közül.
+    p8: A tábor területén üzemel egy <strong>non-stop kocsma</strong>, ahol mindenféle nedűhöz hozzá lehet jutni. A <strong>Szifon</strong> pedig többféle házi szörppel és kávéval várja a kempingben bóklászókat.
+    alt2: Kaja - illusztráció

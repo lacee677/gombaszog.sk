@@ -1,18 +1,17 @@
 @import 'style.scss';
 
 body{
-    height:calc(100% - 30px);
+    height: calc(100% - 30px);
 }
 
 #home-box{
     display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%; 
-    height: calc(100% - 90px);
-    width: calc(100% - 90px);
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    grid-template-rows: calc(50% - 15px) calc(50% - 15px); 
+    height: calc(100% - 30px);
+    width: calc(100% - 60px);
     text-align: center;
-    grid-gap: 30px;
-    
+    grid-gap: 30px;   
     margin:30px;
 }
 

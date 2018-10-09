@@ -3,6 +3,7 @@ $seconary-color: #ee3a24;
 $seconary-color-hover: rgba(238,58,36,0.7);
 $default-background: rgba(255,255,255,0.8);
 $default-text: #232323;
+$default-button: #76C2A8;
 
 html{
     height:100%;
@@ -55,7 +56,7 @@ a:hover{
     font-size:30px;
 }
 
-.heading span{
+.heading span, .strong{
     font-weight: bold;
     line-height: 1.1;
     margin-bottom:30px;
@@ -63,6 +64,13 @@ a:hover{
 
 h1, h2, h3, h4, h5, h6{
     margin:0;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h3{
+    font-size:24px;
 }
 
 img{
@@ -74,9 +82,10 @@ p{
     line-height: 1.3;
     font-weight: 400;
     text-align: justify;
-    font-size: 20px;
+    font-size: 18px;
     color: $default-text;
 }
+
 
 .videoWrapper {
 	position: relative;
@@ -90,4 +99,72 @@ p{
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+img{
+    display:block;
+    height:auto;
+}
+
+label, input, select{
+    display:block;
+    align-self: center;    
+}
+
+label{
+    font-weight:700;
+}
+
+input, select{
+    height: 1.5em;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15
+}
+
+select{
+    height:2.25em;
+}
+
+input:focus, select:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)
+}
+
+input:-moz-placeholder, select:-moz-placeholder {
+    color: #999
+}
+
+input::-moz-placeholder, select::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+input:-ms-input-placeholder, select:-ms-input-placeholder {
+    color: #999
+}
+
+input::-webkit-input-placeholder, select::-webkit-input-placeholder {
+    color: #999
+}
+
+button{
+    color: #fff;
+    background-color: $default-button;
+    box-shadow: none;
+    border: none;
+    font-weight:700;
+    font-size:22px;
+    text-transform: uppercase;
+    border-radius: 3px;
 }
