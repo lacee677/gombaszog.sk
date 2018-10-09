@@ -1,13 +1,15 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
+#ruby "2.1.0"
 
 gem "jekyll"
 gem "jekyll-assets"
-gem 'jekyll-minify-html'
-gem 'jekyll-compress-images'
-
-gem "execjs"
-gem "nokogiri"
+gem "jekyll-minify-html"
+gem "autoprefixer-rails"
 gem "uglifier"
-gem "koala"
-gem "instagram"
+gem "sprockets-es6"
+gem "jekyll-multiple-languages-plugin"
 
+#gem "koala"
+#gem "execjs"
+#gem "nokogiri"
+#gem "instagram"

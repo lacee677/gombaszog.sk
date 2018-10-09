@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /
+Disallow: /api
+Sitemap: https://www.gombaszog.sk/sitemap.xml

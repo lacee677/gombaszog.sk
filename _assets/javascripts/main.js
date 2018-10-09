@@ -1,1 +1,1 @@
-var test = 'asd';
+const test = 'asd';

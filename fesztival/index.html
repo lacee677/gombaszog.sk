@@ -6,13 +6,11 @@ group: fesztival
 
 <div class='container'>
     <section id='top-box'>
-        <img src='{% asset_path logo_index.png %}' alt='Gombaszögi Nyári tábor - 2018.07-'/>
+        <img src='{% asset_path logo_index.png %}' alt='Gombaszögi Nyári tábor - 2019.07.18'/>
     </section>
-    <section id='carousel-box' class='default'>
-        <h2 class='heading'>
-            <span>Zenei </span>program
-        </h2>
-    </section>
+    {%  comment %} Comment out the slider with these tags {% endcomment %}
+    {% include music-slider.html %}
+    
     <section id='content'>
         <div id='content-sticky' class='default'>
             <div class='videoWrapper'>
