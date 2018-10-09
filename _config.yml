@@ -1,9 +1,7 @@
-name: Gombaszög - gombaszog.sk
 markdown: kramdown
 highlighter: null
 permalink: /:year/:month/:day/:title/
 #url: https://www.gombaszog.sk/
-baseurl: ""
 timezone: Europe/Bratislava
 exclude: [ 'README.md', 'LICENSE', 'Gemfile', 'Makefile', '_deprecated', '_compress_images_cache.yml']
 include: ['.htaccess']
@@ -33,7 +31,13 @@ assets:
   js_compressor:  uglifier
   css_compressor: sass
 defaultLang: hu
-languages: ["hu", "en"]
+baseurl: ""
+#languages: ["hu", "en", "sk"]
+languages: ["hu"]
 exclude_from_localizations: ["_assets", "_posts", "_plugins", "_layouts", "_includes", "_deprecated"]
-
+#languageNames:
+  #hu: Magyar
+  #en: English
+  #sk: Slovenčina
+  
 

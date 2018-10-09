@@ -1,11 +1,11 @@
 site:
   name: Gombaszög - gombaszog.sk
   #tagline: 
-  description: tesztszoveg
+  description: tesztszoveg szlovak
   keywords: gombaszog, tabor, kemping
 
 index:
-  title: Index
+  title: Hlavná stránka
   section1: Gombaszögi kemping
   section2: Gombaszögi Nyári Tábor
   section3: Gombaszögi értékmentés és értékteremtés

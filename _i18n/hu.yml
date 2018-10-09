@@ -1,0 +1,32 @@
+site:
+  name: Gombaszög - gombaszog.sk
+  description: tesztszoveg
+  keywords: gombaszog, tabor, kemping
+
+general:
+  more: Tudj meg többet
+
+index:
+  title: Főoldal
+  section1: Gombaszögi kemping
+  section2: Gombaszögi Nyári Tábor
+  section3: Gombaszögi értékmentés és értékteremtés
+  section4: Gombaszögi Pálos Monostor
+
+festival:
+  name: Gombaszögi Nyári tábor - gombaszog.sk
+  title: Gombaszögi Nyári tábor
+  date: 2019.július 15-21.
+  description: test
+  index:
+    title: Főoldal
+    heading1: A <span>táborról</span>
+    alt1: Rólunk - illusztráció
+    p1: A tábor a szlovákiai magyar ifjúság hagyományos <strong>találkozóhelye.</strong>
+        A <strong>fesztiváli</strong> hangulatról különböző stílusokat képviselő hazai és külföldi zenekarok, DJ-k és VJ-k gondoskodnak.
+        A tábori <strong>szabadegyetem</strong> egy semleges platform közösségünk aktuális történéseinek és jövőjének megvitatására, a felvidéki alkotók és a tudományos élet bemutatására, hagyományaink ápolására.
+        A <strong>csapatjátékok</strong> révén pedig barátaiddal próbára tehetitek ügyességeteket, műveltségeteket és tudásotokat is!
+    heading2: Friss <span>Híreink</span>
+    heading3: Legutóbbi <span>videó</span>
+    heading4: <span>Zenei </span>program
+    heading5: Rólunk <span>írták</span>

@@ -1,12 +1,12 @@
 ---
 layout: festival-page
-title: Főoldal
-group: fesztival
+title: festival.index.title
+group: festival
 ---
 
 <div class='container'>
     <section id='top-box'>
-        <img src='{% asset_path logo_index.png %}' alt='Gombaszögi Nyári tábor - 2019.07.18'/>
+        <img src='{% asset_path logo_index.png %}' alt='{% t festival.title %} - {% t festival.date %}'/>
     </section>
     {%  comment %} Comment out the slider with these tags {% endcomment %}
     {% include music-slider.html %}
@@ -19,28 +19,29 @@ group: fesztival
         </div>
         <div id='content-about' class='default'>
             <h2 class='heading'>
-                A <span>táborról</span>
+                {% t festival.index.heading1 %}
             </h2>
-            <img src='{% asset_path about_us_index.jpg %}' alt='Rólunk - illusztráció'/>
-            <p>A tábor a szlovákiai magyar ifjúság hagyományos <strong>találkozóhelye.</strong>
-                A <strong>fesztiváli</strong> hangulatról különböző stílusokat képviselő hazai és külföldi zenekarok, DJ-k és VJ-k gondoskodnak.
-                A tábori <strong>szabadegyetem</strong> egy semleges platform közösségünk aktuális történéseinek és jövőjének megvitatására, a felvidéki alkotók és a tudományos élet bemutatására, hagyományaink ápolására.
-                A <strong>csapatjátékok</strong> révén pedig barátaiddal próbára tehetitek ügyességeteket, műveltségeteket és tudásotokat is!
+            <img src='{% asset_path about_us_index.jpg %}' alt='{% t festival.index.alt1 %}'/>
+            <p>{% t festival.index.p1 %}
             </p>
-            <a href='/fesztival/info' aria-label='Tudj meg többet rólunk'>Tudj meg többet</a>
+            <a href='/fesztival/info' aria-label='{% t general.more %}'>{% t general.more %}</a>
         </div>
         <div id='content-news' class='default'>
             <h2 class='heading'>
-                Friss <span>Híreink</span>
+                {% t festival.index.heading2 %}
             </h2>
         </div>
         <div id='content-video' class='default'>
             <h2 class='heading'>
-                legutóbbi <span>videó</span>
+                {% t festival.index.heading3 %}
             </h2>
         </div>
         <div id='content-fixedvideo' class='default'>pinned video</div>
-        <div id='content-newsabout' class='default'>irasok</div>
+        <div id='content-newsabout' class='default'>
+            <h2 class='heading'>
+                {% t festival.index.heading5 %}
+            </h2>
+        </div>
 
     </section>
 </div>

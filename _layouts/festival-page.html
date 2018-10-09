@@ -1,15 +1,14 @@
 ---
-group: fesztival
-name: Gombaszögi Nyári tábor - gombaszog.sk
+group: festival
 ---
 
 <!doctype html>
-<html lang='{{ site.language }}'>
+<html lang='{{ site.lang }}'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
-    <title>{{ page.title }} - {{ layout.name }}</title>
+    <title>{% t page.title %} - {% t festival.name %}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
     {% css festival.css %}

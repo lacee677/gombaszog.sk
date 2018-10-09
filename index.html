@@ -1,29 +1,28 @@
 ---
-title: Főoldal
-group: Főoldal
+group: frontpage
 ---
 
 <!doctype html>
-<html lang='{{ site.language }}'>
+<html lang='{{ site.lang }}'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow">
-    <title>Főoldal - Gombaszög - gombaszog.sk</title>
+    <title>{% t index.title %} - {% t site.name %}</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     {% css home.css %}
   </head>
   <body>
     <section id='home-box'>
-      <a id='sec1' href='/kemping' aria-label="Gombaszögi kemping" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='Gombaszögi kemping'/></a>
-      <a id='sec2' href='/fesztival' aria-label="Gombaszögi Nyári Tábor" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='Gombaszögi Nyári tábor'/></a>
-      <a id='sec3' href='/ertekmentes' aria-label="Gombaszögi értékmentés és értékteremtés" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='Gombaszögi értékmentés és értékteremtés'/></a>
-      <a id='sec4' href='/monostor' aria-label="Gombaszögi Pálos Monostor" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='Gombaszögi Pálos Monostor'/></a>
+      <a id='sec1' href='/kemping' aria-label="{% t index.section1 %}" class='grid-single-box'>
+        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section1 %}'/></a>
+      <a id='sec2' href='/fesztival' aria-label="{% t index.section2 %}" class='grid-single-box'>
+        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section2 %}'/></a>
+      <a id='sec3' href='/ertekmentes' aria-label="{% t index.section3 %}" class='grid-single-box'>
+        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section3 %}'/></a>
+      <a id='sec4' href='/monostor' aria-label="{% t index.section4 %}" class='grid-single-box'>
+        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section4 %}'/></a>
     </section>
   </body>
 </html>
