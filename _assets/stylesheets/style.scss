@@ -1,9 +1,13 @@
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
 $primary-color: #23361b;
 $seconary-color: #ee3a24;
 $seconary-color-hover: rgba(238,58,36,0.7);
 $default-background: rgba(255,255,255,0.8);
 $default-text: #232323;
 $default-button: #76C2A8;
+$secondary-background: rgba(0,192,245,0.8);
 
 html{
     height:100%;
@@ -36,10 +40,10 @@ body{
 a{
     text-decoration: none;
     color: $seconary-color;
-    transform: .2s ease-in;
+    transition: .2s ease-in;
 }
 
-a:hover{
+a:hover, a.active{
     color: $seconary-color-hover;
 }
 
@@ -127,7 +131,7 @@ input, select{
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
     box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
     -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15;
 }
 
 select{
@@ -142,20 +146,20 @@ input:focus, select:focus {
 }
 
 input:-moz-placeholder, select:-moz-placeholder {
-    color: #999
+    color: #999;
 }
 
 input::-moz-placeholder, select::-moz-placeholder {
     color: #999;
-    opacity: 1
+    opacity: 1;
 }
 
 input:-ms-input-placeholder, select:-ms-input-placeholder {
-    color: #999
+    color: #999;
 }
 
 input::-webkit-input-placeholder, select::-webkit-input-placeholder {
-    color: #999
+    color: #999;
 }
 
 button{
@@ -167,4 +171,67 @@ button{
     font-size:22px;
     text-transform: uppercase;
     border-radius: 3px;
+}
+
+ul, ol{
+    margin:0;
+    padding:0;
+}
+
+ul li{
+    list-style:none;
+}
+
+.list-marker{
+    margin-right:.25em;
+    display:inline;
+}
+
+.list-inline{
+    display:inline;
+    font-size: 16px;
+}
+
+header{
+    width:88%;
+    margin-left:6%;
+    padding:15px;
+    align-content: center;
+    display:grid;
+    margin-bottom:30px;
+    margin-top:15px;
+}
+
+nav{
+    display:grid;
+    grid-template-columns: calc(15% - 15px) calc(85% - 15px);
+    text-align:right;
+}
+
+nav ul{
+    align-self: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right:30px;
+    font-size:22px;
+    font-weight:bold;
+    
+}
+
+nav ul li a{
+    color: rgba(0,0,0,0.9);
+    transition: .2s ease-in;
+}
+
+nav li:last-child{
+    margin-right:0;
+}
+
+footer{
+    width:88%;
+    margin-top:30px;
+    display:grid;
+    height:auto;
 }

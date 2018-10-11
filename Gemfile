@@ -8,6 +8,10 @@ gem "autoprefixer-rails"
 gem "uglifier"
 gem "sprockets-es6"
 gem "jekyll-multiple-languages-plugin"
+gem "font-awesome-sass"
+
+
+#gem "jekyll-liquify"
 
 #gem "koala"
 #gem "execjs"

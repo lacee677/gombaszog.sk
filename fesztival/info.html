@@ -1,5 +1,6 @@
 ---
 group: festival
+id: info
 title: festival.info.title
 layout: festival-page
 ---
@@ -9,56 +10,56 @@ layout: festival-page
         <h2 class='heading'>{% t festival.info.heading1 %}</h2>
         <div id='info-head'>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh1 %}'/>
+                <i class="fas fa-users" aria-label="{% t festival.info.headh1 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh1 %}</h3>
                     <span>{% t festival.info.heads1 %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh2 %}'/>
+                <i class="fas fa-music" aria-label="{% t festival.info.headh2 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh2 %}</h3>
                     <span>{% t festival.info.heads2 %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh3 %}'/>
+                <i class="fas fa-graduation-cap" aria-label="{% t festival.info.headh3 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh3 %}</h3>
                     <span>{% t festival.info.heads3 %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh4 %}'/>
+                <i class="fas fa-gamepad" aria-label="{% t festival.info.headh4 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh4 %}</h3>
                     <span>{% t festival.info.heads4 %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh5 %}'/>
+                <i class="fas fa-taxi" aria-label="{% t festival.info.headh5 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh5 %}</h3>
                     <span>{% t festival.info.heads5 %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh6 %}'/>
+                <i class="far fa-calendar-alt" aria-label="{% t festival.info.headh6 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh6 %}</h3>
                     <span>{% t festival.dateShort %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t general.gombaszog %}'/>
+                <i class="fas fa-map-marker-alt" aria-label="{% t general.gombaszog %}"></i>
                 <div>
                     <h3>{% t general.gombaszog %}</h3>
                     <span>{% t festival.info.heads7 %}</span>
                 </div>
             </div>
             <div class='infobox'>
-                <img src='http://placekitten.com/g/300/300' alt='{% t festival.info.headh8 %}'/>
+                <i class="far fa-smile" aria-label="{% t festival.info.headh8 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh8 %}</h3>
                     <span>{% t festival.info.heads8 %}</span>
@@ -69,7 +70,7 @@ layout: festival-page
 
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading2 %}</h2>
-        <div class='infosection'>
+        <div class='infosection-left'>
             <div>
                 <p>{% t festival.info.p1 %}</p>
                 <p>{% t festival.info.p2 %}</p>
@@ -80,63 +81,282 @@ layout: festival-page
         </div>
     </section>
     <section class='default'>
-            <h2 class='heading'>{% t festival.info.heading3 %}</h2>
-            <div class='infosection'>
-                <div class='fullwidth'>
-                    <h3>{% t festival.info.headsm1 %}</h3>
-                    <p>{% t festival.info.p3 %}</p>
-                </div>
-                <div>
-                    <h3>{% t festival.info.headsm2 %}</h3>
-                    <p>{% t festival.info.p4 %}</p>
-                </div>
-                <form action="https://cp.hnonline.sk/vlakbus/spojenie/" target="_blank" role="form" method="GET">
-                    <input type="hidden" name="time" value="6:00" />
-                    <label for="from">{% t festival.info.from %}</label>
-                    <input id="from" name="f" type="text">
-                
-                    <label for="to">{% t festival.info.to %} </label>
-                    <select id="to" name="t">
-                        <option value="Slavec,Gombasecká jaskyňa">{% t general.gombaszog %}</option>
-                        <option value="Rožňava">{% t festival.info.rozsnyo %}</option>
-                        <option value="Slavec">{% t festival.info.szaloc %}</option>
+        <h2 class='heading'>{% t festival.info.heading3 %}</h2>
+        <div class='infosection-left'>
+            <div class='fullwidth'>
+                <h3>{% t festival.info.headsm1 %}</h3>
+                <p>{% t festival.info.p3 %}</p>
+            </div>
+            <div>
+                <h3>{% t festival.info.headsm2 %}</h3>
+                <p>{% t festival.info.p4 %}</p>
+            </div>
+            <form action="https://cp.hnonline.sk/vlakbus/spojenie/" target="_blank" role="form" method="GET">
+                <input type="hidden" name="time" value="6:00" />
+                <label for="from">{% t festival.info.from %}</label>
+                <input id="from" name="f" type="text">
+            
+                <label for="to">{% t festival.info.to %} </label>
+                <select id="to" name="t">
+                    <option value="Slavec,Gombasecká jaskyňa">{% t general.gombaszog %}</option>
+                    <option value="Rožňava">{% t festival.info.rozsnyo %}</option>
+                    <option value="Slavec">{% t festival.info.szaloc %}</option>
+                </select>
+                <label for="when">{% t festival.info.when %}</label>
+                <div class='select-button-box'>
+                    <select id="when" name="date">
+                        <option value="15.07.2019">{% t festival.info.zero %}</option>
+                        <option value="16.07.2019">{% t festival.info.first %}</option>
+                        <option value="17.07.2019">{% t festival.info.second %}</option>
+                        <option value="18.07.2019">{% t festival.info.third %}</option>
+                        <option value="19.07.2019">{% t festival.info.fourth %}</option>
+                        <option value="20.07.2019">{% t festival.info.fifth %}</option>
                     </select>
-                    <label for="when">{% t festival.info.when %}</label>
-                    <div class='select-button-box'>
-                        <select id="when" name="date">
-                            <option value="15.07.2019">{% t festival.info.zero %}</option>
-                            <option value="16.07.2019">{% t festival.info.first %}</option>
-                            <option value="17.07.2019">{% t festival.info.second %}</option>
-                            <option value="18.07.2019">{% t festival.info.third %}</option>
-                            <option value="19.07.2019">{% t festival.info.fourth %}</option>
-                            <option value="20.07.2019">{% t festival.info.fifth %}</option>
-                        </select>
-                        <button name="submit" value="true" aria-label="{% t general.send %}">O</button>
+                    <button name="submit" value="true" aria-label="{% t general.send %}"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <div class='fullwidth'>
+                <h3>{% t festival.info.headsm3 %}</h3>
+                <p>{% t festival.info.p5 %}</p>
+                <p>{% t festival.info.p6 %}</p>
+            </div>
+        </div>
+    </section>
+    <section class='default'>
+        <h2 class='heading'>{% t festival.info.heading4 %}</h2>
+        <div class='infosection-left'>
+            <div>
+                <p>{% t festival.info.p7 %}</p>
+                <p>{% t festival.info.p8 %}</p>
+            </div>
+            <img src='{% asset_path festival/info-kaja.jpg %}' alt='{% t festival.info.alt2 %}' />
+        </div>
+    </section>
+    <section class='default'>
+        <h2 class='heading'>{% t festival.info.heading5 %}</h2>
+        <div class='infosection-right'>
+            <img src='{% asset_path festival/info-sator.jpg %}' alt='{% t festival.info.alt3 %}' />
+            <div>
+                <h3>{% t festival.info.headsm4 %}</h3>
+                <p>{% t festival.info.p9 %}</p>
+            </div>
+        </div>
+    </section>
+    <section class='default'>
+        <h2 class='heading'>{% t festival.info.heading6 %}</h2>
+        <div class='infosection-left'>
+            <div>
+                <h3>{% t festival.info.headsm5 %}</h3>
+                <p>{% t festival.info.p10 %}</p>
+                <p>{% t festival.info.p11 %}</p>
+            </div>
+            <img src='{% asset_path festival/info-gyerekkel.jpg %}' alt='{% t festival.info.alt4 %}' />
+        </div>
+        <div class='infosection-right'>
+            <img src='{% asset_path festival/info-tuzolto.jpg %}' alt='{% t festival.info.alt5 %}' />    
+            <div>
+                <h3>{% t festival.info.headsm6 %}</h3>
+                <p>{% t festival.info.p12 %}</p>
+                <h3>{% t festival.info.headsm7 %}</h3>
+                <p>{% t festival.info.p13 %}</p>
+            </div>                
+        </div>
+        <div class='infosection-left'>
+            <div>
+                <h3>{% t festival.info.headsm8 %}</h3>
+                <p>{% t festival.info.p14 %}</p>
+                <p>{% t festival.info.p15 %}</p>
+            </div>
+            <img src='{% asset_path festival/info-wifi.jpg %}' alt='{% t festival.info.alt6 %}' />
+        </div>
+    </section>
+    <section class='default'>
+            <h2 class='heading'>{% t festival.info.heading7 %}</h2>
+            <div class='infosection-more'>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-orosz.jpg %}' alt='{% t festival.info.moreh1 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh1 %}</h3>
+                        <span>{% t festival.info.moresp1 %}</span>
                     </div>
-                </form>
-                <div class='fullwidth'>
-                    <h3>{% t festival.info.headsm3 %}</h3>
-                    <p>{% t festival.info.p5 %}</p>
-                    <p>{% t festival.info.p6 %}</p>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh1 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                info<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-kocskovics.jpg %}' alt='{% t festival.info.moreh2 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh2 %}</h3>
+                        <span>{% t festival.info.moresp2 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh2 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                info<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +421 944 104 494
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-zsuzsi.jpg %}' alt='{% t festival.info.moreh3 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh3 %}</h3>
+                        <span>{% t festival.info.moresp3 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh3 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                media<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +421 905 695 737
+                            </li>
+                            <li>
+                                <i class="fas fa-globe-americas list-marker" aria-label='{% t general.website %}'></i>
+                                <a href='/fesztival/sajto' aria-label="{% t footer.media %}">{% t footer.media %}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-geroj.jpg %}' alt='{% t festival.info.moreh4 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh4 %}</h3>
+                        <span>{% t festival.info.moresp4 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh4 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                media<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +421 905 786 649
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +36 20 378 9720
+                            </li>
+                            <li>
+                                <i class="fas fa-globe-americas list-marker" aria-label='{% t general.website %}'></i>
+                                <a href='/fesztival/sajto' aria-label="{% t footer.media %}">{% t footer.media %}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-ilcsa.jpg %}' alt='{% t festival.info.moreh5 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh5 %}</h3>
+                        <span>{% t festival.info.moresp5 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh5 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                info<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +421 905 920 551
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +36 20 964 5598
+                            </li>  
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-izsof.jpg %}' alt='{% t festival.info.moreh6 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh6 %}</h3>
+                        <span>{% t festival.info.moresp6 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh6 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                jegyek<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +36 20 547 8113
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-czimer.jpg %}' alt='{% t festival.info.moreh7 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh7 %}</h3>
+                        <span>{% t festival.info.moresp7 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh7 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                media<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +421 918 576 883
+                            </li>
+                            <li>
+                                <i class="fas fa-globe-americas list-marker" aria-label='{% t general.website %}'></i>
+                                <a href='/fesztival/sajto' aria-label="{% t footer.media %}">{% t footer.media %}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='more-box'>
+                    <img src='{% asset_path festival/info-more-betti.jpg %}' alt='{% t festival.info.moreh8 %}' />
+                    <div class='more-overlay'>
+                        <h3>{% t festival.info.moreh8 %}</h3>
+                        <span>{% t festival.info.moresp8 %}</span>
+                    </div>
+                    <div class='more-overlay-secondary'>
+                        <h3>{% t festival.info.moreh8 %}</h3>
+                        <ul class="more-info-list">
+                            <li>
+                                <i class="fas fa-envelope list-marker" aria-label='{% t general.e-mail %}'></i>
+                                szallas<i class="fas fa-exclamation-circle list-inline" aria-label='{% t general.atSign %}'></i>gombaszog.sk
+                            </li>
+                            <li>
+                                <i class="fas fa-phone list-marker" aria-label='{% t general.mobile %}'></i>
+                                +421 918 246 437
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class='default'>
-                <h2 class='heading'>{% t festival.info.heading4 %}</h2>
-                <div class='infosection'>
-                    <div>
-                        <p>{% t festival.info.p7 %}</p>
-                        <p>{% t festival.info.p8 %}</p>
-                    </div>
-                    <img src='https://placekitten.com/g/600/300' alt='{% t festival.info.alt2 %}' />
-                </div>
-            </section>
+    </section>
 </div>
 <script>
     var map;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: , lng: },
+        center: {lat: 11, lng: 11},
         zoom: 8
         });
     }

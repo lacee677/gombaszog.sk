@@ -1,1 +1,47 @@
-<header></header>
+<header>
+    <nav>
+        <a href="/fesztival/"  aria-label='{% t festival.menu.index %}' ><img src='{% asset_path festival_logo.png %}' alt="{% t festival.menu.index %}" /></a>
+        <ul>                                   
+            <li>
+                <a href="/fesztival/blog" {% if page.id == 'blog' %} class="active" {% endif %}>
+                    {% t festival.menu.blog %}
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/poll" {% if page.id == 'poll' %} class="active" {% endif %}>
+                    {% t festival.menu.poll %}
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/rolunk" {% if page.id == 'about' %} class="active" {% endif %} >
+                    {% t festival.menu.about %}
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/zene" {% if page.id == 'music' %} class="active" {% endif %}>
+                    {% t festival.menu.music %}
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/program" {% if page.id == 'program' %} class="active" {% endif %}>
+                    {% t festival.menu.program %}
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/terkep" {% if page.id == 'map' %} class="active" {% endif %}>
+                    {% t festival.menu.map %}
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/jegyek" {% if page.id == 'tickets' %} class="active" {% endif %}>
+                    {% t festival.menu.tickets %}    
+                </a>
+            </li>
+            <li>
+                <a href="/fesztival/info" {% if page.id == 'info' %} class="active" {% endif %}>
+                    {% t festival.menu.info %}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>

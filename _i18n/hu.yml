@@ -7,6 +7,13 @@ general:
   more: Tudj meg többet
   gombaszog: Gombaszög
   send: Küldés
+  atSign: kukac
+  e-mail: e-mail cím
+  mobile: mobil szám
+  website: weboldal
+
+footer: 
+  media: Sajtószoba
 
 index:
   title: Főoldal
@@ -20,7 +27,18 @@ festival:
   title: Gombaszögi Nyári tábor
   date: 2019.július 15-21.
   dateShort: július 15-21.
+  start: július 15.
   description: test
+  menu:
+    index: Főoldal
+    blog: Hírek
+    poll: Szavazás
+    about: Rólunk
+    music: Koncertek
+    program: Program
+    map: Térkép
+    tickets: Jegyek
+    info: Infó
   index:
     title: Főoldal
     heading1: A <span>táborról</span>
@@ -62,7 +80,7 @@ festival:
         A nosztalgiaszerelvény Dunaszerdahelyről indul, megállói előreláthatólag a következőképpen alakulnak: 
         Nagymegyer, Komárom, Ógyalla, Érsekújvár, Köbölkút, Párkány, Zselíz, Léva, Zólyom, Losonc és Fülek. A pontos menetrend a tábor közeledtével kerül nyilvánosságra. 
         A különvonat odafelé a nulladik napon (július 16., hétfő) reggel indul, és a tábor utáni reggel (július 22, vasárnap) tér vissza, ára oda-vissza 25 euró. 
-        A különvonatra <strong>csak előre megvásárolt jeggyel</strong> lehet felszállni. A vonatjegyet a hetibérlettel együtt (ingyenes hetibérlet esetén is) <a href="http://gombaszog.sk/jegyek/" target="_blank" aria-labeled='Online jegyvásárlási felület link'>az online jegyvásárlási felületünkön</a> tudod beszerezni. 
+        A különvonatra <strong>csak előre megvásárolt jeggyel</strong> lehet felszállni. A vonatjegyet a hetibérlettel együtt (ingyenes hetibérlet esetén is) <a href="/fesztival/jegyek/" target="_blank" aria-labeled='Online jegyvásárlási felület link'>az online jegyvásárlási felületünkön</a> tudod beszerezni. 
         Amennyiben már megvetted a hetibérleted, vagy regisztráltál az ingyenes jegyre, akkor sincs gond, csak írj az utazas@gombaszog.sk címre.
     headsm2: Tömegközlekedés
     p4: >-
@@ -88,7 +106,62 @@ festival:
     p6: >-
         A tábor <strong>GPS koordinátái</strong> a következők: 
         <strong>48.563772; 20.466542</strong>.
-    heading4: Mit fogok <strong>enni és inni</strong>?
+    heading4: Mit fogok <span>enni és inni</span>?
     p7: A tábor büféiben <strong>frissítőket, szeszes italokat, hideg és meleg ételeket</strong> kínálunk. Fontos változás az előző évekhez képest, hogy <strong>megszűnik a lecsópasz</strong> intézménye, helyette viszont változatosabb, viszont továbbra is pénztárcabarát reggeli és estebéd menüvel bővül a kínálatunk. Az étlapon szereplő ételek közé tartozik a gírosz, a csirkemell, a szőgyéni kemencés lepény, valamint lángos többféle feltéttel és egyéb klasszikus fesztiváli ételek. Gondoltunk a vegetáriánusokra is, akik választhatnak a rántott sajt és a hús nélküli pizzák közül.
     p8: A tábor területén üzemel egy <strong>non-stop kocsma</strong>, ahol mindenféle nedűhöz hozzá lehet jutni. A <strong>Szifon</strong> pedig többféle házi szörppel és kávéval várja a kempingben bóklászókat.
     alt2: Kaja - illusztráció
+    heading5: Hol fogok <span>aludni</span>?
+    alt3: Sátrak - illusztráció
+    headsm4: Sátorozás a tábor területén
+    p9: >-
+        A tábor területén sátorban vagy lakókocsiban lehet éjszakázni az arra kijelölt területeken. 
+        A kemping elhelyezkedése miatt célszerű felkészülni hidegebb éjszakákra is. 
+        Minden sátor után <strong>sátordíjat</strong> kell fizetni, melynek ára 10&euro; a tábor teljes idejére, a lakókocsisoknak 30&euro;. 
+        A sátordíj egységes, függetlenül a sátor méretétől, célszerű tehát többen lakni egy sátorban.
+    heading6: Egyéb <span>fontos</span> tudnivalók
+    headsm5: 18 éven aluliak
+    p10: >- 
+         15 éven aluliaknak a tábor látogatása csak szülői/törvényes képviselői <strong>felügyelet mellett ajánlott</strong>! 
+         Ha már elmúltál 15 éves, és a <strong>nulladik napon</strong> ({% t festival.start %}) még nem töltötted be a 18-at, akkor csak egy <strong>kinyomtatott és aláírt</strong> szülői/törvényes képviselői beleegyezéssel engedhetünk be a tábor területére.
+         Ezt a dokumentumot <a href="{% asset_path under18b.pdf %}" target="_blank" aria-label="Szülői/törvényes képviselői engedély">itt</a> tudod letölteni, de internetes jegyelővétel esetén automatikusan hozzácsatoljuk a jegyedhez. 
+         A tábori szabályzat bizonyos pontokban <strong>külön kitér a kiskorúakra</strong>, tehát érdemes azt áttanulmányozni. 
+         <a href="{% asset_path 2018_rules.pdf %}" target="_blank" aria-label="Fesztivál szabályzat">Ide</a> kattintva meg is tekintheted!
+    p11: A legkisebbeket a <strong>Gombaovi</strong> várja, ahol szakképzett óvónénik mellett a csemeték is pompásan szórakozhatnak, amíg a szülők a tábor előadásait és koncertjeit élvezik.
+    alt4: Kiskorú - illusztráció 
+    alt5: Tűzoltó - illusztráció
+    headsm6: Tábori szabályzat
+    p12: >-
+         A táborban tartózkodáshoz és mindenki biztonsága érdekében lefektettünk bizonyos <a href="{% asset_path 2018_rules.pdf %}" target="_blank" aria-label="Fesztivál szabályzat">szabályokat</a>. 
+         Ezek elfogadása és betartása <strong>mindenkinek kötelező</strong> a szabályszegés akár kizárást is vonhat maga után!
+    headsm7: Fő a biztonság  
+    p13: >-
+         A tábort idén is profi <strong>két- és négylábú</strong> biztonsági őrök őrzik és védik majd, valamint a rend őrei is a közelben (Rozsnyó) tanyáznak. 
+         Az esetleges rosszullétet, könnyebb sérüléseket és egyéb egészségügyi panaszokat <strong>tábororvosunk</strong> a nap 24 órájában kezeli, de komolyabb probléma esetén a rozsnyói kórház csupán tíz perc autóval.       
+    headsm8: Internet-hozzáférés
+    alt6: Internet elérés - illusztráció
+    p14: >-
+         A gombaszögi kemping érintetlen szépsége egyben azt jelenti, hogy a tábornak otthont adó völgybe csak igen sovány mobil-térerő jut be. 
+         Könnyen előfordulhat, hogy telefonoddal egy magasabb pontra kell sétálnod, ha zavartalanul szeretnél telefonálni. 
+         A mobil internet pedig ezen a vidéken viszonylag ritka jelenség, bár mindez nagyban függ attól, milyen szolgáltatód van. 
+         A teljes képhez hozzá tartozik, hogy a probléma megoldásán közvetlenül a mobilszolgáltatókkal közösen dolgozunk.
+    p15: >-
+         A tábor területén több vezeték nélküli hálózatot is működtetünk, de ezek nem mindegyike biztosít internet-hozzáférést. 
+         Legtöbbjük valamilyen belső adattovábbításra (képek, videók, statisztikák) vagy pedig a sajtósoknak van fenntartva. 
+         Sajnos a környék gyenge internetes lefedettsége miatt nem tudjuk garantálni, hogy a felesleges sávszélességünk lérhető legyen mindenki számára, de igyekszünk ezt megoldani.
+    heading7: <span>Bővebb információk</span>
+    moreh1: Orosz Örs
+    moresp1: Főszervező
+    moreh2: Kocskovics Péter
+    moresp2: Programigazgató
+    moreh3: Bilás Zsuzsanna
+    moresp3: Főszervező-helyettes, sajtó- és hírszolgálat
+    moreh4: Stubendek Attila
+    moresp4: Infrastruktúra
+    moreh5: Bauer Ildikó
+    moresp5: Booking manager
+    moreh6: Izsóf Máté
+    moresp6: Jegyelővétel
+    moreh7: Czimer Gábor
+    moresp7: Sajtó és hírszolgálat
+    moreh8: Imrecze Betti
+    moresp8: Szállás

@@ -7,7 +7,7 @@ exclude: [ 'README.md', 'LICENSE', 'Gemfile', 'Makefile', '_deprecated', '_compr
 include: ['.htaccess']
 excerpt_separator: <!--more-->
 minify_html: true
-plugins: 
+gems:
   - jekyll-assets
   - jekyll-minify-html
   - jekyll-multiple-languages-plugin

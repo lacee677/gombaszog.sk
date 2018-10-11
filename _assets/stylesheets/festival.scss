@@ -67,14 +67,32 @@
     font-size:18px;
 }
 
-.infosection{
+.infobox i{
+    color: #ee3a24;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid #ee3a24;
+    align-content: center;
+    display:grid;
+    font-size:23px;
+    height: 100%;
+}
+
+.infosection-left{
     display:grid;
     grid-template-columns: calc(60% - 15px) calc(40% - 15px);
     grid-gap:30px;
 }
 
-.infosection img{
-    padding-top:1em;
+.infosection-right{
+    display:grid;
+    grid-template-columns: calc(40% - 15px) calc(60% - 15px);
+    grid-gap:30px;
+}
+
+.infosection-left img, .infosection-left h3, 
+.infosection-right img, .infosection-right h3{
+    margin-top:1em;
 }
 
 .fullwidth{
@@ -85,7 +103,7 @@
 form{
     padding-top:40px;
     display:grid;
-    grid-template-columns: calc(30% - 7.5px) calc(60% - 7.5px);
+    grid-template-columns: calc(28% - 7.5px) calc(62% - 7.5px);
     grid-gap:15px;
     text-align:right;
 }
@@ -94,6 +112,69 @@ form{
     display:grid;
     grid-template-columns: calc(80% - 7.5px) calc(20% - 7.5px);
     grid-gap: 15px;
+}
+
+
+.infosection-more{
+    display:grid;
+    grid-template-columns: calc(25% - 30px) calc(25% - 30px) calc(25% - 30px) calc(25% - 30px);
+    grid-template-rows: calc(50% - 15px) calc(50% - 15px);
+    grid-gap: 30px;
+    margin-top:1em;
+}
+
+.more-box{
+    position:relative;
+}
+
+.more-overlay, .more-overlay-secondary{
+    position:absolute;
+    top: 0px;
+    left: 0;
+    padding: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    display:grid;
+    grid-auto-rows: min-content;  
+}
+
+.more-overlay::after, .more-overlay-secondary::after{
+    clear:both;
+}
+
+.more-overlay{
+    align-content: end;
+    color:#fff;
+    text-shadow: 2px 2px 0 #292e42, -1px -1px 0 #292e42, 1px -1px 0 #292e42, -1px 1px 0 #292e42, 1px 1px 0 #292e42;
+}
+
+.more-overlay-secondary{
+    background-color: $secondary-background;
+    color: #000;
+    display:none;
+}
+
+.more-box:hover > .more-overlay-secondary{
+    display:grid;
+}
+
+.more-box:hover > .more-overlay{
+    display:none;
+}
+
+.more-overlay-secondary h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:1em;
+    margin-bottom:.5em;
+}
+
+.more-info-list{
+    font-size:18px;
+}
+
+.more-info-list a{
+    color: #fff;
 }
 
 
