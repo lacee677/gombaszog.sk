@@ -19,7 +19,7 @@ html{
 
 body{
     background-image: url(asset_path("background.jpg"));   
-    background-position: center top;
+    background-position: left top;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -49,9 +49,11 @@ a:hover, a.active{
 
 .container{
     width:88%;
-    margin-left:6%;
+    margin:0 auto;
     display:grid;
     grid-gap: 30px;
+    max-width: 1170px;
+    justify-content: center;
 }
 
 .heading{
@@ -194,12 +196,13 @@ ul li{
 
 header{
     width:88%;
-    margin-left:6%;
+    margin:0 auto;
     padding:15px;
     align-content: center;
     display:grid;
     margin-bottom:30px;
     margin-top:15px;
+    max-width: 1170px;
 }
 
 nav{

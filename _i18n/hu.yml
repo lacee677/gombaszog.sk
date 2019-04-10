@@ -148,20 +148,32 @@ festival:
          A tábor területén több vezeték nélküli hálózatot is működtetünk, de ezek nem mindegyike biztosít internet-hozzáférést. 
          Legtöbbjük valamilyen belső adattovábbításra (képek, videók, statisztikák) vagy pedig a sajtósoknak van fenntartva. 
          Sajnos a környék gyenge internetes lefedettsége miatt nem tudjuk garantálni, hogy a felesleges sávszélességünk lérhető legyen mindenki számára, de igyekszünk ezt megoldani.
-    heading7: <span>Bővebb információk</span>
+    heading7: <span>Csatlakozz csapatunkhoz!</span>
+    alt7: Staff - illusztráció
+    p16: >-
+         Légy te is Gombaszög csapatának a része! 
+         Ha szívesen dolgoznál együtt több mint száz önkéntessel, ha szeretnél hozzájárulni Gombaszög és így a felvidéki fiatalság fejlődéséhez és feltöltődéséhez, írj nekünk az infogombaszog.sk címre! 
+         Kérjük, pár sorban foglald össze, ki vagy, honnan jöttél, mihez értesz, és mi az, amiben szívesen tevékenykednél.
+    p17: >-
+         Gombaszög erejét a több mint kéttucatnyi társszervező civil szervezet adja, akik szerepet vállalnak a programok létrehozásában, a tábor lebonyolításában, vagy a felépítésében. 
+         Ha egyesületetekkel, polgári társulásotokkal vagy bármilyen más szerveződésetekkel csatlakoznátok Gombaszög csapatához, írjatok az infogombaszog.sk címre egy rövid bemutatkozást, és pár sort arról, mihez tudnátok hozzájárulni!
+    p18: >-
+         A rendezvényen számos szolgáltatást külső partnerekkel végzünk. 
+         Ha árusként szeretnél jelentkezni, kérlek, írj a infogombaszog.sk címre, vagy keresd Kocskovics Petit, akinek a telefonszámát pár sorral lejjebb találod.
+    heading8: <span>Bővebb információk</span>
     moreh1: Orosz Örs
     moresp1: Főszervező
     moreh2: Kocskovics Péter
-    moresp2: Programigazgató
+    moresp2: Főszervező-helyettes
     moreh3: Bilás Zsuzsanna
-    moresp3: Főszervező-helyettes, sajtó- és hírszolgálat
+    moresp3: Médiasátor
     moreh4: Stubendek Attila
-    moresp4: Infrastruktúra
-    moreh5: Bauer Ildikó
+    moresp4: Informatika, jegyek
+    moreh5: Bokor Réka
     moresp5: Booking manager
-    moreh6: Izsóf Máté
-    moresp6: Jegyelővétel
+    moreh6: Herencsár Viktória
+    moresp6: Porta, sztaff-jelentkezés
     moreh7: Czimer Gábor
     moresp7: Sajtó és hírszolgálat
-    moreh8: Imrecze Betti
+    moreh8: Nagy Andrea
     moresp8: Szállás

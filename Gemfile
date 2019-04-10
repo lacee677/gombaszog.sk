@@ -2,7 +2,7 @@ source "https://rubygems.org"
 #ruby "2.1.0"
 
 gem "jekyll"
-gem "jekyll-assets"
+gem "jekyll-assets", "~> 2.2.8"
 gem "jekyll-minify-html"
 gem "autoprefixer-rails"
 gem "uglifier"

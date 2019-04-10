@@ -82,17 +82,24 @@
     display:grid;
     grid-template-columns: calc(60% - 15px) calc(40% - 15px);
     grid-gap:30px;
+    margin-top:1em
 }
 
 .infosection-right{
     display:grid;
     grid-template-columns: calc(40% - 15px) calc(60% - 15px);
     grid-gap:30px;
+    margin-top:1em
+}
+.infosection-left h3, 
+.infosection-right h3{
+    margin-top:1em;
 }
 
-.infosection-left img, .infosection-left h3, 
-.infosection-right img, .infosection-right h3{
-    margin-top:1em;
+.infosection-left img,
+.infosection-right img{
+    justify-self: center;
+    align-self: center;
 }
 
 .fullwidth{
@@ -156,8 +163,21 @@ form{
 
 .more-box:hover > .more-overlay-secondary{
     display:grid;
+    animation: overflow .2s ease-in-out;
 }
 
+@keyframes overflow {
+    0% {
+        background-color: rgba(0,192,245,0.2);
+    }
+    40% {
+        background-color: rgba(0,192,245,0.4);
+    }
+    80% {
+        background-color: rgba(0,192,245,0.6);
+    }
+  }
+  
 .more-box:hover > .more-overlay{
     display:none;
 }
