@@ -1,5 +1,5 @@
 site:
-  name: Gombaszög - gombaszog.sk
+  name: Gombaszög
   description: tesztszoveg
   keywords: gombaszog, tabor, kemping
 
@@ -23,7 +23,7 @@ index:
   section4: Gombaszögi Pálos Monostor
 
 festival:
-  name: Gombaszögi Nyári tábor - gombaszog.sk
+  name: Gombaszögi Nyári tábor
   title: Gombaszögi Nyári tábor
   date: 2019.július 15-21.
   dateShort: július 15-21.
@@ -148,7 +148,7 @@ festival:
          A tábor területén több vezeték nélküli hálózatot is működtetünk, de ezek nem mindegyike biztosít internet-hozzáférést. 
          Legtöbbjük valamilyen belső adattovábbításra (képek, videók, statisztikák) vagy pedig a sajtósoknak van fenntartva. 
          Sajnos a környék gyenge internetes lefedettsége miatt nem tudjuk garantálni, hogy a felesleges sávszélességünk lérhető legyen mindenki számára, de igyekszünk ezt megoldani.
-    heading7: <span>Csatlakozz csapatunkhoz!</span>
+    heading7: <span>Csatlakozz</span> csapatunkhoz!
     alt7: Staff - illusztráció
     p16: >-
          Légy te is Gombaszög csapatának a része! 
@@ -177,3 +177,17 @@ festival:
     moresp7: Sajtó és hírszolgálat
     moreh8: Nagy Andrea
     moresp8: Szállás
+  tickets: 
+    title: Jegyek
+  poll:
+    title: Szavazás
+  map:
+    title: Térkép
+  blog:
+    title: Hírek
+  about: 
+    title: Rólunk
+  program:
+    title: Program
+  music:
+    title: Koncertek
