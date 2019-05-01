@@ -5,7 +5,7 @@ title: festival.info.title
 layout: festival-page
 ---
 
-<div class='container'>
+<main class='container'>
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading1 %}</h2>
         <div id='info-head'>
@@ -58,7 +58,7 @@ layout: festival-page
                     <span>{% t festival.info.heads7 %}</span>
                 </div>
             </div>
-            <div class='infobox'>
+            <div class='infobox second'>
                 <i class="far fa-smile" aria-label="{% t festival.info.headh8 %}"></i>
                 <div>
                     <h3>{% t festival.info.headh8 %}</h3>
@@ -70,7 +70,7 @@ layout: festival-page
 
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading2 %}</h2>
-        <div class='infosection-left'>
+        <div class='section-left'>
             <div>
                 <p>{% t festival.info.p1 %}</p>
                 <p>{% t festival.info.p2 %}</p>
@@ -82,60 +82,61 @@ layout: festival-page
     </section>
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading3 %}</h2>
-        <div class='infosection-left'>
-            <div class='fullwidth'>
-                <h3>{% t festival.info.headsm1 %}</h3>
-                <p>{% t festival.info.p3 %}</p>
-            </div>
+        <div class='fullwidth'>
+            <h3>{% t festival.info.headsm1 %}</h3>
+            <p>{% t festival.info.p3 %}</p>
+        </div>
+        <div class='section-left'>
+            
             <div>
                 <h3>{% t festival.info.headsm2 %}</h3>
                 <p>{% t festival.info.p4 %}</p>
             </div>
-            <form action="https://cp.hnonline.sk/vlakbus/spojenie/" target="_blank" role="form" method="GET">
-                <input type="hidden" name="time" value="6:00" />
-                <label for="from">{% t festival.info.from %}</label>
-                <input id="from" name="f" type="text">
-            
-                <label for="to">{% t festival.info.to %} </label>
-                <select id="to" name="t">
-                    <option value="Slavec,Gombasecká jaskyňa">{% t general.gombaszog %}</option>
-                    <option value="Rožňava">{% t festival.info.rozsnyo %}</option>
-                    <option value="Slavec">{% t festival.info.szaloc %}</option>
-                </select>
-                <label for="when">{% t festival.info.when %}</label>
-                <div class='select-button-box'>
-                    <select id="when" name="date">
-                        <option value="15.07.2019">{% t festival.info.zero %}</option>
-                        <option value="16.07.2019">{% t festival.info.first %}</option>
-                        <option value="17.07.2019">{% t festival.info.second %}</option>
-                        <option value="18.07.2019">{% t festival.info.third %}</option>
-                        <option value="19.07.2019">{% t festival.info.fourth %}</option>
-                        <option value="20.07.2019">{% t festival.info.fifth %}</option>
+                <form action="https://cp.hnonline.sk/vlakbus/spojenie/" target="_blank" role="form" method="GET">
+                    <input type="hidden" name="time" value="6:00" />
+                    <label for="from">{% t festival.info.from %}</label>
+                    <input id="from" name="f" type="text">
+                
+                    <label for="to">{% t festival.info.to %} </label>
+                    <select id="to" name="t">
+                        <option value="Slavec,Gombasecká jaskyňa">{% t general.gombaszog %}</option>
+                        <option value="Rožňava">{% t festival.info.rozsnyo %}</option>
+                        <option value="Slavec">{% t festival.info.szaloc %}</option>
                     </select>
-                    <button name="submit" value="true" aria-label="{% t general.send %}"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            <div class='fullwidth'>
-                <h3>{% t festival.info.headsm3 %}</h3>
-                <p>{% t festival.info.p5 %}</p>
-                <p>{% t festival.info.p6 %}</p>
-            </div>
+                    <label for="when">{% t festival.info.when %}</label>
+                    <div class='select-button-box'>
+                        <select id="when" name="date">
+                            <option value="15.07.2019">{% t festival.info.zero %}</option>
+                            <option value="16.07.2019">{% t festival.info.first %}</option>
+                            <option value="17.07.2019">{% t festival.info.second %}</option>
+                            <option value="18.07.2019">{% t festival.info.third %}</option>
+                            <option value="19.07.2019">{% t festival.info.fourth %}</option>
+                            <option value="20.07.2019">{% t festival.info.fifth %}</option>
+                        </select>
+                        <button name="submit" value="true" aria-label="{% t general.send %}"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+        </div>
+        <div class='fullwidth'>
+            <h3>{% t festival.info.headsm3 %}</h3>
+            <p>{% t festival.info.p5 %}</p>
+            <p>{% t festival.info.p6 %}</p>
         </div>
     </section>
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading4 %}</h2>
-        <div class='infosection-left'>
+        <div class='section-left'>
             <div>
                 <p>{% t festival.info.p7 %}</p>
                 <p>{% t festival.info.p8 %}</p>
             </div>
-            <img src='{% asset_path festival/info-kaja.jpg %}' alt='{% t festival.info.alt2 %}' />
+            <img src='{% asset_path festival/info/info-kaja.jpg %}' alt='{% t festival.info.alt2 %}' />
         </div>
     </section>
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading5 %}</h2>
-        <div class='infosection-right'>
-            <img src='{% asset_path festival/info-sator.jpg %}' alt='{% t festival.info.alt3 %}' />
+        <div class='section-right'>
+            <img src='{% asset_path festival/info/info-sator.jpg %}' alt='{% t festival.info.alt3 %}' />
             <div>
                 <h3>{% t festival.info.headsm4 %}</h3>
                 <p>{% t festival.info.p9 %}</p>
@@ -144,16 +145,16 @@ layout: festival-page
     </section>
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading6 %}</h2>
-        <div class='infosection-left'>
+        <div class='section-left'>
             <div>
                 <h3>{% t festival.info.headsm5 %}</h3>
                 <p>{% t festival.info.p10 %}</p>
                 <p>{% t festival.info.p11 %}</p>
             </div>
-            <img src='{% asset_path festival/info-gyerekkel.jpg %}' alt='{% t festival.info.alt4 %}' />
+            <img src='{% asset_path festival/info/info-gyerekkel.jpg %}' alt='{% t festival.info.alt4 %}' />
         </div>
-        <div class='infosection-right'>
-            <img src='{% asset_path festival/info-tuzolto.jpg %}' alt='{% t festival.info.alt5 %}' />    
+        <div class='section-right'>
+            <img src='{% asset_path festival/info/info-tuzolto.jpg %}' alt='{% t festival.info.alt5 %}' />    
             <div>
                 <h3>{% t festival.info.headsm6 %}</h3>
                 <p>{% t festival.info.p12 %}</p>
@@ -161,31 +162,31 @@ layout: festival-page
                 <p>{% t festival.info.p13 %}</p>
             </div>                
         </div>
-        <div class='infosection-left'>
+        <div class='section-left'>
             <div>
                 <h3>{% t festival.info.headsm8 %}</h3>
                 <p>{% t festival.info.p14 %}</p>
                 <p>{% t festival.info.p15 %}</p>
             </div>
-            <img src='{% asset_path festival/info-wifi.jpg %}' alt='{% t festival.info.alt6 %}' />
+            <img src='{% asset_path festival/info/info-wifi.jpg %}' alt='{% t festival.info.alt6 %}' />
         </div>
     </section>
     <section class='default'>
         <h2 class='heading'>{% t festival.info.heading7 %}</h2>
-        <div class='infosection-left'>
+        <div class='section-left'>
             <div>
                 <p>{% t festival.info.p16 %}</p>
                 <p>{% t festival.info.p17 %}</p>
                 <p>{% t festival.info.p18 %}</p>
             </div>
-            <img src='{% asset_path festival/info-csatlakozz.jpg %}' alt='{% t festival.info.alt6 %}' />
+            <img src='{% asset_path festival/info/info-csatlakozz.jpg %}' alt='{% t festival.info.alt6 %}' />
         </div>
     </section>
     <section class='default'>
             <h2 class='heading'>{% t festival.info.heading8 %}</h2>
             <div class='infosection-more'>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-orosz.jpg %}' alt='{% t festival.info.moreh1 %}' />
+                    <img src='{% asset_path festival/info/info-more-orosz.jpg %}' alt='{% t festival.info.moreh1 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh1 %}</h3>
                         <span>{% t festival.info.moresp1 %}</span>
@@ -201,7 +202,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-kocskovics.jpg %}' alt='{% t festival.info.moreh2 %}' />
+                    <img src='{% asset_path festival/info/info-more-kocskovics.jpg %}' alt='{% t festival.info.moreh2 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh2 %}</h3>
                         <span>{% t festival.info.moresp2 %}</span>
@@ -221,7 +222,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-zsuzsi.jpg %}' alt='{% t festival.info.moreh3 %}' />
+                    <img src='{% asset_path festival/info/info-more-zsuzsi.jpg %}' alt='{% t festival.info.moreh3 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh3 %}</h3>
                         <span>{% t festival.info.moresp3 %}</span>
@@ -245,7 +246,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-geroj.jpg %}' alt='{% t festival.info.moreh4 %}' />
+                    <img src='{% asset_path festival/info/info-more-geroj.jpg %}' alt='{% t festival.info.moreh4 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh4 %}</h3>
                         <span>{% t festival.info.moresp4 %}</span>
@@ -277,7 +278,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-bokor.jpg %}' alt='{% t festival.info.moreh5 %}' />
+                    <img src='{% asset_path festival/info/info-more-bokor.jpg %}' alt='{% t festival.info.moreh5 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh5 %}</h3>
                         <span>{% t festival.info.moresp5 %}</span>
@@ -297,7 +298,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-herencsar.jpg %}' alt='{% t festival.info.moreh6 %}' />
+                    <img src='{% asset_path festival/info/info-more-herencsar.jpg %}' alt='{% t festival.info.moreh6 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh6 %}</h3>
                         <span>{% t festival.info.moresp6 %}</span>
@@ -317,7 +318,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-czimer.jpg %}' alt='{% t festival.info.moreh7 %}' />
+                    <img src='{% asset_path festival/info/info-more-czimer.jpg %}' alt='{% t festival.info.moreh7 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh7 %}</h3>
                         <span>{% t festival.info.moresp7 %}</span>
@@ -341,7 +342,7 @@ layout: festival-page
                     </div>
                 </div>
                 <div class='more-box'>
-                    <img src='{% asset_path festival/info-more-nagy.jpg %}' alt='{% t festival.info.moreh8 %}' />
+                    <img src='{% asset_path festival/info/info-more-nagy.jpg %}' alt='{% t festival.info.moreh8 %}' />
                     <div class='more-overlay'>
                         <h3>{% t festival.info.moreh8 %}</h3>
                         <span>{% t festival.info.moresp8 %}</span>
@@ -362,7 +363,7 @@ layout: festival-page
                 </div>
             </div>
     </section>
-</div>
+</main>
 <script>
     var map;
     function initMap() {

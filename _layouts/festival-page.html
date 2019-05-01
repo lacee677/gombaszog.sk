@@ -11,7 +11,7 @@ group: festival
     <title>{% t page.title %} - {% t festival.name %}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     
-    {% css festival.css %}
+    {% css festival/{{page.id}}.css %}
   </head>
   <body>
     {% include festival-header.html %}

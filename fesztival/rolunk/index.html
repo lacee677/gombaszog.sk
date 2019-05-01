@@ -4,3 +4,28 @@ id: about
 title: festival.about.title
 layout: festival-page
 ---
+
+<main class='container'>
+    <section class='default'>
+        <h2 class='heading'>{% t festival.about.heading1 %}</h2>
+        <div class='section-left'>
+            <div>
+                <p>{% t festival.about.p1 %}</p>
+                <p>{% t festival.about.p2 %}</p>
+            </div>
+            <img src='{% asset_path festival/about/about-helyszin.jpg %}' alt='{% t festival.about.alt1 %}' />
+        </div>
+        <div class='section-right'>
+            <img src='{% asset_path festival/about/about-emberek.jpg %}' alt='{% t festival.about.alt2 %}' />
+            <p>{% t festival.about.p3 %}</p>
+        </div>
+        <div class='section-right'>
+            <img src='{% asset_path festival/about/about-polo.jpg %}' alt='{% t festival.about.alt3 %}' />
+            <div>
+                <p>{% t festival.about.p4 %}</p>
+                <p>{% t festival.about.p5 %}</p>
+            </div>
+        </div>
+        <p>{% t festival.about.p6 %}</p>
+    </section>
+</main>

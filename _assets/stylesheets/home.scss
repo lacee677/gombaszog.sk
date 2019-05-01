@@ -6,13 +6,18 @@ body{
 
 #home-box{
     display:grid;
-    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
-    grid-template-rows: calc(50% - 15px) calc(50% - 15px); 
-    height: calc(100% - 30px);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 50%);
+    height: calc(100% - 60px);
     width: calc(100% - 60px);
     text-align: center;
     grid-gap: 30px;   
     margin:30px;
+}
+
+#home-box > div{
+    grid-gap:30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto) );
 }
 
 .grid-single-box{

@@ -26,8 +26,10 @@ assets:
     - _assets/fonts
     - _assets/downloads
   compress:
-    css: true
-    js: true
+    #css: true
+    #js: true
+    css: false
+    js: false
   js_compressor:  uglifier
   css_compressor: sass
 defaultLang: hu

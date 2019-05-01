@@ -37,10 +37,18 @@ body{
     color:$primary-color;
 }
 
+section, main, div{
+    display:grid;
+}
+
 a{
     text-decoration: none;
     color: $seconary-color;
     transition: .2s ease-in;
+}
+
+.highlighted{
+    color: $seconary-color;
 }
 
 a:hover, a.active{

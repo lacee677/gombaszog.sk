@@ -14,15 +14,19 @@ group: frontpage
     {% css home.css %}
   </head>
   <body>
-    <section id='home-box'>
-      <a id='sec1' href='/kemping' aria-label="{% t index.section1 %}" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section1 %}'/></a>
-      <a id='sec2' href='/fesztival' aria-label="{% t index.section2 %}" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section2 %}'/></a>
-      <a id='sec3' href='/ertekmentes' aria-label="{% t index.section3 %}" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section3 %}'/></a>
-      <a id='sec4' href='/monostor' aria-label="{% t index.section4 %}" class='grid-single-box'>
-        <img src='{% asset_path festival_logo.png %}' alt='{% t index.section4 %}'/></a>
-    </section>
+    <main id='home-box'>
+      <div>
+        <a id='sec1' href='/kemping' aria-label="{% t index.section1 %}" class='grid-single-box'>
+          <img src='{% asset_path festival_logo.png %}' alt='{% t index.section1 %}'/></a>
+        <a id='sec2' href='/fesztival' aria-label="{% t index.section2 %}" class='grid-single-box'>
+          <img src='{% asset_path festival_logo.png %}' alt='{% t index.section2 %}'/></a>
+      </div>
+      <div>
+        <a id='sec3' href='/ertekmentes' aria-label="{% t index.section3 %}" class='grid-single-box'>
+          <img src='{% asset_path festival_logo.png %}' alt='{% t index.section3 %}'/></a>
+        <a id='sec4' href='/monostor' aria-label="{% t index.section4 %}" class='grid-single-box'>
+          <img src='{% asset_path festival_logo.png %}' alt='{% t index.section4 %}'/></a>
+      </div>
+    </main>
   </body>
 </html>
